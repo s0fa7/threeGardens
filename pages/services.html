@@ -6,40 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Наши услуги - 3 сада</title>
   <link rel="stylesheet" href="/src/assets/css/app.css" />
+  <script src="/src/js/headerAnimation.js"></script> 
 
   <link rel="icon" href="/src/assets/icons/logoVector.svg" />
 
-  <meta property="og:title" content="IT Conference" />
+  <meta property="og:title" content="3 sads" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru" />
-  <meta property="og:description" content="IT конференция, для специалистов" />
+  <meta property="og:description" content="our services" />
 </head>
 
 <body>
 
   <body>
     <div class="header-container">
-      <header class="header">
-        <nav class="nav">
-          <ul>
-            <div class="headerOneHalf">
-              <li><a href="">Услуги</a></li>
-              <li><a href="">Прайс-лист</a></li>
-              <li><a href="">Проекты</a></li>
-              <li><a href="">О компании</a></li>
-              <li><a href="">Партнерам</a></li>
-              <li><a href="">Контакты</a></li>
-            </div>
-            <li><a href="/" class="logo">
-                <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
-              </a></li>
-            <div class="headerTwoHalf">
-              <li>Каталог растений</li>
-              <li>Оставить заявку</li>
-              <li>8 800 219 333</li>
-            </div>
-          </ul>
-        </nav>
+      <header class="header" id="mainHeader">
+        <div class="header-content" id="headerContent">
+          <nav class="nav">
+            <ul>
+              <div class="headerOneHalf">
+                <li><a href="">Услуги</a></li>
+                <li><a href="">Прайс-лист</a></li>
+                <li><a href="">Проекты</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Партнерам</a></li>
+                <li><a href="">Контакты</a></li>
+              </div>
+              <li><a href="/" class="logo">
+                  <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
+                </a></li>
+              <div class="headerTwoHalf">
+                <li>Каталог растений</li>
+                <li>Оставить заявку</li>
+                <li>8 800 219 333</li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-bar" id="headerBar">
+            <nav class="nav">
+            <ul>
+              <div class="headerOneHalf">
+                <li><a href="">Услуги</a></li>
+                <li><a href="">Прайс-лист</a></li>
+                <li><a href="">Проекты</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Партнерам</a></li>
+                <li><a href="">Контакты</a></li>
+              </div>
+               <li><a href="/" class="logo">
+                  <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                </a></li>
+              <div class="headerTwoHalf">
+                <li>Каталог растений</li>
+                <li>Оставить заявку</li>
+                <li>8 800 219 333</li>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </header>
     </div>
 
@@ -61,7 +86,7 @@
           </div>
         </div>
         <div class="img-placeholder"><img class="hero-bg-img"
-            src="/src/assets/images/services/servicesMainGarden.png" /></div>
+            src="/src/assets/images/services/servicesMainGarden.png" alt="сад фон" /></div>
       </section>
 
       <section class="services-main">
@@ -81,7 +106,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="service-cards">
         <div class="service-card">
           <div class="service-card-info">
             <div class="service-card__tags">

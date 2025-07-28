@@ -51,6 +51,51 @@
    pointer-events: none;
    user-select: none;
 }
+@media (max-width: 600px) {
+  .services-hero-content {
+    padding: 0.5rem;
+    min-height: unset;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .services-hero-text {
+    max-width: 100%;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .services-hero-content h2 {
+    font-size: 1.7rem;
+    padding-left: 0;
+    margin: 0.5rem 0 0.7rem 0;
+  }
+  .services-hero-subtitle,
+  .services-hero-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin: 0.2rem 0;
+  }
+  .services-hero-desc {
+    line-height: 1.2;
+    font-size: 0.93rem;
+  }
+  .img-placeholder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-bg-img {
+    position: static;
+    width: 100%;
+    max-width: 573px;
+    height: 25.25rem;
+    display: block;
+  }
+}
 
 
 
@@ -71,7 +116,7 @@
 
 .img-placeholder {
   width: 47.25rem;
-  height: 41.3125rem;
+  height: auto;
 }
 
 .services-main-row__text{
@@ -82,6 +127,7 @@
 
     font-size: 16px;
     line-height: 120%;
+    max-width: 51.6875rem;
 }
 
 .services-main-row__text h3{
@@ -92,7 +138,6 @@
     line-height: 80%;
 }
 
-/* Адаптивные стили для секции services-main */
 @media (max-width: 1200px) {
   .services-main-row {
     gap: 4rem;
@@ -135,7 +180,7 @@
   }
   
   .services-main-row__text p {
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 
@@ -146,8 +191,8 @@
   }
   
   .img-placeholder {
-    max-width: 100%;
-    height: auto;
+    width: 21.4375rem;
+    height: 18.75rem;
   }
   
   .services-main-row__text {
@@ -189,6 +234,12 @@
 
 /* cards part */
 
+.service-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .service-card {
   background: #F2F2F2;
   border-radius: 2rem 8rem 8rem 2rem;
@@ -201,17 +252,12 @@
 
   max-width: 1350px;
   padding: 32px;
-  margin: 0 auto 32px auto;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 .service-card .last-element{
     align-items: center;
-}
-
-.service-card-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .service-card__tags {
@@ -306,6 +352,41 @@
   }
 }
 
+@media (max-width: 600px) {
+  .service-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 1.25rem;
+
+    align-items: stretch;
+    position: relative;
+  }
+  .service-card__tags {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .service-card__tags span {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+  .service-card__content h3 {
+    font-size: 1.25rem;
+  }
+  .service-card__content p {
+    font-size: 1rem;
+  }
+  .service-card__image img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .service-card__more {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+
 
 
 /* work info part */
@@ -388,6 +469,9 @@
 
 
 @media (max-width: 1000px) {
+  .company-info{
+    margin: 1rem;
+  }
   .company-info-row {
     flex-direction: column;
     gap: 28px;
@@ -405,18 +489,97 @@
 
 @media (max-width: 600px) {
   .company-info {
-    padding: 18px 0 18px 0;
+    margin: 0 1rem;
+    padding: 1rem;
     border-radius: 12px;
   }
+
   .company-info-row {
     gap: 18px;
     margin-bottom: 18px;
   }
+
+  .company-info-row img {
+    max-width: auto;
+    height: 16.25rem;
+  }
+
   .company-info-row h3, .company-info-row h4 {
     font-size: 1.2rem;
   }
+
   .company-info-row p, .company-info-row ul {
     font-size: 0.98rem;
   }
 }
 
+
+
+
+
+
+/* services V1 page */
+
+.article{
+ display: flex;
+ flex-direction: column;
+ gap: 5rem;
+ max-width: 100.75rem;
+ margin: 0 auto;
+}
+
+.article-container{
+  display: flex;
+  gap: 10.5rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100.75rem;
+}
+
+.article-container p,
+.text-info-group{
+  max-width: 45.125rem;
+}
+
+.text-info-group p{
+  margin-bottom: 1.5625rem;
+}
+
+.text-info-group,
+.border-text{
+  border-bottom: 1px solid #7C9085;
+  margin-bottom: 5.625rem;
+}
+
+.beetle-control-info___photos{
+  display: flex;
+  gap: 2.625rem;
+}
+
+.green-text{
+  font-size: 1.625rem;
+  color: #007D21;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.article h3{
+  font-size: 2.0625rem;
+  font-weight: 700;
+  line-height: 90%;
+}
+
+.beetle-control-info___photos{
+  max-width: 45.125rem;
+}
+
+.beetle-control-info___photos img{
+  max-height: 21.25rem;
+  max-width: 21.25rem;
+  border-radius: 1rem;
+}
+
+#arka{
+  max-width: 45.125rem;
+  height: auto;
+}
