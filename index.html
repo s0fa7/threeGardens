@@ -4,8 +4,285 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .abonement-card {
+  background-color: #F2F2F2;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin: 50px auto;
+  max-width: 70rem;
+  max-height: 119.375rem;
+}
+
+.abonement-main {
+  display: flex;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto 32px auto;
+
+  display: flex;
+  gap: 1.25rem;
+}
+
+.abonement-main__left {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 32px 32px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5625rem;
+  min-width: 320px;
+}
+
+.abonement-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: #f4f7f4;
+  border-radius: 12px;
+  padding: 12px 18px;
+  text-align: center;
+}
+
+.abonement-plan {
+  text-align: center;
+}
+
+.abonement-desc-title,
+.abonement-plan {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.abonement-desc {
+  font-size: 1.125rem;
+}
+
+.abonement-desc ul {
+  list-style: none;
+}
+
+.abonement-desc li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.abonement-container {
+  background-color: #F2F2F2;
+  border-radius: .875rem;
+  padding: 24px 16px;
+}
+
+.abonement-price {
+  background: #E8F5E7;
+  color: #007D21;
+  font-size: 1.15rem;
+  border-radius: 8px;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.abonement-btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6875rem;
+}
+.abonement-butn{
+  border: none;
+  background-color: #fff;
+}
+.abonement-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.abonement-main__right img {
+  width: 100%;
+  max-width: 51.9375rem;
+  max-height: 38.75rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.abonement-works {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.abonement-works__title {
+  font-size: 2.0625rem;
+  font-weight: 700;
+  margin-bottom: 3.375rem;
+}
+
+.abonement-works__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+}
+
+.abonement-works__card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  padding-left: 1rem;
+  /* margin: 1rem; */
+}
+
+.abonement-works__card-title {
+  font-size: 2.0625rem;
+  background-color: #F2F2F2;
+  border-radius: .75rem;
+  padding: .75rem 0;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.abonement-works__card ul {
+  margin: 0;
+  padding-left: 18px;
+  background-color: #F2F2F2;
+  border-radius: .75rem;
+
+  list-style-type: decimal-leading-zero;
+  overflow: auto;
+}
+
+
+.abonement-works__card ul li::marker {
+  color: #007D21;
+}
+
+
+.abonement-works__card li {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .abonement-main {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 98vw;
+  }
+
+  .abonement-main__right img {
+    max-width: 100vw;
+    height: 160px;
+  }
+
+  .abonement-works {
+    max-width: 98vw;
+  }
+
+  .abonement-works__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+  </style>
 </head>
 <body>
-  
+  <section class="abonement-section">
+            <div class="abonement-btns">
+                <button class="abonement-butn">
+                    <img src="/src/assets/icons/arrow-left1variant.svg" alt="кнопка назад" />
+                </button>
+                <button class="abonement-butn">
+                    <img src="/src/assets/icons/arrow-right1variant.svg" alt="кнопка вперёд" />
+                </button>
+            </div>
+            <div class="abonement-card">
+                <div class="abonement-main">
+                    <div class="abonement-main__left">
+                        <div class="abonement-title">Абонементная программа “Стандарт”</div>
+                        <div class="abonement-container">
+                            <div class="abonement-plan">План разработки программы</div>
+                            <div class="abonement-desc-title">Описание абонемента:</div>
+                            <div class="abonement-desc">
+                                Покупая абонемент «Стандарт», вы гарантированно получаете:
+                                <ul>
+                                    <li>Все базовые виды работ</li>
+                                    <li>Сезонный выезд высококвалифицированной бригады на ваш участок на ближайший месяц
+                                    </li>
+                                    <li>Консультацию одного из ведущих агрономов компании</li>
+                                    <li>Постоянную утилизацию мусора</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="abonement-price">от 12 300 ₽</div>
+                        <div class="button-container abonement-btn">
+                            <span>приобрести абонемент</span>
+                            <img src="/src/assets/icons/arrow-right.svg" />
+                        </div>
+                    </div>
+                    <div class="abonement-main__right">
+                        <img src="/src/assets/images/subscription/abonement1.png" alt="Абонемент Стандарт" />
+                    </div>
+                </div>
+                <div class="abonement-works">
+                    <div class="abonement-works__title">Виды выполняемых работ</div>
+                    <div class="abonement-works__grid">
+                        <div class="abonement-works__card">
+                            <div class="abonement-works__card-title">1 выезд</div>
+                            <ul>
+                                <li>выезд и консультация агронома</li>
+                                <li>составление плана мероприятий по уходу за участком</li>
+                                <li>кошение</li>
+                                <li>прополка приствольных кругов</li>
+                                <li>прополка живой изгороди</li>
+                                <li>химическая обработка от заболеваний и вредителей</li>
+                                <li>химическая обработка от клещей</li>
+                                <li>обработка от сорняков (газон)</li>
+                                <li>утилизация мусора</li>
+                            </ul>
+                        </div>
+                        <div class="abonement-works__card">
+                            <div class="abonement-works__card-title">2 выезд</div>
+                            <ul>
+                                <li>кошение</li>
+                                <li>прополка приствольных кругов</li>
+                                <li>прополка живой изгороди</li>
+                                <li>внесение удобрений (газон)</li>
+                                <li>утилизация мусора</li>
+                            </ul>
+                        </div>
+                        <div class="abonement-works__card">
+                            <div class="abonement-works__card-title">3 выезд</div>
+                            <ul>
+                                <li>кошение</li>
+                                <li>прополка приствольных кругов</li>
+                                <li>прополка живой изгороди</li>
+                                <li>химическая обработка от заболеваний и вредителей</li>
+                                <li>утилизация мусора</li>
+                            </ul>
+                        </div>
+                        <div class="abonement-works__card">
+                            <div class="abonement-works__card-title">4 выезд</div>
+                            <ul>
+                                <li>кошение</li>
+                                <li>прополка приствольных кругов</li>
+                                <li>прополка живой изгороди</li>
+                                <li>внесение удобрений (газон)</li>
+                                <li>итоговая проверка качества выполненных работ</li>
+                                <li>утилизация мусора</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
 </body>
 </html>
