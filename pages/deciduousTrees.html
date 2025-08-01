@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Команда, которой доверяют - 3 сада</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
+    <script src="/src/js/headerAnimation.js"></script>
+    <script src="/src/js/showMore.js"></script>
+
+    <link rel="icon" href="/src/assets/icons/logoVector.svg" />
+
+    <meta property="og:title" content="3 sads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru" />
+    <meta property="og:description" content="our services" />
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="header" id="mainHeader">
+            <div class="header-content" id="headerContent">
+                <nav class="nav">
+                    <ul>
+                        <div class="headerOneHalf">
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </div>
+                        <li><a href="/" class="logo">
+                                <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
+                            </a></li>
+                        <div class="headerTwoHalf">
+                            <li class="button-container white-btn">
+                                <span>Каталог растений</span>
+                                <img src="/src/assets/icons/menuHeaderWhite.svg" alt="меню каталог растений" />
+                            </li>
+                            <li class="button-container white-btn">
+                                <span>Оставить заявку</span>
+                                <img src="/src/assets/icons/arrow-rightWhite.svg" alt="стрелка оставить заявку" />
+                            </li>
+                            <li>8 800 219 333</li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-bar" id="headerBar">
+                <nav class="nav">
+                    <ul>
+                        <div class="headerOneHalf">
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </div>
+                        <li><a href="/" class="logo">
+                                <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                            </a></li>
+                        <div class="headerTwoHalf">
+                            <li class="button-container gray-btn">
+                                <span>Каталог растений</span>
+                                <img src="/src/assets/icons/menuHeader.svg" />
+                            </li>
+                            <li class="button-container gray-btn">
+                                <span>Оставить заявку</span>
+                                <img src="/src/assets/icons/arrowRightHeader.svg" />
+                            </li>
+                            <li>8 800 219 333</li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <main>
+        <div>
+            <aside class="nav-container">
+                <ul class="breadcrumbs">
+                    <li>Главная</li>
+                    <li>Каталог растений</li>
+                    <li class="current-pages">Лиственные растения</li>
+                </ul>
+            </aside>
+            <section class="hero-section">
+                <div class="hero-content hero-section-plant">
+                    <div class="hero-text hero-text-container">
+                        <div class="hero-text-top ">
+                            <div class="hero-subtitle">Зелёный акцент — без компромиссов.</div>
+                            <h2>Лиственные
+                                деревья</h2>
+                            <div class="hero-desc">
+                                Лиственные растения придают саду живость, объём и сезонную красоту. Мы подбираем только
+                                здоровые саженцы, адаптированные к местному климату, чтобы ваш участок расцветал с весны
+                                до поздней осени. Качество, разнообразие и забота — под контролем.
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <span>скачать прайслист</span>
+                            <img src="/src/assets/icons/download.svg" />
+                        </div>
+                    </div>
+                    <img class="hero-img-block" src="/src/assets/images/DeciduousTrees/forestBackground.png"
+                        alt="лес фон">
+                </div>
+            </section>
+        </div>
+        <section class="services-main">
+            <div class="services-main-row">
+                <img src="/src/assets/images/plantNursery/cardGarden1.png" alt="сад" class="img-placeholder">
+                <div class="services-main-row__text">
+                    <h3>Питомник растений компании «3 сада»</h3>
+                    <p>
+                        Мы выращиваем саженцы деревьев, кустарников и многолетников в собственном питомнике.
+                        Это позволяет нам контролировать качество посадочного материала и оперативно подбирать растения
+                        под каждый проект без задержек и переплат.
+                    </p>
+                    <p>
+                        Наши растения адаптированы к местному климату и отлично приживаются на участках в Подмосковье
+                        и соседних регионах.
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="services-cards-section">
+            <div class="services-cards-container">
+                <h3 class="services-cards-title">Дополнительные услуги</h3>
+                <p class="services-cards-subtitle">Выберите дополнительные услуги для вашего сада</p>
+                
+                <div class="services-cards-grid" id="servicesCardsGrid">
+                    <!-- Первые 6 карточек видны изначально -->
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card1.png" alt="Услуга 1" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Ландшафтный дизайн</h4>
+                            <p>Создание уникального дизайна вашего участка с учетом всех пожеланий</p>
+                            <div class="service-card-item__price">от 15 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card2.png" alt="Услуга 2" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Система автополива</h4>
+                            <p>Установка и настройка автоматической системы полива для вашего сада</p>
+                            <div class="service-card-item__price">от 25 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card3.png" alt="Услуга 3" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Обработка от вредителей</h4>
+                            <p>Комплексная защита растений от болезней и вредителей</p>
+                            <div class="service-card-item__price">от 8 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card4.png" alt="Услуга 4" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Обрезка деревьев</h4>
+                            <p>Профессиональная обрезка и формирование кроны деревьев</p>
+                            <div class="service-card-item__price">от 12 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card5.png" alt="Услуга 5" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Укладка газона</h4>
+                            <p>Создание идеального газона с нуля или реставрация существующего</p>
+                            <div class="service-card-item__price">от 18 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card6.png" alt="Услуга 6" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Уход за цветниками</h4>
+                            <p>Регулярный уход за цветниками и клумбами</p>
+                            <div class="service-card-item__price">от 6 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Скрытые карточки (изначально не видны) -->
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card1.png" alt="Услуга 7" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Установка освещения</h4>
+                            <p>Создание красивой системы освещения для вашего сада</p>
+                            <div class="service-card-item__price">от 30 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card2.png" alt="Услуга 8" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Мощение дорожек</h4>
+                            <p>Создание красивых и функциональных дорожек в саду</p>
+                            <div class="service-card-item__price">от 20 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card3.png" alt="Услуга 9" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Установка беседки</h4>
+                            <p>Строительство и установка беседок различных типов</p>
+                            <div class="service-card-item__price">от 45 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card4.png" alt="Услуга 10" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Создание водоема</h4>
+                            <p>Строительство прудов, фонтанов и других водных объектов</p>
+                            <div class="service-card-item__price">от 35 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card5.png" alt="Услуга 11" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Установка забора</h4>
+                            <p>Строительство и установка различных типов заборов</p>
+                            <div class="service-card-item__price">от 25 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card6.png" alt="Услуга 12" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Уход за зимним садом</h4>
+                            <p>Специальные услуги по уходу за садом в зимний период</p>
+                            <div class="service-card-item__price">от 15 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card1.png" alt="Услуга 13" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Консультации агронома</h4>
+                            <p>Профессиональные консультации по уходу за растениями</p>
+                            <div class="service-card-item__price">от 3 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card2.png" alt="Услуга 14" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Экологическая обработка</h4>
+                            <p>Безопасная обработка растений без использования химии</p>
+                            <div class="service-card-item__price">от 10 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card-item hidden-card">
+                        <div class="service-card-item__image">
+                            <img src="/src/assets/images/services/card3.png" alt="Услуга 15" />
+                        </div>
+                        <div class="service-card-item__content">
+                            <h4>Уход за плодовыми деревьями</h4>
+                            <p>Специальный уход за плодовыми деревьями и кустарниками</p>
+                            <div class="service-card-item__price">от 12 000 ₽</div>
+                            <button class="service-card-item__btn">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="services-cards-btn-container">
+                    <button class="services-cards-btn" id="showMoreBtn">
+                        <span>Показать еще 9 услуг</span>
+                        <img src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="company-info">
+            <div class="company-info-row">
+                <div class="company-info__text">
+                    <h3>Как выбрать и заказать растения</h3>
+                    <p>
+                        Наш питомник — это более 2 гектаров земли, где под контролемагрономов растут лиственные,
+                        хвойные, декоративные и плодовыедеревья, а также многолетние кустарники и злаки.
+                    </p>
+                    <p>
+                        Перед покупкой можно заказать консультацию агрономаили специалиста по ландшафту. Он подскажет,
+                        какие растениянаилучшим образом подойдут вашему участку.
+                    </p>
+                    <p>
+                        Все саженцы проходят предварительный отбор и доставляютсяв надёжной упаковке. Мы предлагаем
+                        и самостоятельныйвывоз, и полную услугу с посадкой и подкормкой.
+                    </p>
+                </div>
+                <img src="/src/assets/images/DeciduousTrees/forest1.png" alt="сад-1" />
+            </div>
+            <div class="company-info-row">
+                <img src="/src/assets/images/DeciduousTrees/forest2.png" alt="сад-2" />
+                <div>
+                    <h4>Что доступно и в каких объёмах</h4>
+                    <p>Популярные лиственные деревья</p>
+                    <ul>
+                        <li>Берёза</li>
+                        <li>Клён</li>
+                        <li>Яблоня</li>
+                        <li>Липа</li>
+                        <li>Рябина</li>
+                        <li>Сирень</li>
+                    </ul>
+                    <p>Условия поставки</p>
+                    <ul>
+                        <li>От 1 до 100 штук</li>
+                        <li>Доставка по графику</li>
+                        <li>Помощь в подборе</li>
+                        <li>Гарантия приживаемости</li>
+                        <li>Документы на каждую позицию</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li>услуги</li>
+                    <li>прайс-лист</li>
+                    <li>проекты</li>
+                    <li>партнерам</li>
+                    <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
+                    <li>о компании</li>
+                    <li>контакты</li>
+                    <li>каталог растений</li>
+                </ul>
+            </nav>
+
+            <div class="footer-bottom">
+                <span>политика конфиденциальности</span>
+                <div class="footer-social">
+                    <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
+                    <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
+                    <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
+                </div>
+                <span>пользовательское соглашение</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

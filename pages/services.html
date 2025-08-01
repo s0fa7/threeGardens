@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Наши услуги - 3 сада</title>
   <link rel="stylesheet" href="/src/assets/css/app.css" />
-  <script src="/src/js/headerAnimation.js"></script> 
+  <script src="/src/js/headerAnimation.js"></script>
 
   <link rel="icon" href="/src/assets/icons/logoVector.svg" />
 
@@ -21,7 +21,7 @@
   <body>
     <div class="header-container">
       <header class="header" id="mainHeader">
-        <div class="header-content" id="headerContent">
+        <div class="header-content white-mode" id="headerContent">
           <nav class="nav">
             <ul>
               <div class="headerOneHalf">
@@ -36,15 +36,21 @@
                   <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
                 </a></li>
               <div class="headerTwoHalf">
-                <li>Каталог растений</li>
-                <li>Оставить заявку</li>
+                <li class="button-container">
+                  <span>Каталог растений</span>
+                  <img src="/src/assets/icons/menuHeader.svg" />
+                </li>
+                <li class="button-container">
+                  <span>Оставить заявку</span>
+                  <img src="/src/assets/icons/arrowRightHeader.svg" />
+                </li>
                 <li>8 800 219 333</li>
               </div>
             </ul>
           </nav>
         </div>
         <div class="header-bar" id="headerBar">
-            <nav class="nav">
+          <nav class="nav">
             <ul>
               <div class="headerOneHalf">
                 <li><a href="">Услуги</a></li>
@@ -54,12 +60,18 @@
                 <li><a href="">Партнерам</a></li>
                 <li><a href="">Контакты</a></li>
               </div>
-               <li><a href="/" class="logo">
+              <li><a href="/" class="logo">
                   <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
                 </a></li>
               <div class="headerTwoHalf">
-                <li>Каталог растений</li>
-                <li>Оставить заявку</li>
+                <li class="button-container gray-btn">
+                  <span>Каталог растений</span>
+                  <img src="/src/assets/icons/menuHeader.svg" />
+                </li>
+                <li class="button-container gray-btn">
+                  <span>Оставить заявку</span>
+                  <img src="/src/assets/icons/arrowRightHeader.svg" />
+                </li>
                 <li>8 800 219 333</li>
               </div>
             </ul>
@@ -70,27 +82,27 @@
 
     <main>
       <div class="white-mode">
-        <aside class="nav-container">
-              <ul class="breadcrumbs">
-                  <li>Главная</li>
-                  <li class="current-pages">Услуги</li>
-              </ul>
-          </aside>
-          <section class="hero-section">
-              <div class="hero-content">
-                  <div class="hero-text">
-                      <div class="hero-subtitle">Здоровый сад —
-                          без компромиссов</div>
-                      <h2>Комплексный уход за садом, абонементы</h2>
-                      <div class="hero-desc">
-                          Полный цикл заботы о вашем участке: от стрижки газона и обработки
-                          от вредителей до внесения удобрений
-                          и консультаций агронома. Выбирайте абонемент — и доверьте уход профессионалам.
-                      </div>
-                  </div>
-                  <img class="hero-img" src="/src/assets/images/services/servicesMainGarden.png" alt="Жук на листе">
+        <aside class="nav-container white-mode">
+          <ul class="breadcrumbs white-mode">
+            <li>Главная</li>
+            <li class="current-pages white-mode">Услуги</li>
+          </ul>
+        </aside>
+        <section class="hero-section white-mode">
+          <div class="hero-content">
+            <div class="hero-text">
+              <div class="hero-subtitle white-mode">Здоровый сад —
+                без компромиссов</div>
+              <h2>Комплексный уход за садом, абонементы</h2>
+              <div class="hero-desc white-mode">
+                Полный цикл заботы о вашем участке: от стрижки газона и обработки
+                от вредителей до внесения удобрений
+                и консультаций агронома. Выбирайте абонемент — и доверьте уход профессионалам.
               </div>
-          </section>
+            </div>
+            <img class="hero-img" src="/src/assets/images/services/servicesMainGarden.png" alt="Жук на листе">
+          </div>
+        </section>
       </div>
 
       <section class="services-main">

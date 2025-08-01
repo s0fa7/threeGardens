@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Борьба с болезнями и вредителями - 3 сада</title>
+    <title>Команда, которой доверяют - 3 сада</title>
     <link rel="stylesheet" href="/src/assets/css/app.css" />
     <script src="/src/js/headerAnimation.js"></script>
     <script src="/src/js/carouselWork.js"></script>
@@ -35,8 +35,14 @@
                                 <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
                             </a></li>
                         <div class="headerTwoHalf">
-                            <li>Каталог растений</li>
-                            <li>Оставить заявку</li>
+                            <li class="button-container">
+                                <span>Каталог растений</span>
+                                <img src="/src/assets/icons/menuHeaderWhite.svg" alt="меню каталог растений" />
+                            </li>
+                            <li class="button-container">
+                                <span>Оставить заявку</span>
+                                <img src="/src/assets/icons/arrow-rightWhite.svg" alt="стрелка оставить заявку" />
+                            </li>
                             <li>8 800 219 333</li>
                         </div>
                     </ul>
@@ -57,8 +63,14 @@
                                 <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
                             </a></li>
                         <div class="headerTwoHalf">
-                            <li>Каталог растений</li>
-                            <li>Оставить заявку</li>
+                            <li class="button-container gray-btn">
+                                <span>Каталог растений</span>
+                                <img src="/src/assets/icons/menuHeader.svg" />
+                            </li>
+                            <li class="button-container gray-btn">
+                                <span>Оставить заявку</span>
+                                <img src="/src/assets/icons/arrowRightHeader.svg" />
+                            </li>
                             <li>8 800 219 333</li>
                         </div>
                     </ul>
@@ -118,7 +130,7 @@
 
         <section class="story-container">
             <div class="story-container-text">
-                <span class="story-container-text-tags">почему мы</span>
+                <div class="story-container-text-tags">почему мы</div>
                 <h3>История “Три сада”</h3>
             </div>
             <div class="story-container-article">
@@ -152,7 +164,7 @@
         <section>
             <div class="features-container">
                 <div class="story-container-text">
-                    <span class="story-container-text-tags">почему мы</span>
+                    <div class="story-container-text-tags">почему мы</div>
                     <h3>Преимущества,
                         которые вы получите</h3>
                     <p class="green-text">С нашей командой вы обретаете экспертов, готовых создать идеальное
@@ -291,34 +303,78 @@
                 </div>
             </div>
         </section>
-
-
-        <footer class="footer">
-            <div class="footer-content">
-                <nav class="footer-nav">
-                    <ul>
-                        <li>услуги</li>
-                        <li>прайс-лист</li>
-                        <li>проекты</li>
-                        <li>партнерам</li>
-                        <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
-                        <li>о компании</li>
-                        <li>контакты</li>
-                        <li>каталог растений</li>
-                    </ul>
-                </nav>
-
-                <div class="footer-bottom">
-                    <span>политика конфиденциальности</span>
-                    <div class="footer-social">
-                        <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
-                        <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
-                        <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
+        <section>
+            <div class="contacts-header">
+                <div class="button-container">
+                    <span>Оставить заявку</span>
+                    <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
+                </div>
+                <h3 class="contact-heading">Контакты</h3>
+                <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
+            </div>
+            <div class="contants-container about-us-contacts">
+                <div class="contacts-row about-us-contact">
+                    <div class="contant-container green-contacts">
+                        <h3>Позвонить</h3>
+                        <span>8 800 20 19 333</span>
+                        <span>8 985 75 49 333</span>
                     </div>
-                    <span>пользовательское соглашение</span>
+                    <div class="contant-container green-contacts">
+                        <h3>Написать</h3>
+                        <span>8 800 20 19 333</span>
+                        <span>8 985 75 49 333</span>
+                    </div>
+                    <div class="contact-social">
+                        <img class="contact-icon" src="/src/assets/icons/whatsapBlackGreen.svg" alt="whatsapp">
+                        <img class="contact-icon" src="/src/assets/icons/telegramBlackGreen.svg" alt="telegram">
+                        <img class="contact-icon" src="/src/assets/icons/vkBlackGreen.svg" alt="vk">
+                        <img class="contact-icon" src="/src/assets/icons/letter.svg" alt="письмо лого" />
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d561.1330991412364!2d36.86106545142408!3d55.76662475404716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5673b1bdfaf13%3A0x4514191ff92eabc3!2zNTEsINCV0YDRiNC-0LLQviwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxNDMwNTU!5e0!3m2!1sru!2sus!4v1753899914770!5m2!1sru!2sus"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contacts-row about-us-contact">
+                    <div class="contant-container">
+                        <h3>Адрес</h3>
+                        <span>Московская обл., одинцовский г. о., с. ершово 51</span>
+                    </div>
+                    <div class="contant-container">
+                        <h3>Время работы</h3>
+                        <span>с 08:00 до 20:00</span>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li>услуги</li>
+                    <li>прайс-лист</li>
+                    <li>проекты</li>
+                    <li>партнерам</li>
+                    <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
+                    <li>о компании</li>
+                    <li>контакты</li>
+                    <li>каталог растений</li>
+                </ul>
+            </nav>
+
+            <div class="footer-bottom">
+                <span>политика конфиденциальности</span>
+                <div class="footer-social">
+                    <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
+                    <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
+                    <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
+                </div>
+                <span>пользовательское соглашение</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
