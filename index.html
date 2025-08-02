@@ -1,288 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Карусель проектов - 3 сада</title>
   <style>
-    *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+    /* Carousel Styles */
+    .green-carousel-section {
+      padding: 5rem;
+      background: #ffffff;
     }
-    .abonement-card {
-  background-color: #F2F2F2;
-  border-radius: 1rem;
-  padding: 2.5rem;
-  margin: 50px auto;
-  max-width: 70rem;
-  max-height: 119.375rem;
-}
 
-.abonement-main {
-  display: flex;
-  gap: 32px;
-  max-width: 1100px;
-  margin: 0 auto 32px auto;
+    .green-carousel-container {
+      max-width: 1760px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
 
-  display: flex;
-  gap: 1.25rem;
-}
+    .green-carousel-track {
+      display: flex;
+      align-items: self-end;
+      justify-content: center;
+      position: relative;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.abonement-main__left {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 32px 32px 24px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1.5625rem;
-  min-width: 320px;
-}
+    .green-carousel-slide {
+      flex: 0 0 auto;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
 
-.abonement-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  background: #f4f7f4;
-  border-radius: 12px;
-  padding: 12px 18px;
-  text-align: center;
-}
+    .green-carousel-slide.green-active {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 2;
+    }
 
-.abonement-plan {
-  text-align: center;
-}
+    .green-carousel-slide.green-active img {
+      height: 728px;
+      width: 870px;
+    }
 
-.abonement-desc-title,
-.abonement-plan {
-  font-size: 26px;
-  text-transform: uppercase;
-  margin: 0.5rem 0;
-}
+    .green-carousel-image {
+      width: 425px;
+      height: 475px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
 
-.abonement-desc {
-  font-size: 1.125rem;
-}
+    .green-carousel-nav {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      margin-top: 2rem;
+      z-index: 10;
+    }
 
-.abonement-desc ul {
-  list-style: none;
-}
+    .green-carousel-arrow {
+      width: 4rem;
+      height: 4rem;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-.abonement-desc li {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 1rem;
-}
+    .green-carousel-arrow:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.1);
+      ;
+    }
 
-.abonement-container {
-  background-color: #F2F2F2;
-  border-radius: .875rem;
-  padding: 24px 16px;
-}
+    .green-carousel-arrow img {
+      width: 3rem;
+      height: 3rem;
+      transition: transform 0.3s ease;
+    }
 
-.abonement-price {
-  background: #E8F5E7;
-  color: #007D21;
-  font-size: 1.15rem;
-  border-radius: 8px;
-  padding: 10px 0;
-  text-align: center;
-  margin-bottom: 12px;
-}
+    .green-carousel-prev:hover img {
+      transform: translateX(-2px);
+    }
 
-.abonement-btns{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6875rem;
-}
-.abonement-butn{
-  border: none;
-  background-color: #fff;
-}
-.abonement-btn {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+    .green-carousel-next:hover img {
+      transform: translateX(2px);
+    }
 
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .green-carousel-section {
+        padding: 3rem 2rem;
+      }
 
-.abonement-main__right img {
-  width: 100%;
-  max-width: 51.9375rem;
-  max-height: 38.75rem;
-  height: auto;
-  object-fit: cover;
-}
+      .green-carousel-track {
+        gap: 1.5rem;
+        height: auto;
+      }
 
-.abonement-works {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+      .green-carousel-slide.green-active {
+        height: 400px;
+        width: 400px;
+      }
 
-.abonement-works__title {
-  font-size: 2.0625rem;
-  font-weight: 700;
-  margin-bottom: 3.375rem;
-}
+      .green-carousel-arrow {
+        width: 45px;
+        height: 45px;
+      }
 
-.abonement-works__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px 24px;
-}
+      .green-carousel-arrow img {
+        width: 18px;
+        height: 18px;
+      }
+    }
 
-.abonement-works__card {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  padding-left: 1rem;
-  /* margin: 1rem; */
-}
+    @media (max-width: 600px) {
+      .green-carousel-section {
+        padding: 2rem 1rem;
+      }
 
-.abonement-works__card-title {
-  font-size: 2.0625rem;
-  background-color: #F2F2F2;
-  border-radius: .75rem;
-  padding: .75rem 0;
-  text-align: center;
-  margin-bottom: 24px;
-}
+      .green-carousel-track {
+        gap: 1rem;
+      }
 
-.abonement-works__card ul {
-  margin: 0;
-  padding-left: 18px;
-  background-color: #F2F2F2;
-  border-radius: .75rem;
+      .green-carousel-slide {
+        transform: scale(0.7);
+        height: 180px;
+      }
 
-  list-style-type: decimal-leading-zero;
-  overflow: auto;
-}
+      .green-carousel-slide.green-active {
+        transform: scale(1);
+        height: 250px;
+      }
 
+      .green-carousel-image {
+        width: 250px;
+      }
 
-.abonement-works__card ul li::marker {
-  color: #007D21;
-}
+      .green-carousel-arrow {
+        width: 40px;
+        height: 40px;
+      }
 
+      .green-carousel-arrow img {
+        width: 16px;
+        height: 16px;
+      }
+    }
 
-.abonement-works__card li {
-  font-size: 1.125rem;
-  margin-bottom: 24px;
+    @media (max-width: 500px) {
+      .green-carousel-section {
+        padding: 1rem 0.5rem;
+      }
 
-  text-transform: uppercase;
-}
+      .green-carousel-track {
+        gap: 0.75rem;
+      }
 
-@media (max-width: 900px) {
-  .abonement-main {
-    flex-direction: column;
-    gap: 18px;
-    max-width: 98vw;
-  }
+      .green-carousel-slide {
+        transform: scale(0.6);
+        height: 150px;
+      }
 
-  .abonement-main__right img {
-    max-width: 100vw;
-    height: 160px;
-  }
+      .green-carousel-slide.green-active {
+        transform: scale(1);
+        width: 300px;
+        height: 280px;
+      }
 
-  .abonement-works {
-    max-width: 98vw;
-  }
+      .green-carousel-image {
+        width: 160px;
+        height: 160px;
+      }
 
-  .abonement-works__grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
+      .green-carousel-arrow {
+        width: 35px;
+        height: 35px;
+      }
+
+      .green-carousel-arrow img {
+        width: 14px;
+        height: 14px;
+      }
+
+      .green-carousel-arrow{
+        visibility: hidden;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <section class="abonement-section">
-            <div class="abonement-btns">
-                <button class="abonement-butn">
-                    <img src="/src/assets/icons/arrow-left1variant.svg" alt="кнопка назад" />
-                </button>
-                <button class="abonement-butn">
-                    <img src="/src/assets/icons/arrow-right1variant.svg" alt="кнопка вперёд" />
-                </button>
-            </div>
-            <div class="abonement-card">
-                <div class="abonement-main">
-                    <div class="abonement-main__left">
-                        <div class="abonement-title">Абонементная программа “Стандарт”</div>
-                        <div class="abonement-container">
-                            <div class="abonement-plan">План разработки программы</div>
-                            <div class="abonement-desc-title">Описание абонемента:</div>
-                            <div class="abonement-desc">
-                                Покупая абонемент «Стандарт», вы гарантированно получаете:
-                                <ul>
-                                    <li>Все базовые виды работ</li>
-                                    <li>Сезонный выезд высококвалифицированной бригады на ваш участок на ближайший месяц
-                                    </li>
-                                    <li>Консультацию одного из ведущих агрономов компании</li>
-                                    <li>Постоянную утилизацию мусора</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="abonement-price">от 12 300 ₽</div>
-                        <div class="button-container abonement-btn">
-                            <span>приобрести абонемент</span>
-                            <img src="/src/assets/icons/arrow-right.svg" />
-                        </div>
-                    </div>
-                    <div class="abonement-main__right">
-                        <img src="/src/assets/images/subscription/abonement1.png" alt="Абонемент Стандарт" />
-                    </div>
-                </div>
-                <div class="abonement-works">
-                    <div class="abonement-works__title">Виды выполняемых работ</div>
-                    <div class="abonement-works__grid">
-                        <div class="abonement-works__card">
-                            <div class="abonement-works__card-title">1 выезд</div>
-                            <ul>
-                                <li>выезд и консультация агронома</li>
-                                <li>составление плана мероприятий по уходу за участком</li>
-                                <li>кошение</li>
-                                <li>прополка приствольных кругов</li>
-                                <li>прополка живой изгороди</li>
-                                <li>химическая обработка от заболеваний и вредителей</li>
-                                <li>химическая обработка от клещей</li>
-                                <li>обработка от сорняков (газон)</li>
-                                <li>утилизация мусора</li>
-                            </ul>
-                        </div>
-                        <div class="abonement-works__card">
-                            <div class="abonement-works__card-title">2 выезд</div>
-                            <ul>
-                                <li>кошение</li>
-                                <li>прополка приствольных кругов</li>
-                                <li>прополка живой изгороди</li>
-                                <li>внесение удобрений (газон)</li>
-                                <li>утилизация мусора</li>
-                            </ul>
-                        </div>
-                        <div class="abonement-works__card">
-                            <div class="abonement-works__card-title">3 выезд</div>
-                            <ul>
-                                <li>кошение</li>
-                                <li>прополка приствольных кругов</li>
-                                <li>прополка живой изгороди</li>
-                                <li>химическая обработка от заболеваний и вредителей</li>
-                                <li>утилизация мусора</li>
-                            </ul>
-                        </div>
-                        <div class="abonement-works__card">
-                            <div class="abonement-works__card-title">4 выезд</div>
-                            <ul>
-                                <li>кошение</li>
-                                <li>прополка приствольных кругов</li>
-                                <li>прополка живой изгороди</li>
-                                <li>внесение удобрений (газон)</li>
-                                <li>итоговая проверка качества выполненных работ</li>
-                                <li>утилизация мусора</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> 
+  <section>
+    <div class="green-carousel-section">
+      <div class="green-carousel-container">
+        <div class="green-carousel-nav">
+          <button class="green-carousel-arrow green-carousel-prev" aria-label="Предыдущее изображение">
+            <img src="/src/assets/icons/arrow-left1variant.svg" alt="стрелка влево">
+          </button>
+          <button class="green-carousel-arrow green-carousel-next" aria-label="Следующее изображение">
+            <img src="/src/assets/icons/arrow-right1variant.svg" alt="стрелка вправо">
+          </button>
+        </div>
+        <div class="green-carousel-track">
+          <div class="green-carousel-slide" data-index="0">
+            <img src="/src/assets/images/greenfieidV2/garden1.png" alt="Дом с садом" class="green-carousel-image">
+          </div>
+          <div class="green-carousel-slide green-active" data-index="1">
+            <img src="/src/assets/images/greenfieidV2/garden2.png" alt="Ландшафтный дизайн"
+              class="green-carousel-image">
+          </div>
+          <div class="green-carousel-slide" data-index="2">
+            <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду" class="green-carousel-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    class Carousel {
+      constructor(container) {
+        this.container = container;
+        this.track = container.querySelector('.green-carousel-track');
+        this.slides = container.querySelectorAll('.green-carousel-slide');
+        this.prevBtn = container.querySelector('.green-carousel-prev');
+        this.nextBtn = container.querySelector('.green-carousel-next');
+        this.currentIndex = 1; // Start with middle slide active
+        this.isTransitioning = false;
+
+        this.init();
+      }
+
+      init() {
+        this.setupEventListeners();
+        this.updateSlides();
+        this.centerActiveSlide();
+      }
+
+      setupEventListeners() {
+        this.prevBtn.addEventListener('click', () => this.prev());
+        this.nextBtn.addEventListener('click', () => this.next());
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') {
+            this.prev();
+          } else if (e.key === 'ArrowRight') {
+            this.next();
+          }
+        });
+
+        // Touch/swipe support
+        let startX = 0;
+        let endX = 0;
+
+        this.track.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        });
+
+        this.track.addEventListener('touchend', (e) => {
+          endX = e.changedTouches[0].clientX;
+          this.handleSwipe(startX, endX);
+        });
+
+        // Mobile click navigation
+        this.slides.forEach((slide, index) => {
+          slide.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              this.handleSlideClick(index);
+            }
+          });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+          this.centerActiveSlide();
+        });
+      }
+
+      handleSwipe(startX, endX) {
+    const threshold = 50;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > threshold) {
+        if (diff > 0) {
+            this.next();
+        } else {
+            this.prev();
+        }
+    }
+}
+
+
+      prev() {
+        if (this.isTransitioning) return;
+
+        this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+        this.updateSlides();
+      }
+
+      next() {
+        if (this.isTransitioning) return;
+
+        this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+        this.updateSlides();
+      }
+
+      updateSlides() {
+        this.isTransitioning = true;
+
+        // Remove active class from all slides
+        this.slides.forEach(slide => {
+          slide.classList.remove('green-active');
+        });
+
+        // Add active class to current slide
+        this.slides[this.currentIndex].classList.add('green-active');
+
+        // Center the active slide
+        this.centerActiveSlide();
+
+        // Update button states
+        this.updateButtonStates();
+
+        // Reset transition flag after animation completes
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 500); // Match CSS transition duration
+      }
+
+      centerActiveSlide() {
+        const trackWidth = this.track.offsetWidth;
+        const slideWidth = this.getSlideWidth();
+        const gap = this.getGap();
+        const totalSlideWidth = slideWidth + gap;
+        const centerOffset = (trackWidth - slideWidth) / 2;
+        const targetOffset = centerOffset - (this.currentIndex * totalSlideWidth);
+
+        this.track.style.transform = `translateX(${targetOffset}px)`;
+      }
+
+      getSlideWidth() {
+  const windowWidth = window.innerWidth;
+  if (windowWidth <= 400) return 200;
+  if (windowWidth <= 600) return 250;
+  if (windowWidth <= 900) return 300;
+  return 400;
+}
+
+
+      getGap() {
+        const windowWidth = window.innerWidth;
+        if (windowWidth <= 400) return 12; // 0.75rem
+        if (windowWidth <= 600) return 16; // 1rem
+        if (windowWidth <= 900) return 24; // 1.5rem
+        return 32; // 2rem
+      }
+
+      updateButtonStates() {
+        // Enable/disable buttons based on current position
+        this.prevBtn.disabled = false;
+        this.nextBtn.disabled = false;
+
+        // Optional: Add visual feedback for disabled state
+        this.prevBtn.style.opacity = '1';
+        this.nextBtn.style.opacity = '1';
+      }
+    }
+
+    // Initialize carousel when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselContainer = document.querySelector('.green-carousel-container');
+      if (carouselContainer) {
+        new Carousel(carouselContainer);
+      }
+    });
+  </script>
 </body>
+
 </html>
