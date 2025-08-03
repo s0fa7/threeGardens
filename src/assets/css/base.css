@@ -25,7 +25,7 @@ a:active {
 .header-container {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 13;
 
   background: rgba(0, 0, 0, 0);
   /* background-color: #7C9085;

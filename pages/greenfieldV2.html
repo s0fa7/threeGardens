@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Команда, которой доверяют - 3 сада</title>
     <link rel="stylesheet" href="/src/assets/css/app.css" />
-    <script src="/src/js/headerAnimation.js"></script>
-    <script src="/src/js/greenCarousel.js"></script>
 
     <link rel="icon" href="/src/assets/icons/logoVector.svg" />
 
@@ -138,24 +136,24 @@
                         </button>
                     </div>
                     <div class="green-carousel-track">
-                        <div class="green-carousel-slide" data-index="0">
-                            <img src="/src/assets/images/greenfieidV2/garden1.png" alt="Дом с садом"
-                                class="green-carousel-image">
-                        </div>
-                        <div class="green-carousel-slide green-active" data-index="1">
-                            <img src="/src/assets/images/greenfieidV2/garden2.png" alt="Ландшафтный дизайн"
-                                class="green-carousel-image">
-                        </div>
-                        <div class="green-carousel-slide" data-index="2">
-                            <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду"
-                                class="green-carousel-image">
-                        </div>
+                        <img src="/src/assets/images/greenfieidV2/garden1.png" data-index="0" alt="Дом с садом"
+                            class="green-carousel-slide thumbnail green-carousel-image">
+                        <img src="/src/assets/images/greenfieidV2/garden2.png" data-index="1" alt="Ландшафтный дизайн"
+                            class="green-carousel-slide green-active thumbnail green-carousel-image">
+                        <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду"
+                            class="green-carousel-slide green-carousel-image thumbnail" data-index="2">
+<!-- 
+                        <img src="/src/assets/images/greenfieidV2/garden1.png" alt="Беседка в саду"
+                            class="green-carousel-slide green-carousel-image thumbnail" data-index="2"> -->
                     </div>
                 </div>
+                <div id="modal" class="modal">
+                    <img src="/src/assets/icons/cross.svg" class="close" alt="cross" />
+                    <img class="modal-content" id="modalImage">
+                </div>
             </div>
+
         </section>
-
-
 
 
         <section class="company-info">
@@ -213,6 +211,13 @@
             </div>
         </div>
     </footer>
+
+    <script src="/src/js/headerAnimation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/src/js/greenCarousel.js"></script>
+    <script src="/src/js/modal.js"></script>
+
+
 </body>
 
 </html>

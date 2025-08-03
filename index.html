@@ -2,394 +2,381 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карусель проектов - 3 сада</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карточка услуги</title>
   <style>
-    /* Carousel Styles */
-    .green-carousel-section {
-      padding: 5rem;
-      background: #ffffff;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
     }
 
-    .green-carousel-container {
-      max-width: 1760px;
-      height: 100%;
+    .price-container {
       margin: 0 auto;
-      position: relative;
-      overflow: hidden;
+      padding: 20px;
     }
 
-    .green-carousel-track {
+    .price-card {
       display: flex;
-      align-items: self-end;
+      background-color: #f0f0f0;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      position: relative;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .green-carousel-slide {
-      flex: 0 0 auto;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-      transform: scale(0.8);
-      opacity: 0.7;
-    }
-
-    .green-carousel-slide.green-active {
-      transform: scale(1);
-      opacity: 1;
-      z-index: 2;
-    }
-
-    .green-carousel-slide.green-active img {
-      height: 728px;
-      width: 870px;
-    }
-
-    .green-carousel-image {
-      width: 425px;
-      height: 475px;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .green-carousel-nav {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      gap: 2rem;
-      margin-top: 2rem;
-      z-index: 10;
-    }
-
-    .green-carousel-arrow {
-      width: 4rem;
-      height: 4rem;
-      border: none;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 50%;
+    .price-card-image {
+      max-width: 460px;
+      max-height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
+    }
+
+    .price-card-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .price-card-content {
+      flex: 2 1 400px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card-title {
+      font-size: 33px;
+      font-weight: 400;
+      line-height: 90%;
+      color: #35AB54;
+      margin: 0 auto;
+    }
+
+    .price-card-description {
+      font-size: 12px;
+      color: #A0AEA4;
+    }
+
+    .price-services {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .price-service {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+    }
+
+    .price-service:last-child {
+      border-bottom: none;
+    }
+
+    .price-service-info {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .price-service-info span:first-child {
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 50%;
+    }
+
+    .price-service-price {
+      color: #007D21;
+      font-size: 18px;
+      width: 50%;
+    }
+
+    .price-service-price.text {
+      font-size: 16px;
+      color: #A0AEA4;
+    }
+
+    .service-arrow {
+      width: 1.25rem;
+      height: 1.25rem;
+      padding: 0.5rem;
+      border: 1.5px solid #81AB7C33;
+      border-radius: 50%;
       cursor: pointer;
-      transition: all 0.3s ease;
     }
 
-    .green-carousel-arrow:hover {
-      background: rgba(255, 255, 255, 1);
-      transform: scale(1.1);
-      ;
-    }
 
-    .green-carousel-arrow img {
-      width: 3rem;
-      height: 3rem;
-      transition: transform 0.3s ease;
-    }
-
-    .green-carousel-prev:hover img {
-      transform: translateX(-2px);
-    }
-
-    .green-carousel-next:hover img {
-      transform: translateX(2px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 900px) {
-      .green-carousel-section {
-        padding: 3rem 2rem;
+    @media(max-width: 768px) {
+      .price-card {
+        flex-direction: column;
       }
 
-      .green-carousel-track {
-        gap: 1.5rem;
-        height: auto;
+      .price-card-image,
+      .price-card-content {
+        max-width: 100%;
       }
 
-      .green-carousel-slide.green-active {
-        height: 400px;
-        width: 400px;
-      }
-
-      .green-carousel-arrow {
-        width: 45px;
-        height: 45px;
-      }
-
-      .green-carousel-arrow img {
-        width: 18px;
-        height: 18px;
+      .price-service-info {
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 600px) {
-      .green-carousel-section {
-        padding: 2rem 1rem;
-      }
 
-      .green-carousel-track {
-        gap: 1rem;
-      }
 
-      .green-carousel-slide {
-        transform: scale(0.7);
-        height: 180px;
-      }
 
-      .green-carousel-slide.green-active {
-        transform: scale(1);
-        height: 250px;
-      }
 
-      .green-carousel-image {
-        width: 250px;
-      }
+    .price-hidden-containers {
+      margin: 48px auto;
+      padding: 20px;
+      border-top: 1px solid #B3D9AE;
 
-      .green-carousel-arrow {
-        width: 40px;
-        height: 40px;
-      }
-
-      .green-carousel-arrow img {
-        width: 16px;
-        height: 16px;
-      }
+      display: flex;
+      flex-direction: column;
     }
 
-    @media (max-width: 500px) {
-      .green-carousel-section {
-        padding: 1rem 0.5rem;
+    .price-hidden-containers h3 {
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .price-hidden-container {
+      border-bottom: 1px solid #B3D9AE;
+      padding: 2rem 0;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .price-hidden-container p,
+    .price-hidden-services {
+      width: 50%;
+    }
+
+    .price-hidden-service-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 8px 0;
+    }
+
+    .price-hidden-service-left {
+      max-width: 60%;
+    }
+
+    .price-hidden-service-desc {
+      font-weight: normal;
+      font-size: 0.95em;
+    }
+
+    .price-hidden-service-right {
+      color: #007D21;
+      text-align: right;
+    }
+
+    .price-hidden-note-container h3 {
+      color: #A0AEA4;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .price-hidden-notes {
+      margin-top: 12px;
+      color: #A0AEA4;
+    }
+
+    @media(max-width: 600px) {
+      .price-hidden-container {
+        flex-direction: column;
       }
 
-      .green-carousel-track {
-        gap: 0.75rem;
-      }
-
-      .green-carousel-slide {
-        transform: scale(0.6);
-        height: 150px;
-      }
-
-      .green-carousel-slide.green-active {
-        transform: scale(1);
-        width: 300px;
-        height: 280px;
-      }
-
-      .green-carousel-image {
-        width: 160px;
-        height: 160px;
-      }
-
-      .green-carousel-arrow {
-        width: 35px;
-        height: 35px;
-      }
-
-      .green-carousel-arrow img {
-        width: 14px;
-        height: 14px;
-      }
-
-      .green-carousel-arrow{
-        visibility: hidden;
+      .price-hidden-container p,
+      .price-hidden-services {
+        width: 100%;
       }
     }
   </style>
 </head>
 
 <body>
-  <section>
-    <div class="green-carousel-section">
-      <div class="green-carousel-container">
-        <div class="green-carousel-nav">
-          <button class="green-carousel-arrow green-carousel-prev" aria-label="Предыдущее изображение">
-            <img src="/src/assets/icons/arrow-left1variant.svg" alt="стрелка влево">
-          </button>
-          <button class="green-carousel-arrow green-carousel-next" aria-label="Следующее изображение">
-            <img src="/src/assets/icons/arrow-right1variant.svg" alt="стрелка вправо">
-          </button>
-        </div>
-        <div class="green-carousel-track">
-          <div class="green-carousel-slide" data-index="0">
-            <img src="/src/assets/images/greenfieidV2/garden1.png" alt="Дом с садом" class="green-carousel-image">
-          </div>
-          <div class="green-carousel-slide green-active" data-index="1">
-            <img src="/src/assets/images/greenfieidV2/garden2.png" alt="Ландшафтный дизайн"
-              class="green-carousel-image">
-          </div>
-          <div class="green-carousel-slide" data-index="2">
-            <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду" class="green-carousel-image">
-          </div>
+
+  <div class="price-container">
+    <div class="price-card">
+      <!-- Изображение -->
+      <div class="price-card-image">
+        <img src="/src/assets/images/priceV2/price-photo1.png" alt="Сад" />
+      </div>
+      <!-- Контент -->
+      <div class="price-card-content">
+        <h2 class="price-card-title">Уход за садом</h2>
+        <p class="price-card-description">*Стоимость на сайте указана на основе стандартных параметров.Фактическая цена
+          может
+          варьироваться в зависимости от особенностей участка: типа почвы, рельефа, удалённости, пожеланий по озеленению
+          и другим индивидуальным условиям.</p>
+        <ul class="price-services">
+          <li class="price-service">
+            <div class="price-service-info">
+              <span>мощение территории</span>
+              <span class="service-price">от 95 руб.</span>
+            </div>
+            <img src="/src/assets/icons/arrow-right.svg" class="service-arrow" alt="стрелка раскрыть"
+              onclick="toggleDetails('details1')" />
+          </li>
+          <li class="price-service">
+            <div class="price-service-info">
+              <span>дренажная система участка</span>
+              <span class="price-service-price text">Для оценки точной стоимости требуется выезд
+                специалиста</span>
+            </div>
+            <img src="/src/assets/icons/arrow-right.svg" class="service-arrow" alt="стрелка раскрыть"
+              onclick="toggleDetails('details2')" />
+          </li>
+          <li class="price-service">
+            <div class="price-service-info">
+              <span>вертикальная планировка</span>
+              <span class="price-service-price">от 95 руб.</span>
+            </div>
+            <img src="/src/assets/icons/arrow-right.svg" class="service-arrow" alt="стрелка раскрыть"
+              onclick="toggleDetails('details3')" />
+          </li>
+          <li class="price-service">
+            <div class="price-service-info">
+              <span>освещение территории</span>
+              <span class="price-service-price text">Для оценки точной стоимости требуется выезд
+                специалиста</span>
+            </div>
+            <img src="/src/assets/icons/arrow-right.svg" class="service-arrow" alt="стрелка раскрыть"
+              onclick="toggleDetails('details4')" />
+          </li>
+        </ul>
+        <div href="#" class="button-container">
+          <span>Оставить заявку</span>
+          <img src="/src/assets/icons/arrow-right.svg" />
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+
+
+
+
+  <div class="price-hidden-containers">
+    <h3>деревья и кустарники</h3>
+    <div class="price-hidden-container">
+      <p>Подкормка удобрениями деревьев и кустарников, шт*</p>
+      <div class="price-hidden-services">
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>высотой 1-3 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 95 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>высотой 3-7 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 140 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>выше 7 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 190 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь до 1 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 140 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь 1-3 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 190 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь 3-5 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 215 РУБ.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-hidden-container">
+      <p>Подкормка удобрениями деревьев и кустарников, шт*</p>
+      <div class="price-hidden-services">
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>высотой 1-3 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 95 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>высотой 3-7 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 140 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>выше 7 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 190 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь до 1 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 140 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь 1-3 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 190 РУБ.</div>
+        </div>
+        <div class="price-hidden-service-row">
+          <div class="price-hidden-service-left">
+            <div>живая изгородь 3-5 м</div>
+          </div>
+          <div class="price-hidden-service-right">ОТ 215 РУБ.</div>
+        </div>
+      </div>
+    </div>
+    <div class="price-hidden-note-container">
+      <h3>примечание:</h3>
+      <p class="price-hidden-notes">*Стоимость материалов не включена</p>
+      <p class="price-hidden-notes">*Стоимость материалов не включена</p>
+    </div>
+  </div>
+
+
+
 
   <script>
-    class Carousel {
-      constructor(container) {
-        this.container = container;
-        this.track = container.querySelector('.green-carousel-track');
-        this.slides = container.querySelectorAll('.green-carousel-slide');
-        this.prevBtn = container.querySelector('.green-carousel-prev');
-        this.nextBtn = container.querySelector('.green-carousel-next');
-        this.currentIndex = 1; // Start with middle slide active
-        this.isTransitioning = false;
-
-        this.init();
-      }
-
-      init() {
-        this.setupEventListeners();
-        this.updateSlides();
-        this.centerActiveSlide();
-      }
-
-      setupEventListeners() {
-        this.prevBtn.addEventListener('click', () => this.prev());
-        this.nextBtn.addEventListener('click', () => this.next());
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') {
-            this.prev();
-          } else if (e.key === 'ArrowRight') {
-            this.next();
-          }
-        });
-
-        // Touch/swipe support
-        let startX = 0;
-        let endX = 0;
-
-        this.track.addEventListener('touchstart', (e) => {
-          startX = e.touches[0].clientX;
-        });
-
-        this.track.addEventListener('touchend', (e) => {
-          endX = e.changedTouches[0].clientX;
-          this.handleSwipe(startX, endX);
-        });
-
-        // Mobile click navigation
-        this.slides.forEach((slide, index) => {
-          slide.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-              e.preventDefault();
-              this.handleSlideClick(index);
-            }
-          });
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-          this.centerActiveSlide();
-        });
-      }
-
-      handleSwipe(startX, endX) {
-    const threshold = 50;
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > threshold) {
-        if (diff > 0) {
-            this.next();
-        } else {
-            this.prev();
-        }
-    }
-}
-
-
-      prev() {
-        if (this.isTransitioning) return;
-
-        this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
-        this.updateSlides();
-      }
-
-      next() {
-        if (this.isTransitioning) return;
-
-        this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-        this.updateSlides();
-      }
-
-      updateSlides() {
-        this.isTransitioning = true;
-
-        // Remove active class from all slides
-        this.slides.forEach(slide => {
-          slide.classList.remove('green-active');
-        });
-
-        // Add active class to current slide
-        this.slides[this.currentIndex].classList.add('green-active');
-
-        // Center the active slide
-        this.centerActiveSlide();
-
-        // Update button states
-        this.updateButtonStates();
-
-        // Reset transition flag after animation completes
-        setTimeout(() => {
-          this.isTransitioning = false;
-        }, 500); // Match CSS transition duration
-      }
-
-      centerActiveSlide() {
-        const trackWidth = this.track.offsetWidth;
-        const slideWidth = this.getSlideWidth();
-        const gap = this.getGap();
-        const totalSlideWidth = slideWidth + gap;
-        const centerOffset = (trackWidth - slideWidth) / 2;
-        const targetOffset = centerOffset - (this.currentIndex * totalSlideWidth);
-
-        this.track.style.transform = `translateX(${targetOffset}px)`;
-      }
-
-      getSlideWidth() {
-  const windowWidth = window.innerWidth;
-  if (windowWidth <= 400) return 200;
-  if (windowWidth <= 600) return 250;
-  if (windowWidth <= 900) return 300;
-  return 400;
-}
-
-
-      getGap() {
-        const windowWidth = window.innerWidth;
-        if (windowWidth <= 400) return 12; // 0.75rem
-        if (windowWidth <= 600) return 16; // 1rem
-        if (windowWidth <= 900) return 24; // 1.5rem
-        return 32; // 2rem
-      }
-
-      updateButtonStates() {
-        // Enable/disable buttons based on current position
-        this.prevBtn.disabled = false;
-        this.nextBtn.disabled = false;
-
-        // Optional: Add visual feedback for disabled state
-        this.prevBtn.style.opacity = '1';
-        this.nextBtn.style.opacity = '1';
+    function toggleDetails(id) {
+      const elem = document.getElementById(id);
+      if (elem.style.display === "none") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
       }
     }
-
-    // Initialize carousel when DOM is loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      const carouselContainer = document.querySelector('.green-carousel-container');
-      if (carouselContainer) {
-        new Carousel(carouselContainer);
-      }
-    });
   </script>
+
+
 </body>
 
 </html>

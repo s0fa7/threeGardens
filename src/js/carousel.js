@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Карусель для абонементов
-    const cards = document.querySelectorAll('.plant-card');
+    const cards = document.querySelectorAll('.abonement-card');
     const prevBtn = document.getElementById('abonement-prev');
     const nextBtn = document.getElementById('abonement-next');
     let current = 0;
@@ -12,18 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', function () {
-            current = (current - 1 + total) % total;
-            showCard(current);
-        });
-
-        nextBtn.addEventListener('click', function () {
-            current = (current + 1) % total;
-            showCard(current);
-        });
-
+    prevBtn.addEventListener('click', function () {
+        current = (current - 1 + total) % total;
         showCard(current);
-    }
-    
+    });
+
+    nextBtn.addEventListener('click', function () {
+        current = (current + 1) % total;
+        showCard(current);
+    });
+
+    showCard(current);
 });
