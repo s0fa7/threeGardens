@@ -27,7 +27,7 @@ a:active {
   top: 0;
   z-index: 13;
 
-  background: rgba(0, 0, 0, 0);
+  background: rgba(165, 255, 180, 0);
   /* background-color: #7C9085;
   background-image: linear-gradient(90deg, #93aa9d 0%, #acc5b8 70%); */
 }
