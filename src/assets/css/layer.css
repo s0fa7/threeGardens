@@ -105,6 +105,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: flex-start;
+
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tags li {
@@ -197,7 +201,8 @@
 
   font-size: 16px;
   line-height: 120%;
-  max-width: 51.6875rem;
+  max-width: 90%;
+  margin: 1rem;
 }
 
 .services-main-row__text h3 {
@@ -416,17 +421,18 @@
 }
 
 @media (max-width: 900px) {
-  .service-card{
+  .service-card {
     flex-direction: column;
     height: auto;
   }
+
   .service-card__content {
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
   }
 
-  .service-card__image img{
+  .service-card__image img {
     width: 220px;
     height: 220px;
     margin: 0 auto;
@@ -607,7 +613,10 @@
     height: 16.25rem;
   }
 
-  .company-info-row h3,
+  .company-info-row h3 {
+    font-size: 32px;
+  }
+
   .company-info-row h4 {
     font-size: 1.2rem;
   }
@@ -629,7 +638,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  max-width: 1200px;
+  max-width: 50%;
   margin: 0 auto 2.5rem auto;
   padding: 0 1.5rem;
 }
@@ -643,10 +652,10 @@
   align-items: start;
 }
 
-.article-container p,
+/* .article-container p,
 .text-info-group {
-  max-width: 100%;
-}
+  width: 50%;
+} */
 
 .text-info-group p {
   margin-bottom: 1.1rem;
@@ -656,7 +665,7 @@
 .border-text {
   border-bottom: 1px solid #7C9085;
   margin-bottom: 5.625rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .green-text {
@@ -979,7 +988,14 @@
 @media (max-width: 900px) {
   .abonement-main {
     gap: 18px;
-    max-width: 31.25rem;
+    /* max-width: 31.25rem; */
+    flex-direction: column;
+  }
+
+  .abonement-card {
+    max-height: 118rem;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
   }
 
   #green-card-abonement-main {
@@ -1028,12 +1044,12 @@
   gap: 3.125rem;
   align-items: flex-start;
 
-  max-width: 633px;
-  margin: 0 5rem;
+  max-width: 50%;
 }
 
 .story-container-text h3 {
   font-size: 4.375rem;
+  max-width: 100%;
 }
 
 .story-container-text-tags {
@@ -1054,6 +1070,8 @@
   justify-content: center;
 
   margin: 60px auto;
+  padding: 1rem;
+  width: 100%;
 }
 
 .story-container-article-row {
@@ -1062,7 +1080,7 @@
   gap: 6.25rem;
   justify-content: space-between;
 
-  max-width: 573px;
+  max-width: 50%;
 }
 
 .story-container-article-row {
@@ -1140,11 +1158,20 @@
 @media (max-width: 600px) {
   .story-container-article {
     flex-direction: column;
-    max-width: 343px;
+    max-width: 100%;
   }
 
   .features-container {
     flex-direction: column;
+  }
+
+  .story-container-article-row,
+  .story-container-text {
+    max-width: 100%;
+  }
+
+  .story-container-text h3 {
+    font-size: 36px;
   }
 }
 
@@ -1389,8 +1416,11 @@
     margin: 1rem;
   }
 
-  .contacts-row {
-    width: auto;
+  .contacts-row,
+  .about-us-contact.contacts-row:last-child {
+    width: 95%;
+    margin: 0 auto;
+    position: static;
   }
 }
 
@@ -1409,6 +1439,21 @@
 .hero-section-plant {
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .hero-section-plant {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .hero-section-plant  .hero-text-for-partners{
+    padding: 1rem;
+  }
+  .hero-section-plant .hero-img-block{
+    width: 80%;
+    height: auto;
+  }
 }
 
 
@@ -1729,12 +1774,12 @@
   border-radius: 50%;
 }
 
-.company-info__text h3 {
+/* .company-info__text h3 {
   font-size: 48px;
   font-weight: 700;
   max-width: 538px;
   line-height: 80%;
-}
+} */
 
 .project-banner-logo {
   width: 11.25rem;
@@ -2316,14 +2361,12 @@
 
   .project-project {
     flex: 0 0 auto;
-    width: 80vw;
-    height: 50vh;
     scroll-snap-align: start;
   }
 
   .project-project .project-img-wrapper {
     width: auto;
-    height: 100%;
+    /* height: 100%; */
   }
 
   .project-project:hover img {
@@ -2332,9 +2375,9 @@
     width: 100px;
   }
 
-  .project-project img {
-    height: 320px;
-    width: 320px;
+  .project-project img:not(.button-container img) {
+    height: 45vh;
+    width: 45vw;
   }
 
   .project-info {
@@ -2343,7 +2386,16 @@
     color: rgba(48, 58, 48, 1);
     position: static;
     max-width: 80%;
+    max-height: 50%;
     align-items: flex-start;
+  }
+
+  .project-info p {
+    display: none;
+  }
+
+  .project-info h3 {
+    font-size: 20px;
   }
 }
 
@@ -2908,7 +2960,8 @@
   gap: 1rem;
   height: 80%;
 }
-.header-main-path{
+
+.header-main-path {
   background-color: #4A5F56;
 }
 
