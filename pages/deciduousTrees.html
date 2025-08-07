@@ -101,7 +101,7 @@
                                 до поздней осени. Качество, разнообразие и забота — под контролем.
                             </div>
                         </div>
-                        <div class="button-container">
+                        <div class="button-container white-btn-bg">
                             <span>скачать прайслист</span>
                             <img src="/src/assets/icons/download.svg" />
                         </div>
@@ -132,202 +132,475 @@
 
 
 
-        <section class="services-cards-section">
-            <div class="services-cards-container">
-                <h3 class="services-cards-title">Дополнительные услуги</h3>
-                <p class="services-cards-subtitle">Выберите дополнительные услуги для вашего сада</p>
-                
-                <div class="services-cards-grid" id="servicesCardsGrid">
-                    <!-- Первые 6 карточек видны изначально -->
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card1.png" alt="Услуга 1" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Ландшафтный дизайн</h4>
-                            <p>Создание уникального дизайна вашего участка с учетом всех пожеланий</p>
-                            <div class="service-card-item__price">от 15 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
+        <section class="plant-cards-section">
+            <div class="plant-cards-container">
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden1.png"
+                            alt="Ива шаровидная">
                     </div>
-                    
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card2.png" alt="Услуга 2" />
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="service-card-item__content">
-                            <h4>Система автополива</h4>
-                            <p>Установка и настройка автоматической системы полива для вашего сада</p>
-                            <div class="service-card-item__price">от 25 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card3.png" alt="Услуга 3" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Обработка от вредителей</h4>
-                            <p>Комплексная защита растений от болезней и вредителей</p>
-                            <div class="service-card-item__price">от 8 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card4.png" alt="Услуга 4" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Обрезка деревьев</h4>
-                            <p>Профессиональная обрезка и формирование кроны деревьев</p>
-                            <div class="service-card-item__price">от 12 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card5.png" alt="Услуга 5" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Укладка газона</h4>
-                            <p>Создание идеального газона с нуля или реставрация существующего</p>
-                            <div class="service-card-item__price">от 18 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card6.png" alt="Услуга 6" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Уход за цветниками</h4>
-                            <p>Регулярный уход за цветниками и клумбами</p>
-                            <div class="service-card-item__price">от 6 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Скрытые карточки (изначально не видны) -->
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card1.png" alt="Услуга 7" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Установка освещения</h4>
-                            <p>Создание красивой системы освещения для вашего сада</p>
-                            <div class="service-card-item__price">от 30 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card2.png" alt="Услуга 8" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Мощение дорожек</h4>
-                            <p>Создание красивых и функциональных дорожек в саду</p>
-                            <div class="service-card-item__price">от 20 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card3.png" alt="Услуга 9" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Установка беседки</h4>
-                            <p>Строительство и установка беседок различных типов</p>
-                            <div class="service-card-item__price">от 45 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card4.png" alt="Услуга 10" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Создание водоема</h4>
-                            <p>Строительство прудов, фонтанов и других водных объектов</p>
-                            <div class="service-card-item__price">от 35 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card5.png" alt="Услуга 11" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Установка забора</h4>
-                            <p>Строительство и установка различных типов заборов</p>
-                            <div class="service-card-item__price">от 25 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card6.png" alt="Услуга 12" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Уход за зимним садом</h4>
-                            <p>Специальные услуги по уходу за садом в зимний период</p>
-                            <div class="service-card-item__price">от 15 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card1.png" alt="Услуга 13" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Консультации агронома</h4>
-                            <p>Профессиональные консультации по уходу за растениями</p>
-                            <div class="service-card-item__price">от 3 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card2.png" alt="Услуга 14" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Экологическая обработка</h4>
-                            <p>Безопасная обработка растений без использования химии</p>
-                            <div class="service-card-item__price">от 10 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card-item hidden-card">
-                        <div class="service-card-item__image">
-                            <img src="/src/assets/images/services/card3.png" alt="Услуга 15" />
-                        </div>
-                        <div class="service-card-item__content">
-                            <h4>Уход за плодовыми деревьями</h4>
-                            <p>Специальный уход за плодовыми деревьями и кустарниками</p>
-                            <div class="service-card-item__price">от 12 000 ₽</div>
-                            <button class="service-card-item__btn">Заказать</button>
-                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
                     </div>
                 </div>
-                
-                <div class="services-cards-btn-container">
-                    <button class="services-cards-btn" id="showMoreBtn">
-                        <span>Показать еще 9 услуг</span>
-                        <img src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden2.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                        <span>Высота:</span>
+                                        <span>до 20 м</span>
+                                    </li>
+                                    <li>
+                                        <span>Срок посадки:</span>
+                                        <span>весна / осень</span>
+                                    </li>
+                                    <li>
+                                        <span>Зона посадки:</span>
+                                        <span>солнце / полутень</span>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden3.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                    <span>Высота:</span>
+                                    <span>до 20 м</span>
+                                </li>
+                                <li>
+                                    <span>Срок посадки:</span>
+                                    <span>весна / осень</span>
+                                </li>
+                                <li>
+                                    <span>Зона посадки:</span>
+                                    <span>солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden1.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden2.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                        <span>Высота:</span>
+                                        <span>до 20 м</span>
+                                    </li>
+                                    <li>
+                                        <span>Срок посадки:</span>
+                                        <span>весна / осень</span>
+                                    </li>
+                                    <li>
+                                        <span>Зона посадки:</span>
+                                        <span>солнце / полутень</span>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden3.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                    <span>Высота:</span>
+                                    <span>до 20 м</span>
+                                </li>
+                                <li>
+                                    <span>Срок посадки:</span>
+                                    <span>весна / осень</span>
+                                </li>
+                                <li>
+                                    <span>Зона посадки:</span>
+                                    <span>солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden1.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden2.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                        <span>Высота:</span>
+                                        <span>до 20 м</span>
+                                    </li>
+                                    <li>
+                                        <span>Срок посадки:</span>
+                                        <span>весна / осень</span>
+                                    </li>
+                                    <li>
+                                        <span>Зона посадки:</span>
+                                        <span>солнце / полутень</span>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden3.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul>
+                                <li>
+                                    <span>Высота:</span>
+                                    <span>до 20 м</span>
+                                </li>
+                                <li>
+                                    <span>Срок посадки:</span>
+                                    <span>весна / осень</span>
+                                </li>
+                                <li>
+                                    <span>Зона посадки:</span>
+                                    <span>солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                                
+
+
+                <!-- Дополнительные скрытые карточки -->
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden1.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden2.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden3.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden1.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden2.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+                <div class="plant-card hidden-cards" style="display: none;">
+                    <div class="plant-card__image">
+                        <img src="/src/assets/images/plantNursery/cardGarden3.png"
+                            alt="Ива шаровидная">
+                    </div>
+                    <div class="plant-card__content">
+                        <h3 class="plant-card__title">Ива шаровидная</h3>
+                        <p class="plant-card__description">
+                            невысокое дерево с округлой кроной. украсит береговую зону или станет акцентом на участке.
+                        </p>
+                        <div class="plant-card__characteristics">
+                            <div class="plant-card__characteristics-title">характеристики:</div>
+                            <ul class="plant-card__characteristics-list">
+                                <li class="plant-card__characteristics-item">
+                                    <span>Высота:</span>
+                                    <span class="plant-card__characteristics-value">до 20 м</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Срок посадки:</span>
+                                    <span class="plant-card__characteristics-value">весна / осень</span>
+                                </li>
+                                <li class="plant-card__characteristics-item">
+                                    <span>Зона посадки:</span>
+                                    <span class="plant-card__characteristics-value">солнце / полутень</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plant-card__price">от 3 500 Р</div>
+                    </div>
+                </div>
+
+                <!-- Кнопка "ПОКАЗАТЬ ЕЩЕ" -->
+                <div class="show-more-container">
+                    <button class="show-more-btn" id="show-more-btn">
+                        <span class="show-more-text">ПОКАЗАТЬ ЕЩЕ</span>
+                        <div class="show-more-icon">
+                            <img src="/src/assets/icons/arrow-right.svg" alt="стрелка">
+                        </div>
                     </button>
                 </div>
+
             </div>
+                
         </section>
 
 

@@ -18,6 +18,17 @@ a:active {
   color: inherit;
 }
 
+.btn {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  align-items: center;
+  gap: 0.75rem;
+}
 
 
 /* header part */
@@ -40,22 +51,27 @@ a:active {
   background-image: linear-gradient(90deg, #93aa9d 0%, #acc5b8 70%); */
   color: #fff;
 
-  height: 15vh;
+  /* height: 15vh; */
   overflow-y: hidden;
 }
 
 .header-content {
-  padding: 1rem 5rem;
+  padding: 1rem;
   display: flex;
-  height: 15vh;
+  /* height: 15vh; */
 
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   transition: opacity 5s;
 
   background-color: #7C9085;
   background-image: linear-gradient(90deg, #93aa9d 0%, #acc5b8 70%);
+}
+
+@media(width>=1536){
+  .header-content{
+    padding: 1rem 5rem;
+  }
 }
 
 .header-bar {
@@ -84,8 +100,12 @@ a:active {
   pointer-events: auto;
 }
 
-.nav{
+/* .nav{
   width: 1820px;
+} */
+
+.nav{
+  display: none;
 }
 
 .nav ul {
@@ -94,35 +114,69 @@ a:active {
   text-transform: uppercase;
 
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 11.25rem;
-
-  padding: 0;
-  margin: 0;
+  gap: 2.5rem;
 }
 
-.logo {
+.logo img {
+  display: block;
   width: auto;
   height: 5.5rem;
-  margin-top: 10px;
-  letter-spacing: 2px;
 }
 
-.headerOneHalf {
+.info-nav {
+  display: none;
+  gap: 3.875rem;
+  align-items: center;
+}
+
+.plants-catalog {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 12px;
+}
+
+.plants-catalog svg,
+.application-btn svg {
+  width: 2rem;
+  height: 2rem;
+
+  border: 1px solid #D9D9D9;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.plants-catalog svg {
+  fill: #fff;
+}
+.application-btn svg{
+  stroke: #fff;
+}
+.application-btn{
+  text-transform: uppercase;
+}
+
+@media(width>768px){
+  .nav{
+    display: block;
+  }
+  .info-nav{
+    display: flex;
+  }
+}
+/* .headerOneHalf {
   display: flex;
   gap: 1.875rem;
   flex-wrap: wrap;
   align-items: center;
-}
+} */
 
-.headerTwoHalf {
+/* .headerTwoHalf {
   display: flex;
   gap: 1.875rem;
   flex-wrap: wrap;
   align-items: center;
-}
+} */
 
 /* Header scroll animation styles */
 .header-bar {
@@ -149,7 +203,7 @@ a:active {
   color: #303A30;
 }
 
-.header-bar ul{
+.header-bar ul {
   align-items: flex-end;
   margin-bottom: 2rem;
 }

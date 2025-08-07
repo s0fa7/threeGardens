@@ -22,31 +22,37 @@
       <div class="header-content header-main-path" id="headerContent">
         <nav class="nav">
           <ul>
-            <div class="headerOneHalf">
-              <li><a href="">Услуги</a></li>
-              <li><a href="">Прайс-лист</a></li>
-              <li><a href="">Проекты</a></li>
-              <li><a href="">О компании</a></li>
-              <li><a href="">Партнерам</a></li>
-              <li><a href="">Контакты</a></li>
-            </div>
-            <li><a href="/" class="logo">
-                <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
-              </a></li>
-            <div class="headerTwoHalf">
-              <li class="button-container gray-btn">
-                <span>Каталог растений</span>
-                <img src="/src/assets/icons/menuHeaderWhite.svg" alt="меню каталог растений" />
-              </li>
-              <li class="button-container gray-btn">
-                <span>Оставить заявку</span>
-                <img src="/src/assets/icons/arrow-rightWhite.svg" alt="стрелка оставить заявку" />
-              </li>
-              <li>8 800 219 333</li>
-            </div>
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Прайс-лист</a></li>
+            <li><a href="">Проекты</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href="">Партнерам</a></li>
+            <li><a href="">Контакты</a></li>
           </ul>
         </nav>
+
+        <a href="/" class="logo">
+          <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
+        </a>
+
+        <div class="info-nav">
+          <a href="" class="plants-catalog">
+            <span>Каталог растений</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#dots"></use>
+            </svg>
+          </a>
+          <button type="button" class="btn application-btn">
+            <span>Оставить заявку</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <a href="tel:8800219333">8 800 219 333</a>
+          </ul>
+        </div>
       </div>
+
       <div class="header-bar" id="headerBar">
         <nav class="nav">
           <ul>
@@ -82,63 +88,77 @@
     <section>
       <div class="main-section">
         <div class="main-section-title">
-          <p>Вместе мы воплотим вашу мечту в проект</p>
-          <div>
+          <p class="animation delay1">Вместе мы воплотим вашу мечту в проект</p>
+          <div class="animation">
             <h2>
               Делаем вашу жизнь комфортнее благодаря</h2>
             <div class="white-bg-tag">озеленению</div>
           </div>
 
         </div>
-        <div class="main-section-img">
-          <img src="/src/assets/images/main/tree-main1.png" />
+        <div class="main-section-img animation">
+          <img class="fade-in show" src="/src/assets/images/main/tree-main1.png" />
         </div>
         <div class="main-section-right-side">
           <div class="main-section-navigation">
-            <div class="main-section-navigation-container">
-              <img src="/src/assets/images/main/main-icon1.svg" alt="иконка листка"
-                class="main-section-navigation-icon" />
-              <div class="main-section-navigation__element">
+            <div class="main-section-navigation-container animation">
+              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
+                aria-hidden="true" viewBox="0 0 14 14">
+                <use href="/src/assets/icons/sprite.svg#sheet"></use>
+              </svg>
+              <div class="main-section-navigation__element hidden-navigation-decorative">
                 <div class="main-section-navigation__element-title">
                   <h4>01 сад юности</h4>
-                  <img src="/src/assets/icons/arrow-right.svg" alt="стрелка " />
+                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка " />
                 </div>
-                <p>идеальный сад начинается с идеи</p>
-                <div class="main-section-navigation__element-img-container">
-                  <img src="/src/assets/images/main/photo-1.png" alt="сад-1" />
-                  <img src="/src/assets/images/main/photo-2.png" alt="сад-2" />
+                <div class="hidden">
+                  <p>идеальный сад начинается с идеи</p>
+                  <div class="main-section-navigation__element-img-container">
+                    <img src="/src/assets/images/main/photo-1.png" alt="сад-1" />
+                    <img src="/src/assets/images/main/photo-2.png" alt="сад-2" />
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="main-section-navigation-container">
-              <img src="/src/assets/images/main/main-icon2.svg" alt="иконка цветка"
-                class="main-section-navigation-icon" />
-              <div class="main-section-navigation__element">
+
+            <div class="main-section-navigation-container animation delay1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
+                aria-hidden="true" viewBox="0 0 18 20">
+                <use href="/src/assets/icons/sprite.svg#flower"></use>
+              </svg>
+              <div class="main-section-navigation__element hidden-navigation-decorative">
                 <div class="main-section-navigation__element-title">
                   <h4>02 Сад зрелости</h4>
-                  <img src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
+                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
                 </div>
-                <p>Сад оживает благодаря нашему профессионализму и вниманию
-                  к каждой детали</p>
-                <div class="main-section-navigation__element-img-container">
-                  <img src="/src/assets/images/main/photo-3.png" alt="сад-3" />
-                  <img src="/src/assets/images/main/photo-4.png" alt="сад-4" />
+                <div class="hidden">
+                  <p>Сад оживает благодаря нашему профессионализму и вниманию
+                    к каждой детали</p>
+                  <div class="main-section-navigation__element-img-container">
+                    <img src="/src/assets/images/main/photo-3.png" alt="сад-3" />
+                    <img src="/src/assets/images/main/photo-4.png" alt="сад-4" />
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="main-section-navigation-container">
-              <img src="/src/assets/images/main/main-icon3.svg" alt="иконка дерева"
-                class="main-section-navigation-icon" />
-              <div class="main-section-navigation__element">
+
+            <div class="main-section-navigation-container animation delay1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
+                aria-hidden="true" viewBox="0 0 14 16">
+                <use href="/src/assets/icons/sprite.svg#tree"></use>
+              </svg>
+              <div class="main-section-navigation__element hidden-navigation-decorative">
                 <div class="main-section-navigation__element-title">
                   <h4>03 Сад мудрости</h4>
-                  <img src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
+                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
                 </div>
-                <p>Сохраним красоту вашего
-                  сада на долгие годы</p>
-                <div class="main-section-navigation__element-img-container">
-                  <img src="/src/assets/images/main/photo-5.png" alt="сад-5" />
-                  <img src="/src/assets/images/main/photo-6.png" alt="сад-6" />
+                <div class="hidden">
+                  <p>Сохраним красоту вашего
+                    сада на долгие годы</p>
+                  <div class="main-section-navigation__element-img-container">
+                    <img src="/src/assets/images/main/photo-5.png" alt="сад-5" />
+                    <img src="/src/assets/images/main/photo-6.png" alt="сад-6" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,6 +170,7 @@
         </div>
       </div>
     </section>
+
     <section class="services-main">
       <div class="services-main-row">
         <img src="/src/assets/images/main/garden-img.png" alt="сад" class="img-placeholder">
@@ -279,7 +300,7 @@
         <h3>Наши проекты</h3>
         <div class="button-container">
           <span>смотреть все проекты</span>
-          <img src="/src/assets/icons/arrow-right3.svg" alt="стрелка оставить заявку" />
+          <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
         </div>
       </div>
       <div class="projects-container">
@@ -424,7 +445,7 @@
       <div class="contacts-header">
         <div class="button-container">
           <span>Оставить заявку</span>
-          <img src="/src/assets/icons/arrow-right2.svg" alt="стрелка оставить заявку" />
+          <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
         </div>
         <h3 class="contact-heading">Контакты</h3>
         <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
@@ -442,10 +463,22 @@
             <span>8 985 75 49 333</span>
           </div>
           <div class="contact-social">
-            <img class="contact-icon" src="/src/assets/icons/whatsapBlackGreen.svg" alt="whatsapp">
-            <img class="contact-icon" src="/src/assets/icons/telegramBlackGreen.svg" alt="telegram">
-            <img class="contact-icon" src="/src/assets/icons/vkBlackGreen.svg" alt="vk">
-            <img class="contact-icon" src="/src/assets/icons/letter.svg" alt="письмо лого" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+              fill="#303A30">
+              <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 22 18"
+              fill="#303A30">
+              <use href="/src/assets/icons/sprite.svg#telegram"></use>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 24 16"
+              fill="#303A30">
+              <use href="/src/assets/icons/sprite.svg#vk"></use>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 22 18"
+              fill="#303A30">
+              <use href="/src/assets/icons/sprite.svg#letter"></use>
+            </svg>
           </div>
         </div>
         <iframe
@@ -492,6 +525,7 @@
       </div>
     </div>
   </footer>
+  <script src="/src/js/mainSectionAnimation.js"></script>
 </body>
 
 </html>
