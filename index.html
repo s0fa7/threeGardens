@@ -20,7 +20,10 @@
   <div class="header-container">
     <header class="header" id="mainHeader">
       <div class="header-content header-main-path" id="headerContent">
-        <nav class="nav">
+        <svg class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+          <use href="/src/assets/icons/sprite.svg#telephone"></use>
+        </svg>
+        <nav class="nav animation">
           <ul>
             <li><a href="">Услуги</a></li>
             <li><a href="">Прайс-лист</a></li>
@@ -35,7 +38,7 @@
           <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
         </a>
 
-        <div class="info-nav">
+        <div class="info-nav animation">
           <a href="" class="plants-catalog">
             <span>Каталог растений</span>
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
@@ -44,13 +47,16 @@
           </a>
           <button type="button" class="btn application-btn">
             <span>Оставить заявку</span>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
               <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
             </svg>
           </button>
           <a href="tel:8800219333">8 800 219 333</a>
           </ul>
         </div>
+        <svg class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 33">
+          <use href="/src/assets/icons/sprite.svg#menu"></use>
+        </svg>
       </div>
 
       <div class="header-bar" id="headerBar">
@@ -445,7 +451,9 @@
       <div class="contacts-header">
         <div class="button-container">
           <span>Оставить заявку</span>
-          <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                    </svg>
         </div>
         <h3 class="contact-heading">Контакты</h3>
         <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
@@ -501,31 +509,45 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <nav class="footer-nav">
-        <ul>
-          <li>услуги</li>
-          <li>прайс-лист</li>
-          <li>проекты</li>
-          <li>партнерам</li>
-          <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
-          <li>о компании</li>
-          <li>контакты</li>
-          <li>каталог растений</li>
-        </ul>
-      </nav>
+      <ul class="nav-footer">
+        <li>услуги</li>
+        <li>прайс-лист</li>
+        <li>проекты</li>
+        <li>партнерам</li>
+      </ul>
+      <a href="/" class="footer-logo">
+        <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+      </a>
+      <ul class="info-footer">
+        <li>о компании</li>
+        <li>контакты</li>
+        <li>каталог растений</li>
+      </ul>
 
-      <div class="footer-bottom">
-        <span>политика конфиденциальности</span>
-        <div class="footer-social">
-          <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
-          <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
-          <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
-        </div>
-        <span>пользовательское соглашение</span>
+      <span class="document-1">политика конфиденциальности</span>
+
+      <div class="footer-social">
+        <a href="">
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+          </svg>
+        </a>
+        <a href="">
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+        <a href="">
+          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+            <use href="/src/assets/icons/sprite.svg#vk"></use>
+          </svg>
+        </a>
       </div>
+      <span class="document-2">пользовательское соглашение</span>
     </div>
   </footer>
   <script src="/src/js/mainSectionAnimation.js"></script>
+  <script src="/src/js/headerAdaptation.js"></script>
 </body>
 
 </html>

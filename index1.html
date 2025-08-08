@@ -7,13 +7,123 @@
     <title>3 сада</title>
     <link rel="stylesheet" href="/src/assets/css/app.css" />
     <style>
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
+        .footer {
+            background: #7C9085;
+            color: #fff;
+            font-size: 15px;
+            width: 100%;
         }
 
-        .fade-in.show {
-            opacity: 1;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3.8125rem 0;
+            text-align: center;
+
+            text-transform: uppercase;
+        }
+
+        .nav-footer {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .footer-logo {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .info-footer {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .document-1 {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .footer-social {
+            grid-area: 2 / 2 / 3 / 3;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .footer-icon {
+            width: 52px;
+            height: 52px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            fill: #fff;
+
+            border-radius: 50%;
+            background: transparent;
+            display: block;
+            padding: 14px;
+        }
+
+        .document-2 {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .nav-footer,
+        .info-footer {
+            list-style: none;
+            display: flex;
+            min-width: 31.25rem;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+
+        .document-1,
+        .document-2{
+            margin: auto 0;
+        }
+
+        @media(width<=768px) {
+
+            .nav-footer {
+                grid-area: 3 / 1 / 4 / 2;
+                align-items: flex-end;
+            }
+
+            .footer-logo {
+                grid-area: 1 / 1 / 2 / 3;
+            }
+
+            .info-footer {
+                grid-area: 3 / 2 / 4 / 3;
+                align-items: flex-start;
+            }
+
+            .document-1 {
+                grid-area: 4 / 1 / 5 / 3;
+            }
+
+            .footer-social {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+
+            .document-2 {
+                grid-area: 5 / 1 / 6 / 3;
+            }
+
+            .nav-footer,
+            .info-footer {
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 18px;
+                margin: 0 1rem;
+            }
+
+            .document-1,
+            .document-2 {
+                text-align: left;
+                margin: 1rem;
+            }
         }
     </style>
 </head>
@@ -21,6 +131,9 @@
 <body>
     <header class="header" id="mainHeader">
         <div class="header-content header-main-path" id="headerContent">
+            <svg class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                <use href="/src/assets/icons/sprite.svg#telephone"></use>
+            </svg>
             <nav class="nav animation">
                 <ul>
                     <li><a href="">Услуги</a></li>
@@ -52,193 +165,66 @@
                 <a href="tel:8800219333">8 800 219 333</a>
                 </ul>
             </div>
+            <svg id="burger" class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                viewBox="0 0 32 33">
+                <use href="/src/assets/icons/sprite.svg#menu"></use>
+            </svg>
         </div>
     </header>
-    <section>
-        <div class="main-section">
-            <div class="main-section-title">
-                <p class="animation delay1">Вместе мы воплотим вашу мечту в проект</p>
-                <div class="animation">
-                    <h2>
-                        Делаем вашу жизнь комфортнее благодаря</h2>
-                    <div class="white-bg-tag">озеленению</div>
-                </div>
 
-            </div>
-            <div class="main-section-img animation">
-                <img class="fade-in show" src="/src/assets/images/main/tree-main1.png" />
-            </div>
-            <div class="main-section-right-side">
-                <div class="main-section-navigation">
-                    <div class="main-section-navigation-container animation">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="main-section-navigation-icon hidden-navigation-decorative" aria-hidden="true"
-                            viewBox="0 0 14 14">
-                            <use href="/src/assets/icons/sprite.svg#sheet"></use>
-                        </svg>
-                        <div class="main-section-navigation__element hidden-navigation-decorative">
-                            <div class="main-section-navigation__element-title">
-                                <h4>01 сад юности</h4>
-                                <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка " />
-                            </div>
-                            <div class="hidden">
-                                <p>идеальный сад начинается с идеи</p>
-                                <div class="main-section-navigation__element-img-container">
-                                    <img src="/src/assets/images/main/photo-1.png" alt="сад-1" />
-                                    <img src="/src/assets/images/main/photo-2.png" alt="сад-2" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <ul class="nav-footer">
+                <li>услуги</li>
+                <li>прайс-лист</li>
+                <li>проекты</li>
+                <li>партнерам</li>
+            </ul>
+            <a href="/" class="footer-logo">
+                <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+            </a>
+            <ul class="info-footer">
+                <li>о компании</li>
+                <li>контакты</li>
+                <li>каталог растений</li>
+            </ul>
 
-                    <div class="main-section-navigation-container animation delay1">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="main-section-navigation-icon hidden-navigation-decorative" aria-hidden="true"
-                            viewBox="0 0 18 20">
-                            <use href="/src/assets/icons/sprite.svg#flower"></use>
-                        </svg>
-                        <div class="main-section-navigation__element hidden-navigation-decorative">
-                            <div class="main-section-navigation__element-title">
-                                <h4>02 Сад зрелости</h4>
-                                <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
-                            </div>
-                            <div class="hidden">
-                                <p>Сад оживает благодаря нашему профессионализму и вниманию
-                                    к каждой детали</p>
-                                <div class="main-section-navigation__element-img-container">
-                                    <img src="/src/assets/images/main/photo-3.png" alt="сад-3" />
-                                    <img src="/src/assets/images/main/photo-4.png" alt="сад-4" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <span class="document-1">политика конфиденциальности</span>
 
-                    <div class="main-section-navigation-container animation delay1">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="main-section-navigation-icon hidden-navigation-decorative" aria-hidden="true"
-                            viewBox="0 0 14 16">
-                            <use href="/src/assets/icons/sprite.svg#tree"></use>
-                        </svg>
-                        <div class="main-section-navigation__element hidden-navigation-decorative">
-                            <div class="main-section-navigation__element-title">
-                                <h4>03 Сад мудрости</h4>
-                                <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
-                            </div>
-                            <div class="hidden">
-                                <p>Сохраним красоту вашего
-                                    сада на долгие годы</p>
-                                <div class="main-section-navigation__element-img-container">
-                                    <img src="/src/assets/images/main/photo-5.png" alt="сад-5" />
-                                    <img src="/src/assets/images/main/photo-6.png" alt="сад-6" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-container white-btn-bg">
-                    <span>подробнее</span>
-                    <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-                </div>
+            <div class="footer-social">
+                <a href="">
+                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                        <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                        <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                        <use href="/src/assets/icons/sprite.svg#vk"></use>
+                    </svg>
+                </a>
             </div>
+            <span class="document-2">пользовательское соглашение</span>
         </div>
-    </section>
+    </footer>
     <script>
         window.onload = (event) => {
 
-            const containers = document.querySelectorAll('.main-section-navigation-container');
-            const mainImg = document.querySelector('.main-section-img img');
+            const burger = document.getElementById('burger'); // вторая svg — бургер
+            const nav = document.querySelector(".nav");
 
-            let activeContainer = containers[0]; // по умолчанию выбран первый
-            let previousState = new Map();
-
-            const imageMap = {
-                0: '/src/assets/images/main/tree-main1.png',
-                1: '/src/assets/images/main/tree-main2.png',
-                2: '/src/assets/images/main/tree-main3.png'
-            };
-
-            // Сохраняем изначальные классы всех элементов
-            containers.forEach((container, index) => {
-                const togglableElements = container.querySelectorAll('.hidden, .hidden-navigation-decorative');
-                togglableElements.forEach(el => {
-                    previousState.set(el, {
-                        hasHidden: el.classList.contains('hidden'),
-                        hasDecorative: el.classList.contains('hidden-navigation-decorative')
-                    });
-                });
+            burger.addEventListener("click", function () {
+                // Проверяем — только на мобилках
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    nav.classList.toggle("nav-open");
+                }
             });
 
-            // Сразу убираем классы у первого элемента
-            if (activeContainer) {
-                removeClasses(activeContainer);
-                changeMainImage(imageMap[0]);
-            }
 
-            // Назначаем обработчики
-            containers.forEach((container, index) => {
-                container.addEventListener('click', () => {
-                    if (activeContainer && activeContainer !== container) {
-                        restoreClasses(activeContainer);
-                    }
-
-                    if (activeContainer !== container) {
-                        removeClasses(container);
-                        activeContainer = container;
-                        changeMainImage(imageMap[index]);
-                    } else {
-                        // Повторный клик — свернуть
-                        restoreClasses(container);
-                        activeContainer = null;
-                        changeMainImage(imageMap[0]); // вернём первую картинку
-                    }
-                });
-            });
-
-            function removeClasses(container) {
-                const elements = container.querySelectorAll('.hidden, .hidden-navigation-decorative');
-                elements.forEach(el => {
-                    el.classList.remove('hidden');
-                    el.classList.remove('hidden-navigation-decorative');
-
-                    // 👇 Добавляем анимацию
-                    el.classList.add('animated-fade-in');
-
-                    // Удалим анимационный класс после завершения (если нужно перезапускать анимацию позже)
-                    el.addEventListener('animationend', () => {
-                        el.classList.remove('animated-fade-in');
-                    }, { once: true });
-                });
-            }
-
-
-            function restoreClasses(container) {
-                const elements = container.querySelectorAll('*');
-                elements.forEach(el => {
-                    const state = previousState.get(el);
-                    if (state) {
-                        if (state.hasHidden) el.classList.add('hidden');
-                        else el.classList.remove('hidden');
-
-                        if (state.hasDecorative) el.classList.add('hidden-navigation-decorative');
-                        else el.classList.remove('hidden-navigation-decorative');
-                    }
-                });
-            }
-
-            function changeMainImage(newSrc) {
-                if (!mainImg) return;
-
-                // Удалим анимацию, чтобы можно было перезапустить
-                mainImg.classList.remove('animate-in');
-
-                // Маленькая задержка — иначе анимация не перезапустится
-                setTimeout(() => {
-                    mainImg.src = newSrc;
-
-                    // Перезапускаем анимацию
-                    mainImg.classList.add('animate-in');
-                }, 50);
-            }
         }
     </script>
 
