@@ -2,552 +2,376 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Команда, которой доверяют - 3 сада</title>
-  <link rel="stylesheet" href="/src/assets/css/app.css" />
-  <script src="/src/js/headerAnimation.js"></script>
-
-  <link rel="icon" href="/src/assets/icons/logoVector.svg" />
-
-  <meta property="og:title" content="3 sads" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ru" />
-  <meta property="og:description" content="our services" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карусель</title>
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .projects-about-us-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .carousel-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .arrows-container {
+    margin: 1rem;
+    position: relative;
+    top: 10%;
+    left: 1%;
+    display: flex;
+    gap: 27px;
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .arrow {
+    cursor: pointer;
+
+    border: 1px solid #7C9085;
+    stroke: #303A30;
+    border-radius: 50%;
+    background-color: inherit;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    /* width: 800px; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: auto;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    transition: all 0.5s ease;
+    /* Плавное изменение размера и прозрачности */
+  }
+
+  .carousel-item.hidden {
+    width: 0;
+    opacity: 0;
+  }
+
+  .carousel-item.small {
+    /* width: auto;
+    height: auto; */
+    max-height: 50%;
+    max-width: 20%;
+    opacity: 1;
+  }
+
+  .carousel-item.big {
+    width: 49%;
+    height: auto;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .carousel-item.big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .carousel-item.small img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .button-container {
+    text-transform: uppercase;
+    font-size: .9375rem;
+
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  .button-container svg {
+    width: 36px;
+    height: 36px;
+    stroke: #007D21;
+    border: 1px solid #007D2133;
+    border-radius: 50%;
+    background: transparent;
+    display: inline-block;
+    padding: 0.5rem;
+    filter: blur(0);
+  }
+
+  .white-btn-bg svg {
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .info-about-us {
+    padding: 1rem;
+    margin-top: 3%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info-about-us p {
+    font-size: 33px;
+    margin-bottom: 0.5rem;
+  }
+
+@media (min-width: 1440px) {
+
+  .projects-about-us-carousel {
+    gap: 24px;
+    max-height: 773px;
+  }
+
+  .carousel-about-us {
+    height: 100%;
+    width: auto;
+    padding: 0.5rem;
+  }
+
+  .info-about-us {
+    max-width: 28%;
+  }
+
+  .info-about-us p {
+    font-size: 26px;
+  }
+
+  .carousel-track {
+    gap: 12px;
+    height: 50%;
+  }
+
+  .carousel-item.small{
+    height: auto;
+    width: 20%;
+  }
+
+  .carousel-item.big{
+    height: 100%;
+    width: auto;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-about-us-carousel {
+    gap: 20px;
+    height: 50%;
+    align-items: flex-end;
+  }
+
+  .carousel-about-us {
+    height: 80%;
+    width: 40%;
+    padding: 0.5rem;
+    overflow: hidden;
+
+  }
+
+  .info-about-us {
+    max-width: 55%;
+  }
+
+  .info-about-us p {
+    font-size: 22px;
+  }
+
+  .carousel-track {
+    gap: 10px;
+  }
+
+  .carousel-item.small {
+    height: 40%;
+  }
+
+  .carousel-item.big {
+    height: 80%;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 425px){
+  .projects-about-us-carousel{
+    flex-direction: column;
+  }
+  .info-about-us{
+    max-width: 100%;
+  }
+  .carousel-about-us{
+    width: 100%;
+  }
+  .carousel-track{
+    overflow-x: auto;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .carousel-item.small,
+  .carousel-item.hidden,
+  .carousel-item.big{
+    width: 20%;
+    height: 20%;
+    opacity: 1;
+  }
+  /* .carousel-item.small{
+    width: 100%;
+  } */
+  .carousel-item.small img,
+  .carousel-item.hidden img,
+  .carousel-item.big img{
+    width: 300px;
+    height: 260px;
+  }
+}
+
+</style>
 
 <body>
-  <div class="header-container">
-    <header class="header" id="mainHeader">
-      <div class="header-content header-main-path" id="headerContent">
-        <svg class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
-          <use href="/src/assets/icons/sprite.svg#telephone"></use>
-        </svg>
-        <nav class="nav animation">
-          <ul>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Прайс-лист</a></li>
-            <li><a href="">Проекты</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Партнерам</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <a href="/" class="logo">
-          <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
-        </a>
-
-        <div class="info-nav animation">
-          <a href="" class="plants-catalog">
-            <span>Каталог растений</span>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
-              <use href="/src/assets/icons/sprite.svg#dots"></use>
-            </svg>
-          </a>
-          <button type="button" class="btn application-btn">
-            <span>Оставить заявку</span>
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
-              <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
-            </svg>
-          </button>
-          <a href="tel:8800219333">8 800 219 333</a>
-          </ul>
-        </div>
-        <svg class="phone-menu" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 33">
-          <use href="/src/assets/icons/sprite.svg#menu"></use>
-        </svg>
-      </div>
-
-      <div class="header-bar" id="headerBar">
-        <nav class="nav">
-          <ul>
-            <div class="headerOneHalf">
-              <li><a href="">Услуги</a></li>
-              <li><a href="">Прайс-лист</a></li>
-              <li><a href="">Проекты</a></li>
-              <li><a href="">О компании</a></li>
-              <li><a href="">Партнерам</a></li>
-              <li><a href="">Контакты</a></li>
-            </div>
-            <li><a href="/" class="logo">
-                <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
-              </a></li>
-            <div class="headerTwoHalf">
-              <li class="button-container gray-btn">
-                <span>Каталог растений</span>
-                <img src="/src/assets/icons/menuHeader.svg" />
-              </li>
-              <li class="button-container gray-btn">
-                <span>Оставить заявку</span>
-                <img src="/src/assets/icons/arrowRightHeader.svg" />
-              </li>
-              <li>8 800 219 333</li>
-            </div>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </div>
-
-  <main>
-    <section>
-      <div class="main-section">
-        <div class="main-section-title">
-          <p class="animation delay1">Вместе мы воплотим вашу мечту в проект</p>
-          <div class="animation">
-            <h2>
-              Делаем вашу жизнь комфортнее благодаря</h2>
-            <div class="white-bg-tag">озеленению</div>
-          </div>
-
-        </div>
-        <div class="main-section-img animation">
-          <img class="fade-in show" src="/src/assets/images/main/tree-main1.png" />
-        </div>
-        <div class="main-section-right-side">
-          <div class="main-section-navigation">
-            <div class="main-section-navigation-container animation">
-              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
-                aria-hidden="true" viewBox="0 0 14 14">
-                <use href="/src/assets/icons/sprite.svg#sheet"></use>
-              </svg>
-              <div class="main-section-navigation__element hidden-navigation-decorative">
-                <div class="main-section-navigation__element-title">
-                  <h4>01 сад юности</h4>
-                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка " />
-                </div>
-                <div class="hidden">
-                  <p>идеальный сад начинается с идеи</p>
-                  <div class="main-section-navigation__element-img-container">
-                    <img src="/src/assets/images/main/photo-1.png" alt="сад-1" />
-                    <img src="/src/assets/images/main/photo-2.png" alt="сад-2" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="main-section-navigation-container animation delay1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
-                aria-hidden="true" viewBox="0 0 18 20">
-                <use href="/src/assets/icons/sprite.svg#flower"></use>
-              </svg>
-              <div class="main-section-navigation__element hidden-navigation-decorative">
-                <div class="main-section-navigation__element-title">
-                  <h4>02 Сад зрелости</h4>
-                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
-                </div>
-                <div class="hidden">
-                  <p>Сад оживает благодаря нашему профессионализму и вниманию
-                    к каждой детали</p>
-                  <div class="main-section-navigation__element-img-container">
-                    <img src="/src/assets/images/main/photo-3.png" alt="сад-3" />
-                    <img src="/src/assets/images/main/photo-4.png" alt="сад-4" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="main-section-navigation-container animation delay1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="main-section-navigation-icon hidden-navigation-decorative"
-                aria-hidden="true" viewBox="0 0 14 16">
-                <use href="/src/assets/icons/sprite.svg#tree"></use>
-              </svg>
-              <div class="main-section-navigation__element hidden-navigation-decorative">
-                <div class="main-section-navigation__element-title">
-                  <h4>03 Сад мудрости</h4>
-                  <img class="hidden" src="/src/assets/icons/arrow-right.svg" alt="стрелка" />
-                </div>
-                <div class="hidden">
-                  <p>Сохраним красоту вашего
-                    сада на долгие годы</p>
-                  <div class="main-section-navigation__element-img-container">
-                    <img src="/src/assets/images/main/photo-5.png" alt="сад-5" />
-                    <img src="/src/assets/images/main/photo-6.png" alt="сад-6" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="button-container white-btn-bg">
-            <span>подробнее</span>
-            <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services-main">
-      <div class="services-main-row">
-        <img src="/src/assets/images/main/garden-img.png" alt="сад" class="img-placeholder">
-        <div class="services-main-row__text">
-          <h3>Благоустройство и уход за садом под ключ</h3>
-          <p>
-            Компания «3 сада» занимается благоустройством и озеленением частных и городских участков. Мы создаём
-            комфортные, ухоженные пространства, в которых приятно находиться. Работаем по Москве и области, предлагаем
-            комплексный подход — от проектирования до сезонного ухода.
-          </p>
-          <p>
-            В нашем арсенале — профессиональное оборудование, собственный питомник растений и команда опытных
-            специалистов. Мы умеем не только красиво посадить, но и грамотно ухаживать, защищать от вредителей и
-            продлевать жизнь зелёных насаждений.
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="projects-title-main service-main">
-        <div class="projects-title-main-left">
-          <div class="story-container-text-tags">услуги</div>
-          <h3>Наши проекты</h3>
-        </div>
-        <p>Создаём пространства,где живёт вдохновение и расцветает гармония</p>
-      </div>
-      <div class="main-cards-container">
-        <div class="main-card-row">
-          <div class="main-card">
-            <h3>Профессиональный уход за садом</h3>
-            <img src="/src/assets/images/main/service1.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-          <div class="main-card">
-            <h3>Благоустройство</h3>
-            <img src="/src/assets/images/main/service2.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="main-card-row">
-          <div class="main-card">
-            <h3>Устройство газонов
-              и посадка растений</h3>
-            <img src="/src/assets/images/main/service3.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-          <div class="main-card">
-            <h3>Озеленение
-              интерьера
-            </h3>
-            <img src="/src/assets/images/main/service4.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="main-card-row">
-          <div class="main-card">
-            <h3>Эскизное и рабочее
-              проектирование</h3>
-            <img src="/src/assets/images/main/service5.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-          <div class="main-card">
-            <h3>Прочие услуги</h3>
-            <img src="/src/assets/images/main/service6.png" alt="Уход за садом">
-            <div class="main-card-footer">
-              <div class="button-container white-btn-bg">
-                <span>подробнее</span>
-                <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-              </div>
-              <p class="main-card-description">
-                Помогаем бороться с болезнями и вредителями, регулярно ухаживаем за газоном, проводим обрезку и
-                стрижку растений
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="projects-title-main">
-        <h3>Наши проекты</h3>
-        <div class="button-container">
-          <span>смотреть все проекты</span>
-          <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-        </div>
-      </div>
-      <div class="projects-container">
-        <div class="project-main">
-          <div class="project-title">
-            <img src="/src/assets/icons/arrow-right3.svg" alt="стрелка оставить заявку" />
-            <div class="project-title__info">
-              <h4>Киевское шоссе</h4>
-              <p>частные проекты</p>
-            </div>
-          </div>
-          <img src="/src/assets/images/main/project-1.png" alt="проект-1" />
-          <div class="project-main-info">
-            <p>На участке были успешно выполнены работы по улучшению состояния
-              зеленых насаждений. В рамках проекта была проведена формовочная обрезка,
-              что способствовало правильному развитию растений и улучшению
-              их эстетического вида.
-            </p>
-            <p>
-              Кроме того, проведена подкормка растений и газонов, что обеспечило необходимое питание и способствовало их
-              активному развитию. Проект направлен на создание красивого и ухоженного зеленого пространства
-            </p>
-          </div>
-        </div>
-
-        <div class="project-main">
-          <div class="project-title">
-            <img src="/src/assets/icons/arrow-right3.svg" alt="стрелка оставить заявку" />
-            <div class="project-title__info">
-              <h4>Веледниково</h4>
-              <p>частные проекты</p>
-            </div>
-          </div>
-          <img src="/src/assets/images/main/project-2.png" alt="проект-1" />
-          <div class="project-main-info">
-            <p>На участке были успешно выполнены работы по улучшению состояния
-              зеленых насаждений. В рамках проекта была проведена формовочная обрезка,
-              что способствовало правильному развитию растений и улучшению
-              их эстетического вида.
-            </p>
-            <p>
-              Кроме того, проведена подкормка растений и газонов, что обеспечило необходимое питание и способствовало их
-              активному развитию. Проект направлен на создание красивого и ухоженного зеленого пространства
-            </p>
-          </div>
-        </div>
-
-        <div class="project-main">
-          <div class="project-title">
-            <img src="/src/assets/icons/arrow-right3.svg" alt="стрелка оставить заявку" />
-            <div class="project-title__info">
-              <h4>КП “Миллениум парк”</h4>
-              <p>частные проекты</p>
-            </div>
-          </div>
-          <img src="/src/assets/images/main/project-3.png" alt="проект-1" />
-          <div class="project-main-info">
-            <p>На участке были успешно выполнены работы по улучшению состояния
-              зеленых насаждений. В рамках проекта была проведена формовочная обрезка,
-              что способствовало правильному развитию растений и улучшению
-              их эстетического вида.
-            </p>
-            <p>
-              Кроме того, проведена подкормка растений и газонов, что обеспечило необходимое питание и способствовало их
-              активному развитию. Проект направлен на создание красивого и ухоженного зеленого пространства
-            </p>
-          </div>
-
-        </div>
-    </section>
-
-
-    <section>
-      <div class="about-company-section">
-        <div class="about-company-section-info">
-          <div class="story-container-text about-company-section__container-text">
-            <div class="story-container-text-tags">о компании</div>
-            <h3>История “Три сада”</h3>
-            <p>Приглашаем вас погрузиться в увлекательную
-              историю создания нашей компании </p>
-          </div>
-          <div class="about-company-section__container-text-button">
-            <p>Компания “Три Сада” была основана в феврале 2019 года. Кто-то назовет нас новичками, а мы ответим, что за
-              такое непродолжительное время набрали штат высококвалифицированных специалистов, облагородили крупные
-              городские объекты, обзавелись крупной клиентской базой и показали впечатляющие результаты, к которым
-              некоторые компании стремятся в течении многих лет</p>
-            <div class="button-container white-btn-bg">
-              <span>подробнее</span>
-              <img src="/src/assets/icons/arrow-right.svg" alt="стрелка оставить заявку" />
-            </div>
-          </div>
-        </div>
-        <div class="about-company-section__img">
-          <img src="/src/assets/images/main/about-companny-img.png" alt="фото мужчина косит" />
-          <div class="button-container">
-            <span>наша команда</span>
-            <img src="/src/assets/icons/arrow-rightWhite.svg" alt="стрелка оставить заявку" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="company-info">
-      <div class="company-info-row">
-        <div class="company-info__text">
-          <h3>Полный спектр ландшафтных и садовых услуг</h3>
-          <p>Компания «3 сада» предоставляет услуги по благоустройству, озеленениюи сезонному уходу за участками любой
-            сложности. Мы работаем как с частнымисадовыми территориями, так и с городскими объектами, детскими
-            садами,офисными дворами и жилыми комплексами.</p>
-          <p>
-            Наши специалисты выполняют весь цикл работ: от проектирования до регулярногоухода. Мы сажаем деревья
-            и кустарники, косим газон, проводим профилактикуот вредителей, создаём отмостки и садовые дорожки,
-            прокладываем системуавтополива. В своей работе мы используем современную технику, сертифицированныепрепараты
-            и материалы, подходящие для климата средней полосы.
-          </p>
-          <p>Мы сопровождаем объекты на протяжении всего года — весной, летом и осеньюпроводим активные работы, а зимой
-            готовим сад к следующему сезону. Для удобстванаших клиентов действует абонементное обслуживание:
-            вы получаете постоянныйконтроль и своевременное выполнение задач по фиксированной цене.</p>
-          <p>Мы также сотрудничаем с ландшафтными дизайнерами, выступая подрядчиком на этапереализации их проектов.
-            Это позволяет объединить художественную идею и техническоеисполнение в одном процессе. Благодаря опыту
-            и профессионализму наша командаспособна реализовать самые разные задачи: от компактного сада у дома
-            допространства общественного парка..</p>
-        </div>
-        <img src="/src/assets/images/main/garden1.png" alt="сад-1" />
-      </div>
-      <div class="company-info-row">
-        <img src="/src/assets/images/main/garden2.png" alt="сад-2" />
-        <div>
-          <h4>Почему выбирают «3 сада»</h4>
-          <ul>
-            <li>Индивидуальный подход к каждому участку и клиенту</li>
-            <li>Работаем круглый год, включая зимнее обслуживание</li>
-            <li>Собственный питомник с проверенными саженцами</li>
-            <li>Гарантия на все посадки и приживаемость</li>
-            <li>Команда агрономов, инженеров и садовников с опытом</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="contacts-header">
-        <div class="button-container">
-          <span>Оставить заявку</span>
+  <section class="projects-about-us-carousel">
+    <div class="carousel-about-us">
+      <div class="arrows-container">
+        <button class="arrow left">
           <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
-                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
-                    </svg>
-        </div>
-        <h3 class="contact-heading">Контакты</h3>
-        <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
+            <use href="/src/assets/icons/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="arrow right">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
       </div>
-      <div class="contants-container about-us-contacts">
-        <div class="contacts-row about-us-contact">
-          <div class="contant-container green-contacts">
-            <h3>Позвонить</h3>
-            <span>8 800 20 19 333</span>
-            <span>8 985 75 49 333</span>
-          </div>
-          <div class="contant-container green-contacts">
-            <h3>Написать</h3>
-            <span>8 800 20 19 333</span>
-            <span>8 985 75 49 333</span>
-          </div>
-          <div class="contact-social">
-            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
-              fill="#303A30">
-              <use href="/src/assets/icons/sprite.svg#whatsap"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 22 18"
-              fill="#303A30">
-              <use href="/src/assets/icons/sprite.svg#telegram"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 24 16"
-              fill="#303A30">
-              <use href="/src/assets/icons/sprite.svg#vk"></use>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 22 18"
-              fill="#303A30">
-              <use href="/src/assets/icons/sprite.svg#letter"></use>
-            </svg>
-          </div>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d561.1330991412364!2d36.86106545142408!3d55.76662475404716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5673b1bdfaf13%3A0x4514191ff92eabc3!2zNTEsINCV0YDRiNC-0LLQviwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxNDMwNTU!5e0!3m2!1sru!2sus!4v1753899914770!5m2!1sru!2sus"
-          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="contacts-row about-us-contact">
-          <div class="contant-container">
-            <h3>Адрес</h3>
-            <span>Московская обл., одинцовский г. о., с. ершово 51</span>
-          </div>
-          <div class="contant-container">
-            <h3>Время работы</h3>
-            <span>с 08:00 до 20:00</span>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work1.png" alt=""></div>
+          <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work2.png" alt=""></div>
+          <div class="carousel-item small"><img src="/src/assets/images/aboutUs/work3.png" alt=""></div>
+          <div class="carousel-item small"><img src="/src/assets/images/projectsV2/private-project3.png" alt=""></div>
+          <div class="carousel-item big active"><img src="/src/assets/images/projectsV2/private-project4.png" alt="">
           </div>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <ul class="nav-footer">
-        <li>услуги</li>
-        <li>прайс-лист</li>
-        <li>проекты</li>
-        <li>партнерам</li>
-      </ul>
-      <a href="/" class="footer-logo">
-        <img src="/src/assets/icons/logoVector.svg" alt="logo" />
-      </a>
-      <ul class="info-footer">
-        <li>о компании</li>
-        <li>контакты</li>
-        <li>каталог растений</li>
-      </ul>
-
-      <span class="document-1">политика конфиденциальности</span>
-
-      <div class="footer-social">
-        <a href="">
-          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
-            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
-          </svg>
-        </a>
-        <a href="">
-          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
-            <use href="/src/assets/icons/sprite.svg#telegram"></use>
-          </svg>
-        </a>
-        <a href="">
-          <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
-            <use href="/src/assets/icons/sprite.svg#vk"></use>
-          </svg>
-        </a>
-      </div>
-      <span class="document-2">пользовательское соглашение</span>
     </div>
-  </footer>
-  <script src="/src/js/mainSectionAnimation.js"></script>
-  <script src="/src/js/headerAdaptation.js"></script>
+    <div class="info-about-us">
+      <div>
+        <p>Мы — команда профессионалов, объединённых любовью к природе
+          и качественному ландшафту.
+          Наша работа — это забота о садах, реализация ландшафтных решений, монтаж систем автополива и комплексный
+          технический уход
+          за участками.</p>
+        <p>
+          Мы работаем как с частными заказчиками, так и в партнёрстве
+          с ландшафтными дизайнерами, помогая воплощать их идеи в жизнь — точно, аккуратно и надёжно. В каждом проекте
+          мы
+          стремимся создать среду,
+          в которой хочется быть.
+        </p>
+      </div>
+      <div class="button-container white-btn-bg">
+        <span>оставить заявку</span>
+        <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true" viewBox="0 0 20 20">
+          <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const leftBtn = document.querySelector('.arrow.left');
+    const rightBtn = document.querySelector('.arrow.right');
+
+    let items = Array.from(track.children);
+    let isAnimating = false;
+
+    function updateClasses() {
+      items.forEach((item, index) => {
+        item.className = 'carousel-item';
+        if (index < 2) {
+          item.classList.add('hidden');
+        } else if (index === 2 || index === 3) {
+          item.classList.add('small');
+        } else if (index === 4) {
+          item.classList.add('big', 'active');
+        }
+      });
+    }
+
+    function move(direction) {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // Просто меняем порядок элементов в массиве
+      if (direction === 'left') {
+        items.unshift(items.pop());
+      } else {
+        items.push(items.shift());
+      }
+
+      // Обновляем DOM
+      updateDOM();
+
+      // Даем время на завершение transition
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500);
+    }
+
+    function updateDOM() {
+      track.innerHTML = '';
+      items.forEach(item => track.appendChild(item));
+      updateClasses();
+    }
+
+    leftBtn.addEventListener('click', () => move('left'));
+    rightBtn.addEventListener('click', () => move('right'));
+
+    updateClasses();
+
+  </script>
 </body>
 
 </html>

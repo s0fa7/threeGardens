@@ -231,29 +231,56 @@
 
 
 
-        <section class="about-carousel-section">
-            <div class="about-carousel">
-                <button class="carousel-arrow left" id="carousel-prev">&#8592;</button>
-                <div class="carousel-track">
-                    <!-- Картинки вставляются в JS -->
+        <section class="projects-about-us-carousel">
+            <div class="carousel-about-us">
+                <div class="arrows-container">
+                    <button class="arrow left">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="arrow right">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
                 </div>
-                <button class="carousel-arrow right" id="carousel-next">&#8594;</button>
+                <div class="about-us-carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work1.png" alt=""></div>
+                        <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work2.png" alt=""></div>
+                        <div class="carousel-item small"><img src="/src/assets/images/aboutUs/work3.png" alt=""></div>
+                        <div class="carousel-item small"><img src="/src/assets/images/projectsV2/private-project3.png"
+                                alt=""></div>
+                        <div class="carousel-item big active"><img
+                                src="/src/assets/images/projectsV2/private-project4.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-carousel-text">
-                <p>
-                    Мы — команда профессионалов, объединённых любовью к природе и качественному ландшафту.
-                    Наша работа — это забота о садах, реализация ландшафтных решений, монтаж систем автополива и
-                    комплексный технический уход за участками.
-                </p>
-                <p>
-                    Мы работаем как с частными заказчиками, так и в партнёрстве с ландшафтными дизайнерами, помогая
-                    воплощать их идеи в жизнь — точно, аккуратно и надёжно. В каждом проекте мы стремимся создать среду,
-                    в которой хочется быть.
-                </p>
-                <a href="#" class="service-card__more">
-                    подробнее
-                    <span class="service-card__arrow">→</span>
-                </a>
+            <div class="info-about-us">
+                <div>
+                    <p>Мы — команда профессионалов, объединённых любовью к природе
+                        и качественному ландшафту.
+                        Наша работа — это забота о садах, реализация ландшафтных решений, монтаж систем автополива и
+                        комплексный
+                        технический уход
+                        за участками.</p>
+                    <p>
+                        Мы работаем как с частными заказчиками, так и в партнёрстве
+                        с ландшафтными дизайнерами, помогая воплощать их идеи в жизнь — точно, аккуратно и надёжно. В
+                        каждом проекте
+                        мы
+                        стремимся создать среду,
+                        в которой хочется быть.
+                    </p>
+                </div>
+                <div class="button-container white-btn-bg">
+                    <span>оставить заявку</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true" viewBox="0 0 20 20">
+                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                    </svg>
+                </div>
             </div>
         </section>
 
@@ -314,7 +341,7 @@
                 <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
             </div>
             <div class="contants-container about-us-contacts">
-                <div class="contacts-row about-us-contact">
+                <div class="contacts-row">
                     <div class="contant-container green-contacts">
                         <h3>Позвонить</h3>
                         <span>8 800 20 19 333</span>
@@ -360,6 +387,8 @@
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer class="footer">

@@ -1,44 +1,50 @@
-const images = [
-  '/src/assets/images/aboutUs/work1.png', // замените на свои пути
-  '/src/assets/images/aboutUs/work2.png',
-  '/src/assets/images/aboutUs/work3.png',
-  '/src/assets/images/aboutUs/work1.png',
-  '/src/assets/images/aboutUs/work2.png'
-];
-
 const track = document.querySelector('.carousel-track');
-let current = 2; // индекс активного (большого) фото
+    const leftBtn = document.querySelector('.arrow.left');
+    const rightBtn = document.querySelector('.arrow.right');
 
-function renderCarousel() {
-  track.innerHTML = '';
-  for (let i = 0; i < images.length; i++) {
-    let className = 'carousel-img hidden';
-    // Индексы для маленьких слева и справа, активного
-    if ((i + images.length) % images.length === (current - 2 + images.length) % images.length) {
-      className = 'carousel-img small';
-    } else if ((i + images.length) % images.length === (current - 1 + images.length) % images.length) {
-      className = 'carousel-img small right';
-    } else if (i === current) {
-      className = 'carousel-img active';
+    let items = Array.from(track.children);
+    let isAnimating = false;
+
+    function updateClasses() {
+      items.forEach((item, index) => {
+        item.className = 'carousel-item';
+        if (index < 2) {
+          item.classList.add('hidden');
+        } else if (index === 2 || index === 3) {
+          item.classList.add('small');
+        } else if (index === 4) {
+          item.classList.add('big', 'active');
+        }
+      });
     }
-    const img = document.createElement('img');
-    img.src = images[i];
-    img.className = className;
-    img.alt = `Фото ${i+1}`;
-    track.appendChild(img);
-  }
-}
 
-function next() {
-  current = (current + 1) % images.length;
-  renderCarousel();
-}
-function prev() {
-  current = (current - 1 + images.length) % images.length;
-  renderCarousel();
-}
+    function move(direction) {
+      if (isAnimating) return;
+      isAnimating = true;
 
-document.getElementById('carousel-next').onclick = next;
-document.getElementById('carousel-prev').onclick = prev;
+      // Просто меняем порядок элементов в массиве
+      if (direction === 'left') {
+        items.unshift(items.pop());
+      } else {
+        items.push(items.shift());
+      }
 
-renderCarousel();
+      // Обновляем DOM
+      updateDOM();
+
+      // Даем время на завершение transition
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500);
+    }
+
+    function updateDOM() {
+      track.innerHTML = '';
+      items.forEach(item => track.appendChild(item));
+      updateClasses();
+    }
+
+    leftBtn.addEventListener('click', () => move('left'));
+    rightBtn.addEventListener('click', () => move('right'));
+
+    updateClasses();
