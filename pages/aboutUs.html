@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Команда, которой доверяют - 3 сада</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
+
+    <link rel="icon" href="/src/assets/icons/logoVector.svg" />
+
+    <meta property="og:title" content="3 sads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru" />
+    <meta property="og:description" content="about us" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header-content">
+                <a href="tel:8800219333" class="phone-menu" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
+                    <ul>
+                        <li><a href="">Лиственные деревья</a></li>
+                        <li><a href="">Хвойные растения</a></li>
+                        <li><a href="">Кустарники</a></li>
+                        <li><a href="">Многолетние растения</a></li>
+                        <li><a href="">Плодовые деревья и кустарники</a></li>
+                    </ul>
+                </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li>Лиственные деревья</li>
+                                <li>Хвойные растения</li>
+                                <li>Кустарники</li>
+                                <li>Многолетние растения</li>
+                                <li>Плодовые деревья и кустарники</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mobbile-menu">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <aside class="nav-container">
+            <ul class="breadcrumbs">
+                <li>Главная</li>
+                <li class="current-pages">о компании</li>
+            </ul>
+        </aside>
+        <div class="hero-section">
+            <div class="hero-content center-hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Команда,
+                        которой доверяют</div>
+                    <h2>О нас</h2>
+                    <div class="hero-desc">
+                        Мы — команда специалистов по уходу за садами и ландшафту. Реализуем проекты любой сложности,
+                        монтируем автополив, подбираем растения
+                        и сопровождаем участки круглый год. Работаем напрямую с питомниками
+                        и дизайнерами — воплощаем идеи точно и надёжно.
+                    </div>
+                </div>
+                <img class="hero-img" src="/src/assets/images/aboutUs/cubsBackground.png" alt="кубики земли">
+                <div class="hero-tags">
+                    <ul>
+                        <li>История</li>
+                        <li>преимущества</li>
+                        <li>команда</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/aboutUs/cuteGarden.png" alt="сад" class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Компания «3 сада» — команда, которая заботится о зелёном</h3>
+                        <p>
+                            Мы работаем с 2016 года и помогаем частным и корпоративным клиентам создавать, развивать
+                            и сохранять зелёные пространства.
+                        </p>
+                        <p>
+                            Для нас важны не только красота участка, но и его здоровье, удобство и устойчивость.
+                            Мы подбираем решения под ваш стиль, климат и задачи.
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="story-container">
+                <div class="story-container-text">
+                    <div class="story-container-text-tags">почему мы</div>
+                    <h3>История “Три сада”</h3>
+                </div>
+                <div class="story-container-article">
+                    <div class="story-container-article-row">
+                        <p>Компания “Три Сада” была основана в феврале 2019 года. Кто-то назовет нас новичками, а мы
+                            ответим, что за такое непродолжительное время набрали штат высококвалифицированных
+                            специалистов,
+                            облагородили крупные городские объекты, обзавелись крупной клиентской базой и показали
+                            впечатляющие результаты, к которым некоторые компании стремятся в течении многих лет.
+                        </p>
+                        <img src="/src/assets/images/aboutUs/house1.png" />
+                    </div>
+                    <div class="story-container-article-row">
+                        <p>
+                            Результатом такого прогресса является слаженная работа наших высококвалифицированных
+                            сотрудников, а также безусловная любовь к тому,
+                            чем мы занимаемся. К каждому клиенту мы ищем индивидуальный подход. Компания “Три Сада”
+                            гарантирует качественное и своевременное выполнение каждого этапа работы. Выбрав нашу
+                            компанию,
+                            Вы останетесь довольны,
+                            и проблемы «дачного участка» обойдут Вас стороной!
+
+                        </p>
+                        <img src="/src/assets/images/aboutUs/house2.png" />
+                    </div>
+                </div>
+                <p class="green-text black-text">Если Вы все еще не решились позвонить или написать, ниже несколько
+                    причин,
+                    почему стоит выбрать компанию
+                    «Три Сада»
+                </p>
+            </section>
+
+            <section>
+                <div class="features-container">
+                    <div class="story-container-text">
+                        <div class="story-container-text-tags">почему мы</div>
+                        <h3>Преимущества,
+                            которые вы получите</h3>
+                        <p class="green-text">С нашей командой вы обретаете экспертов, готовых создать идеальное
+                            пространство для вашего сада
+                        </p>
+                    </div>
+                    <div class="company-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <img src="/src/assets/icons/people2.svg" alt="Штат профессионалов">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Штат профессионалов</h3>
+                                <p>Над вашим проектом будут трудиться специалисты с огромным опытом работы, которые
+                                    проходят
+                                    регулярные обучения и улучшают свои профессиональные навыки</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <img src="/src/assets/icons/manTalk.svg" alt="Офисная команда">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Офисная команда</h3>
+                                <p>Ваш проект будут вести не только агрономы и бригадиры, но и профессиональный и
+                                    слаженный
+                                    штат офисных сотрудников, от менеджеров до бухгалтерии. К Вам будет прикреплен
+                                    персональный менеджер, который будет вести проект от идеи до самой его реализации
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <img src="/src/assets/icons/shovel.svg" alt="Качественное оборудование">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Качественное оборудование</h3>
+                                <p>Мы располагаем необходимой материально технической базой, в т.ч. и автопарком
+                                    спецтехники
+                                    для проведения работ по уходу за садом</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <img src="/src/assets/icons/medal.svg" alt="Качественное обслуживание">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Качественное обслуживание</h3>
+                                <p>Главная задача для нас - довольный клиент. Наша компания дорожит репутацией, поэтому
+                                    будет вести Вас до тех пор, пока каждый уголок Вашего участка не будет в идеальном
+                                    состоянии</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <img src="/src/assets/icons/man.svg" alt="Индивидуальный подход">
+                            </div>
+                            <div class="feature-content">
+                                <h3>Индивидуальный подход</h3>
+                                <p>Индивидуальный подход к каждому клиенту - один из главных девизов нашей компании. При
+                                    работе мы учитываем все мельчайшие или грандиозные пожелания заказчика. Каждые
+                                    работы
+                                    индивидуальны для каждого клиента, будь то ландшафтный проект или обычная укладка
+                                    газона
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="projects-about-us-carousel">
+                <div class="carousel-about-us">
+                    <div class="arrows-container">
+                        <button class="arrow left">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="arrow right">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-us-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work1.png" alt="">
+                            </div>
+                            <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work2.png" alt="">
+                            </div>
+                            <div class="carousel-item small"><img src="/src/assets/images/aboutUs/work3.png" alt="">
+                            </div>
+                            <div class="carousel-item small"><img
+                                    src="/src/assets/images/projectsV2/private-project3.png" alt=""></div>
+                            <div class="carousel-item big active"><img
+                                    src="/src/assets/images/projectsV2/private-project4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-about-us">
+                    <div>
+                        <p>Мы — команда профессионалов, объединённых любовью к природе
+                            и качественному ландшафту.
+                            Наша работа — это забота о садах, реализация ландшафтных решений, монтаж систем автополива и
+                            комплексный
+                            технический уход
+                            за участками.</p>
+                        <p>
+                            Мы работаем как с частными заказчиками, так и в партнёрстве
+                            с ландшафтными дизайнерами, помогая воплощать их идеи в жизнь — точно, аккуратно и надёжно.
+                            В
+                            каждом проекте
+                            мы
+                            стремимся создать среду,
+                            в которой хочется быть.
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <span>оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true" viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Кто мы и чем занимаемся</h3>
+                        <p>
+                            Компания «3 сада» — это команда специалистов, которая делаетучастки живыми, ухоженными
+                            и здоровыми. Мы работаем в Москвеи области, выполняем полный цикл ландшафтных и садовых
+                            работ.
+                        </p>
+                        <p>
+                            У нас есть опыт, своё оборудование, питомник растенийи многопрофильная команда. Мы не просто
+                            подстригаем траву,а продумываем, как сделать участок удобным и устойчивымв долгосрочной
+                            перспективе.
+                        </p>
+                        <p>
+                            Мы ценим эстетику, биологию и практичность. Работая с нами,вы получаете не просто услугу,
+                            а внимание к каждой деталии поддержку на всех этапах благоустройства.
+                        </p>
+                    </div>
+                    <img src="/src/assets/images/aboutUs/garden1.png" alt="сад-1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/aboutUs/garden2.png" alt="сад-2" />
+                    <div>
+                        <h4>Наши ценности и принципы</h4>
+                        <p>Что для нас главное</p>
+                        <ul>
+                            <li>Красота и здоровье участка</li>
+                            <li>Сохранение экологического баланса</li>
+                            <li>Долговечные решения, а не временные меры</li>
+                            <li>Прозрачные договорённости и честность</li>
+                            <li>Уважение к клиенту и его территории</li>
+                        </ul>
+                        <p>Чем мы гордимся</p>
+                        <ul>
+                            <li>8 лет опыта работы в регионе</li>
+                            <li>Десятки постоянных клиентов</li>
+                            <li>Собственный питомник</li>
+                            <li>Партнёрство с ландшафтными студиями</li>
+                            <li>Реальные результаты, а не обещания</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="contacts-header">
+                    <div class="button-container">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                    <h3 class="contact-heading">Контакты</h3>
+                    <p class="text-info green-text">Мы готовы ответить на ваши вопросы о садовых растениях!</p>
+                </div>
+                <div class="contants-container about-us-contacts">
+                    <div class="contacts-row">
+                        <div class="contant-container green-contacts">
+                            <h3>Позвонить</h3>
+                            <span>8 800 20 19 333</span>
+                            <span>8 985 75 49 333</span>
+                        </div>
+                        <div class="contant-container green-contacts">
+                            <h3>Написать</h3>
+                            <span>8 800 20 19 333</span>
+                            <span>8 985 75 49 333</span>
+                        </div>
+                        <div class="contact-social">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true"
+                                viewBox="0 0 20 20" fill="#303A30">
+                                <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true"
+                                viewBox="0 0 22 18" fill="#303A30">
+                                <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true"
+                                viewBox="0 0 24 16" fill="#303A30">
+                                <use href="/src/assets/icons/sprite.svg#vk"></use>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true"
+                                viewBox="0 0 22 18" fill="#303A30">
+                                <use href="/src/assets/icons/sprite.svg#letter"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d561.1330991412364!2d36.86106545142408!3d55.76662475404716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5673b1bdfaf13%3A0x4514191ff92eabc3!2zNTEsINCV0YDRiNC-0LLQviwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxNDMwNTU!5e0!3m2!1sru!2sus!4v1753899914770!5m2!1sru!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="contacts-row about-us-contact">
+                        <div class="contant-container">
+                            <h3>Адрес</h3>
+                            <span>Московская обл., одинцовский г. о., с. ершово 51</span>
+                        </div>
+                        <div class="contant-container">
+                            <h3>Время работы</h3>
+                            <span>с 08:00 до 20:00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="nav-footer">
+                    <li><a href="">услуги</a></li>
+                    <li><a href="">прайс-лист</a></li>
+                    <li><a href="">проекты</a></li>
+                    <li><a href="">партнерам</a></li>
+                </ul>
+                <a href="/" class="footer-logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+                </a>
+                <ul class="info-footer">
+                    <li><a href="">о компании</a></li>
+                    <li><a href="">контакты</a></li>
+                    <li><a href="">каталог растений</a></li>
+                </ul>
+
+                <a href="" class="document-1">политика конфиденциальности</a>
+
+                <div class="footer-social">
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+                <a href="" class="document-2">пользовательское соглашение</a>
+            </div>
+        </footer>
+    </div>
+    <script src="/src/js/carouselWork.js"></script>
+    <script src="/src/js/headerAdaptation.js"></script>
+    <script>
+        const headerHeight = document.querySelector(
+            ".main-header-content"
+        ).clientHeight;
+        document
+            .querySelector(".nav")
+            .setAttribute("style", `top: ${headerHeight}px`);
+
+        const plantsMenuModal = document.querySelector(".plants-menu");
+
+        document
+            .querySelector(".plants-catalog")
+            .addEventListener("click", () => {
+                if (plantsMenuModal.hasAttribute("style")) {
+                    plantsMenuModal.removeAttribute("style");
+                } else {
+                    plantsMenuModal.setAttribute("style", "display: none;");
+                }
+            });
+    </script>
+</body>
+
+</html>

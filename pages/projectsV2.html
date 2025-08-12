@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наши проекты —
+        ваше вдохновение - 3 сада</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
+
+    <link rel="icon" href="/src/assets/icons/logoVector.svg" />
+
+    <meta property="og:title" content="3 sads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru" />
+    <meta property="og:description" content="projects" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header-content">
+                <a href="tel:8800219333" class="phone-menu" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
+                    <ul>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Прайс-лист</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Партнерам</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li><a href="">Лиственные деревья</a></li>
+                                <li><a href="">Хвойные растения</a></li>
+                                <li><a href="">Кустарники</a></li>
+                                <li><a href="">Многолетние растения</a></li>
+                                <li><a href="">Плодовые деревья и кустарники</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mobbile-menu">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="nav-container">
+            <ul class="breadcrumbs">
+                <li>Главная</li>
+                <li class="current-pages">проекты</li>
+            </ul>
+        </aside>
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Наши проекты —
+                        ваше вдохновение.</div>
+                    <h2>Наши <span class="white-bg-tag">проекты</span></h2>
+                    <div class="hero-desc">
+                        Мы не просто озеленяем — мы создаём пространство, в котором хочется жить. В каждом проекте —
+                        чёткий подход, внимание к деталям и любовь к делу. Частные участки, городские территории,
+                        автоматический полив и стрижка деревьев — всё под ключ и с гарантией результата.
+                    </div>
+                </div>
+                <img class="hero-img" src="/src/assets/images/projectsV2/road-background.png" alt="Жук на листе">
+            </div>
+        </div>
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/projectsV2/bench.png" alt="мужчина стрижёт куст"
+                        class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Примеры благоустройства: частные и городские участки</h3>
+                        <p>
+                            Наша компания реализует проекты разного масштаба — от частных садов до городских территорий.
+                            Мы подходим к каждому участку индивидуально, с учётом его функций, расположения и пожеланий
+                            заказчика.
+                        </p>
+                        <p>
+                            Работы выполняются под ключ: от подготовки земли до финального ухода. Ниже представлены
+                            основные
+                            типы проектов, которые мы ведём.
+                    </div>
+                </div>
+            </section>
+
+            <section class="city-projects-section">
+                <div class="city-projects-text-block">
+                    <h3>Городские проекты</h3>
+                    <ul class="city-projects-buttons">
+                        <li>ул. Милашенкова</li>
+                        <li>ул. Перерва</li>
+                        <li>ул. Юных Ленинцев</li>
+                        <li>площадь Славы</li>
+                        <li>ул. Митинская</li>
+                        <li>ул. Святоозерская</li>
+                    </ul>
+                </div>
+                <div class="city-projects-image-block">
+                    <img src="/src/assets/images/projectsV2/white-section-img1.png" alt="Городской проект" />
+                </div>
+            </section>
+
+            <section>
+                <div class="project-gallery">
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project6.png" alt="Проект 1" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project1.png" alt="Проект 2" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project2.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project3.png" alt="Проект 1" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project4.png" alt="Проект 2" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project5.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/project6.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>подробнее</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="city-projects-section green-section">
+                <div class="city-projects-text-block">
+                    <h3>Частные
+                        проекты</h3>
+                    <ul class="city-projects-buttons">
+                        <li>киевское шоссе</li>
+                        <li>веледниково</li>
+                        <li>кп «гринфилд»</li>
+                        <li>кп «павлово»</li>
+                        <li>кп «миллениум парк»</li>
+                        <li>кп «адмирал»</li>
+                    </ul>
+                </div>
+                <div class="city-projects-image-block">
+                    <img src="/src/assets/images/projectsV2/green-section-img.png" alt="Городской проект" />
+                </div>
+            </section>
+
+            <section>
+                <div class="project-gallery">
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project1.png" alt="Проект 1" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project2.png" alt="Проект 2" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project3.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project4.png" alt="Проект 1" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project5.png" alt="Проект 2" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project6.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-project">
+                        <div class="project-img-wrapper">
+                            <img src="/src/assets/images/projectsV2/private-project7.png" alt="Проект 3" />
+                            <div class="project-info">
+                                <h3>ул.. Юных Ленинцев</h3>
+                                <p>Омай–июнь 2019 г <br>
+                                    площадь объекта: 0.8 га</p>
+                                <div href="#" class="button-container">
+                                    <span>Оставить заявку</span>
+                                    <svg class="service-arrow" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                        viewBox="0 0 32 32">
+                                        <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Благоустройство для частных и городских задач</h3>
+                        <p>Частные проекты</p>
+                        <p>
+                            Это дачи, приусадебные участки, коттеджные посёлки. Мы занимаемсяозеленением, посадками,
+                            дорожками, отмосткой, автополивом
+                            и уходом. Создаём не просто красоту, а удобство и долговечность.
+                        </p>
+                        <p>Городские проекты</p>
+                        <p>Это детские сады, придомовые территории, школы, офисные дворы.Мы обеспечиваем чистоту,
+                            безопасность и соответствие регламенту.Умеем работать с подрядчиками, управляющими
+                            компаниями, ТСЖ.</p>
+                        <p>В обоих случаях результат — это ухоженная территория, где всёфункционирует и радует глаз.</p>
+                    </div>
+                    <img src="/src/assets/images/projectsV2/garden-project1.png" alt="сад-1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/projectsV2/garden-project2.png" alt="сад-2" />
+                    <div>
+                        <h4>Что входит в проект и как мы работаем</h4>
+                        <p>В типовой проект входят</p>
+                        <ul>
+                            <li>Бесплатный выезд на участок</li>
+                            <li>Подготовка схемы и сметы</li>
+                            <li>Согласование по этапам</li>
+                            <li>Закупка материалов и растений</li>
+                            <li>Пошаговая реализация</li>
+                        </ul>
+
+                        <p>Порядок работы</p>
+                        <ul>
+                            <li>все цены — от, окончательная рассчитывается по осмотру</li>
+                            <li>возможны скидки при заказе нескольких услуг</li>
+                            <li>для постоянных клиентов действуют бонусные программы</li>
+                            <li>пакетные предложения дешевле на 10–20%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="nav-footer">
+                    <li><a href="">услуги</a></li>
+                    <li><a href="">прайс-лист</a></li>
+                    <li><a href="">проекты</a></li>
+                    <li><a href="">партнерам</a></li>
+                </ul>
+                <a href="/" class="footer-logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+                </a>
+                <ul class="info-footer">
+                    <li><a href="">о компании</a></li>
+                    <li><a href="">контакты</a></li>
+                    <li><a href="">каталог растений</a></li>
+                </ul>
+
+                <a href="" class="document-1">политика конфиденциальности</a>
+
+                <div class="footer-social">
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+                <a href="" class="document-2">пользовательское соглашение</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/src/js/headerAdaptation.js"></script>
+    <script>
+        const headerHeight = document.querySelector(
+            ".main-header-content"
+        ).clientHeight;
+        document
+            .querySelector(".nav")
+            .setAttribute("style", `top: ${headerHeight}px`);
+
+        const plantsMenuModal = document.querySelector(".plants-menu");
+
+        document
+            .querySelector(".plants-catalog")
+            .addEventListener("click", () => {
+                if (plantsMenuModal.hasAttribute("style")) {
+                    plantsMenuModal.removeAttribute("style");
+                } else {
+                    plantsMenuModal.setAttribute("style", "display: none;");
+                }
+            });
+    </script>
+</body>
+
+</html>

@@ -5,68 +5,159 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Наши услуги - 3 сада</title>
-  <link rel="stylesheet" href="src\css\services.css">
+  <link rel="stylesheet" href="/src/assets/css/app.css" />
 
   <link rel="icon" href="/src/assets/icons/logoVector.svg" />
 
-  <meta property="og:title" content="IT Conference" />
+  <meta property="og:title" content="3 sads" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ru" />
-  <meta property="og:description" content="IT конференция, для специалистов" />
+  <meta property="og:description" content="services" />
+  <script type="module">
+    import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+    window.addEventListener("load", () => {
+      window.addEventListener("scroll", showPopupHeader);
+    });
+  </script>
 </head>
 
 <body>
-
-  <body>
-    <div class="header-container">
-      <header class="header">
-        <nav class="nav">
+  <div class="container white-mode">
+    <header class="main-header">
+      <div class="main-header-content white-mode">
+        <a href="tel:8800219333" class="phone-menu black-svg" aria-label="Позвоните нам">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+            <use href="/src/assets/icons/sprite.svg#telephone"></use>
+          </svg>
+        </a>
+        <nav class="nav animation">
           <ul>
-            <div class="headerOneHalf">
+            <li><a href="">Услуги</a></li>
+            <li><a href="">Прайс-лист</a></li>
+            <li><a href="">Проекты</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href="">Партнерам</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="/" class="logo">
+          <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
+        </a>
+        <div class="info-nav animation">
+          <div class="plants-catalog-wrapper">
+            <button type="button" class="btn plants-catalog black-svg">
+              <span>Каталог растений</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                <use href="/src/assets/icons/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <div class="plants-menu" style="display: none">
+              <ul>
+                <li><a href="">Лиственные деревья</a></li>
+                <li><a href="">Хвойные растения</a></li>
+                <li><a href="">Кустарники</a></li>
+                <li><a href="">Многолетние растения</a></li>
+                <li><a href="">Плодовые деревья и кустарники</a></li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="btn application-btn black-svg">
+            <span>Оставить заявку</span>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+              <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <a href="tel:8800219333">8 800 219 333</a>
+        </div>
+
+        <div class="burger phone-menu" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="mobbile-menu">
+        <ul>
+          <li><a href="">Услуги</a></li>
+          <li><a href="">Прайс-лист</a></li>
+          <li><a href="">Проекты</a></li>
+          <li><a href="">О компании</a></li>
+          <li><a href="">Партнерам</a></li>
+          <li><a href="">Контакты</a></li>
+          <li>
+            <a href="/" class="btn application-btn black-svg">
+              <span>Оставить заявку</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+            <a href="tel:8800219333">8 800 219 333</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="popup-header-wrapper">
+        <div class="popup-header">
+          <nav class="nav animation">
+            <ul>
               <li><a href="">Услуги</a></li>
               <li><a href="">Прайс-лист</a></li>
               <li><a href="">Проекты</a></li>
               <li><a href="">О компании</a></li>
               <li><a href="">Партнерам</a></li>
               <li><a href="">Контакты</a></li>
-            </div>
-            <li><a href="/" class="logo">
-                <img src="src\assets\icons\logoGrennBlackVector.svg" alt="Логотип сайта" />
-              </a></li>
-            <div class="headerTwoHalf">
-              <li>Каталог растений</li>
-              <li>Оставить заявку</li>
-              <li>8 800 219 333</li>
-            </div>
-          </ul>
-        </nav>
-      </header>
-    </div>
-
-    <aside class="nav-container">
-      <ul class="breadcrumbs">
-        <li>Главная</li>
-        <li class="current-pages">Услуги</li>
-      </ul>
-    </aside>
-
-    <main>
-      <section class="services-hero">
-        <div class="services-hero-content">
-          <div class="services-hero-text">
-            <p class="services-hero-subtitle">подберите услугу, подходящую вам</p>
-            <h2>Наши услуги</h2>
-            <p class="services-hero-desc">
-              Создаём комфорт по кусочкам: газон, брусчатка, цветы и не только. Как пазл, всё сходится в гармонию.
+            </ul>
+          </nav>
+          <a href="/" class="popup-header__logo">
+            <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+          </a>
+          <div class="info-nav animation">
+            <button type="button" class="btn plants-catalog">
+              <span>Каталог растений</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                <use href="/src/assets/icons/sprite.svg#dots"></use>
+              </svg>
+            </button>
+            <button type="button" class="btn application-btn">
+              <span>Оставить заявку</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <a href="tel:8800219333">8 800 219 333</a>
           </div>
         </div>
-        <div class="img-placeholder"><img class="hero-bg-img"
-            src="/src/assets/images/services/servicesMainGarden.png" /></div>
-      </section>
-
+      </div>
+    </header>
+    <div class="white-mode">
+      <aside class="nav-container white-mode">
+        <ul class="breadcrumbs white-mode">
+          <li>Главная</li>
+          <li class="current-pages white-mode">Услуги</li>
+        </ul>
+      </aside>
+      <div class="hero-section white-mode">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-subtitle white-mode">Здоровый сад —
+              без компромиссов</div>
+            <h2>Комплексный уход за садом, абонементы</h2>
+            <div class="hero-desc white-mode">
+              Полный цикл заботы о вашем участке: от стрижки газона и обработки
+              от вредителей до внесения удобрений
+              и консультаций агронома. Выбирайте абонемент — и доверьте уход профессионалам.
+            </div>
+          </div>
+          <img class="hero-img" src="/src/assets/images/services/servicesMainGarden.png" alt="Жук на листе">
+        </div>
+      </div>
+    </div>
+    <main>
       <section class="services-main">
         <div class="services-main-row">
-          <img src="src\assets\images\services\servicesFontaine.png" alt="Сад" class="img-placeholder">
+          <img src="/src/assets/images/services/servicesFontaine.png" alt="Сад" class="img-placeholder">
           <div class="services-main-row__text">
             <h3>Услуги по благоустройству и уходу за участками</h3>
             <p>
@@ -81,7 +172,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="service-cards">
         <div class="service-card">
           <div class="service-card-info">
             <div class="service-card__tags">
@@ -94,8 +185,11 @@
               <span>Комплексный уход за садом, абонементы</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -103,9 +197,10 @@
             <p>Мы помогаем сохранить ваш сад в идеальном состоянии, чтобы он радовал вас круглый год</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card1.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card1.png" alt="Уход за садом">
           </div>
         </div>
+
         <div class="service-card">
           <div class="service-card-info">
             <div class="service-card__tags">
@@ -113,8 +208,11 @@
               <span>Устройство газонов</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -123,7 +221,7 @@
               и элементы ландшафта, создавая гармоничное пространство для отдыха и наслаждения природой</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card2.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card2.png" alt="Уход за садом">
           </div>
         </div>
         <div class="service-card">
@@ -133,8 +231,11 @@
               <span>Рабочее проектирование</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -143,7 +244,7 @@
               и сочетание растений и элементов дизайна</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card3.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card3.png" alt="Уход за садом">
           </div>
         </div>
         <div class="service-card">
@@ -155,8 +256,11 @@
               <span>освещение территории</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -165,7 +269,7 @@
               и наслаждения природой</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card4.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card4.png" alt="Уход за садом">
           </div>
         </div>
         <div class="service-card">
@@ -174,8 +278,11 @@
               <span>система полива</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -184,7 +291,7 @@
               и климатические условия</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card5.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card5.png" alt="Уход за садом">
           </div>
         </div>
         <div class="service-card">
@@ -196,8 +303,11 @@
               <span>озеленение интерьера</span>
             </div>
             <a href="#" class="service-card__more">
-              подробнее
-              <span class="service-card__arrow">→</span>
+              <span>подробнее</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon" aria-hidden="true" viewBox="0 0 20 20"
+                stroke="#007D21">
+                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </a>
           </div>
           <div class="service-card__content">
@@ -206,7 +316,7 @@
               к уходу за вашим садом, чтобы он всегда оставался здоровым и красивым</p>
           </div>
           <div class="service-card__image last-element">
-            <img src="src\assets\images\services\card6.png" alt="Уход за садом">
+            <img src="/src/assets/images/services/card6.png" alt="Уход за садом">
           </div>
         </div>
       </section>
@@ -230,10 +340,10 @@
               участка.
             </p>
           </div>
-          <img src="src\assets\images\services\photoGarden1.png" alt="сад-1" />
+          <img src="/src/assets/images/services/photoGarden1.png" alt="сад-1" />
         </div>
         <div class="company-info-row">
-          <img src="src\assets\images\services\photoGarden2.png" alt="сад-2" />
+          <img src="/src/assets/images/services/photoGarden2.png" alt="сад-2" />
           <div>
             <h4>Направления и преимущества</h4>
             <p>Основные направления работ</p>
@@ -260,30 +370,66 @@
 
     <footer class="footer">
       <div class="footer-content">
-        <nav class="footer-nav">
-          <ul>
-            <li>услуги</li>
-            <li>прайс-лист</li>
-            <li>проекты</li>
-            <li>партнерам</li>
-            <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
-            <li>о компании</li>
-            <li>контакты</li>
-            <li>каталог растений</li>
-          </ul>
-        </nav>
+        <ul class="nav-footer">
+          <li><a href="">услуги</a></li>
+          <li><a href="">прайс-лист</a></li>
+          <li><a href="">проекты</a></li>
+          <li><a href="">партнерам</a></li>
+        </ul>
+        <a href="/" class="footer-logo">
+          <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+        </a>
+        <ul class="info-footer">
+          <li><a href="">о компании</a></li>
+          <li><a href="">контакты</a></li>
+          <li><a href="">каталог растений</a></li>
+        </ul>
 
-        <div class="footer-bottom">
-          <span>политика конфиденциальности</span>
-          <div class="footer-social">
-            <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
-            <img class="footer-icon" src="src\assets\icons\telegram.svg" alt="telegram">
-            <img class="footer-icon" src="src\assets\icons\vk.svg" alt="vk">
-          </div>
-          <span>пользовательское соглашение</span>
+        <a href="" class="document-1">политика конфиденциальности</a>
+
+        <div class="footer-social">
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#vk"></use>
+            </svg>
+          </a>
         </div>
+        <a href="" class="document-2">пользовательское соглашение</a>
       </div>
     </footer>
-  </body>
+  </div>
+
+  <script src="/src/js/headerAdaptation.js"></script>
+  <script>
+    const headerHeight = document.querySelector(
+      ".main-header-content"
+    ).clientHeight;
+    document
+      .querySelector(".nav")
+      .setAttribute("style", `top: ${headerHeight}px`);
+
+    const plantsMenuModal = document.querySelector(".plants-menu");
+
+    document
+      .querySelector(".plants-catalog")
+      .addEventListener("click", () => {
+        if (plantsMenuModal.hasAttribute("style")) {
+          plantsMenuModal.removeAttribute("style");
+        } else {
+          plantsMenuModal.setAttribute("style", "display: none;");
+        }
+      });
+  </script>
+</body>
 
 </html>

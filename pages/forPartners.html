@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>От проекта — к живому саду - 3 сада</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
+
+    <link rel="icon" href="/src/assets/icons/logoVector.svg" />
+
+    <meta property="og:title" content="3 sads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru" />
+    <meta property="og:description" content="for partners" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container white-mode">
+        <header class="main-header">
+            <div class="main-header-content white-mode">
+                <a href="tel:8800219333" class="phone-menu black-svg" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
+                    <ul>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Прайс-лист</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Партнерам</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog black-svg">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li><a href="">Лиственные деревья</a></li>
+                                <li><a href="">Хвойные растения</a></li>
+                                <li><a href="">Кустарники</a></li>
+                                <li><a href="">Многолетние растения</a></li>
+                                <li><a href="">Плодовые деревья и кустарники</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn black-svg">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mobbile-menu">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn black-svg">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="white-mode">
+            <aside class="nav-container white-mode">
+                <ul class="breadcrumbs">
+                    <li>Главная</li>
+                    <li class="current-pages white-mode">партнерам</li>
+                </ul>
+            </aside>
+            <section class="hero-section white-mode">
+                <div class="hero-content hero-section-plant">
+                    <div class="hero-text hero-text-container hero-text-for-partners">
+                        <div class="hero-text-top ">
+                            <div class="hero-subtitle white-mode">От проекта — к живому саду</div>
+                            <h2>Надежный партнер в реализации ландшафтных проектов</h2>
+                            <div class="hero-desc white-mode">
+                                Мы профессионально воплощаем задумки дизайнеров, архитекторов
+                                и студий: от ухода за участком
+                                до комплексного благоустройства
+                                и установки полива. Подряд, техническая реализация, сопровождение — всё под контролем.
+                            </div>
+                        </div>
+                    </div>
+                    <img class="hero-img-block white-mode"
+                        src="/src/assets/images/forPartners/houseGardenBackground.png" alt="сад фон">
+                </div>
+            </section>
+        </div>
+
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/forPartners/manWrite.png" alt="сад" class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Сотрудничество с дизайнерами, ТСЖ 
+                            и застройщиками</h3>
+                        <p>
+                            Наша компания регулярно работает с ландшафтными студиями, архитекторами, ТСЖ и строительными
+                            подрядчиками. Мы берём на себя реализацию всех технических этапов проекта: от подготовки
+                            участка
+                            до сдачи озеленения под ключ.
+                        </p>
+                        <p>
+                            Вы придумываете концепцию — мы воплощаем её в реальность в точности по чертежам, графику
+                            и бюджету.
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects-about-us-carousel">
+                <div class="carousel-about-us">
+                    <div class="arrows-container">
+                        <button class="arrow left">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="arrow right">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-us-carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work1.png" alt="">
+                            </div>
+                            <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work2.png" alt="">
+                            </div>
+                            <div class="carousel-item small"><img src="/src/assets/images/aboutUs/work3.png" alt="">
+                            </div>
+                            <div class="carousel-item small"><img
+                                    src="/src/assets/images/projectsV2/private-project3.png" alt=""></div>
+                            <div class="carousel-item big active"><img
+                                    src="/src/assets/images/projectsV2/private-project4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-about-us">
+                    <div>
+                        <p>Наша компания специализируется
+                            на профессиональном уходе за садами, ландшафтных работах, монтаже автополива и посадках.
+                            Мы сотрудничаем с ландшафтными дизайнерами, выступая техническим подрядчиком для воплощения
+                            их концепций
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <span>оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true" viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="partners-article-container">
+                    <div class="partners-info-row">
+                        <div class="company-info__text">
+                            <h3>Гибкий формат
+                                и прозрачные условия</h3>
+                            <ul>
+                                <li>Работа по договору или подрядной схеме</li>
+                                <li>Индивидуальные условия для студий и дизайнеров</li>
+                                <li>Согласование на каждом этапе</li>
+                                <li>Прозрачные сметы и чёткие сроки</li>
+                                <li>Фотоотчёты и гарантийные обязательства</li>
+                            </ul>
+
+                        </div>
+                        <img src="/src/assets/images/forPartners/article3.png" alt="работа 1" />
+                    </div>
+                    <div class="partners-info-row">
+                        <img src="/src/assets/images/forPartners/article4.png" alt="работа 2" />
+                        <div class="company-info__text">
+                            <h3>Закрываем всё — от газона до ухода</h3>
+                            <ul>
+                                <li>Устройство газонов</li>
+                                <li>Посадка деревьев и кустарников</li>
+                                <li>Монтаж автополива</li>
+                                <li>Уход и абонементное обслуживание</li>
+                                <li>Обработка от болезней и вредителей</li>
+                                <li>Сезонные работы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Как мы работаем с партнёрами</h3>
+                        <p>
+                            Мы выступаем техническим подрядчиком, обеспечивая веськомплекс работ по благоустройству.
+                            Это может быть покос,посадка, уход, автополив, освещение, монтаж дорожек иукрепление
+                            откосов.
+                        </p>
+                        <p>
+                            Сотрудничаем по договору, предоставляем сметы, гарантиии фотофиксацию этапов. У нас свои
+                            сотрудники, транспорти питомник, поэтому можем выполнять задачи точно
+                            в сроки без привлечения
+                            сторонних бригад.
+                        <p>
+                            Под каждый проект закрепляется менеджер. Вы получаетеоперативную обратную связь, документы
+                            и контроль качествана всех этапах.
+                        </p>
+                    </div>
+                    <img src="/src/assets/images/forPartners/workWithPartners1.png" alt="работа 1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/forPartners/workWithPartners2.png" alt="работа 2" />
+                    <div>
+                        <h4>Кому подойдёт сотрудничество</h4>
+                        <p>Наши партнёры</p>
+                        <ul>
+                            <li>Ландшафтные дизайнеры</li>
+                            <li>Архитекторы</li>
+                            <li>Строительные компании</li>
+                            <li>Управляющие организации</li>
+                            <li>Частные инвесторы</li>
+                        </ul>
+                        <p>Преимущества сотрудничества</p>
+                        <ul>
+                            <li>Работаем по проекту и ТЗ</li>
+                            <li>Полный цикл — от земли до деревьев</li>
+                            <li>Надёжные исполнители</li>
+                            <li>Скидки на крупные заказы</li>
+                            <li>Гибкие условия оплаты</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="project-banner-container">
+                    <h3>Давайте сделаем проект вместе</h3>
+                    <img class="project-banner-logo" src="/src/assets/icons/logoVector.svg" alt="логотип" />
+                    <div class="project-banner-container__info">
+                        <p>Если вы ищете надёжного исполнителя для реализации своих идей, просто напишите нам. Мы
+                            обсудим
+                            задачи, сроки и найдём удобный формат сотрудничества</p>
+                        <div class="button-container project-banner-btn">
+                            <span>связаться с нами</span>
+                            <img src="/src/assets/icons/arrow-right.svg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="nav-footer">
+                    <li><a href="">услуги</a></li>
+                    <li><a href="">прайс-лист</a></li>
+                    <li><a href="">проекты</a></li>
+                    <li><a href="">партнерам</a></li>
+                </ul>
+                <a href="/" class="footer-logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+                </a>
+                <ul class="info-footer">
+                    <li><a href="">о компании</a></li>
+                    <li><a href="">контакты</a></li>
+                    <li><a href="">каталог растений</a></li>
+                </ul>
+
+                <a href="" class="document-1">политика конфиденциальности</a>
+
+                <div class="footer-social">
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+                <a href="" class="document-2">пользовательское соглашение</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/src/js/headerAdaptation.js"></script>
+    <script>
+        const headerHeight = document.querySelector(
+            ".main-header-content"
+        ).clientHeight;
+        document
+            .querySelector(".nav")
+            .setAttribute("style", `top: ${headerHeight}px`);
+
+        const plantsMenuModal = document.querySelector(".plants-menu");
+
+        document
+            .querySelector(".plants-catalog")
+            .addEventListener("click", () => {
+                if (plantsMenuModal.hasAttribute("style")) {
+                    plantsMenuModal.removeAttribute("style");
+                } else {
+                    plantsMenuModal.setAttribute("style", "display: none;");
+                }
+            });
+    </script>
+    <script src="/src/js/carouselWork.js"></script>
+</body>
+
+</html>

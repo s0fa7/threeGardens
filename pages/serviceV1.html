@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Борьба с болезнями и вредителями - 3 сада</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
+
+    <link rel="icon" href="/src/assets/icons/logoVector.svg" />
+
+    <meta property="og:title" content="3 sads" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru" />
+    <meta property="og:description" content="service" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header-content">
+                <a href="tel:8800219333" class="phone-menu" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
+                    <ul>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Прайс-лист</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Партнерам</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li><a href="">Лиственные деревья</a></li>
+                                <li><a href="">Хвойные растения</a></li>
+                                <li><a href="">Кустарники</a></li>
+                                <li><a href="">Многолетние растения</a></li>
+                                <li><a href="">Плодовые деревья и кустарники</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="mobbile-menu">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                            <li><a href="">Проекты</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Партнерам</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="nav-container">
+            <ul class="breadcrumbs">
+                <li>Главная</li>
+                <li>Услуги</li>
+                <li class="current-pages">Борьба с болезнями и вредителями</li>
+            </ul>
+        </aside>
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Здоровый сад —
+                        без компромиссов</div>
+                    <h2>Борьба с болезнями и вредителями</h2>
+                    <div class="hero-desc">
+                        Мы используем проверенные методы и современные средства, чтобы ваш сад оставался сильным,
+                        цветущим и безопасным. Профилактика, обработка и забота — под контролем.
+                    </div>
+                </div>
+                <img class="hero-img" src="/src/assets/images/serviceV1/nasekomoePhone.png" alt="Жук на листе">
+            </div>
+        </div>
+
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/serviceV1/manServiceV1.png" alt="мужчина борется с насекомыми"
+                        class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Профессиональная защита сада от вредителей и болезней</h3>
+                        <p>
+                            Здоровый сад — результат регулярной и качественной защиты растений. Вредители, грибковые
+                            инфекции и бактерии могут за короткое время нанести серьёзный ущерб деревьям, кустарникам
+                            и газону. Специалисты компании «3 сада» проводят профессиональную диагностику и обработку
+                            растений с применением современных и безопасных препаратов.
+                        </p>
+                        <p>
+                            Мы не просто боремся с симптомами, а устраняем источник проблемы. Работаем
+                            как с декоративными,
+                            так и с плодовыми культурами, подбираем подходящие методы защиты и обеспечиваем профилактику
+                            на сезон вперёд.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Второй раздел -->
+            <section class="beetle-control-info">
+                <div class="article">
+                    <p class="text-info green-text">Все, кто занимается садоводством, хоть раз в жизни сталкивается с
+                        вредителями и болезнями растений. Именно они являются причиной замедления роста растений, потери
+                        декоративности или даже их гибели.</p>
+                    <div class="article-container">
+                        <p class="border-text">На сегодняшний день невозможно назвать точное количество вредителей
+                            и болезней, которые могут испортить Ваш сад. Однако, эта цифра превышает несколько сотен
+                            тысяч.
+                            Поэтому
+                            так важно регулярно проводить защитные мероприятия. Не забывайте, что любую болезнь, гораздо
+                            проще
+                            предотвратить, нежели вылечить. Вовремя не проведенная профилактика грозит заражением Ваших
+                            растений,
+                            распространению инфекции на большие площади и гибелью сада.</p>
+                        <div class="text-info-group">
+                            <p>
+                                Сложность состоит в том, что при планировании будущей обработки, важно учитывать все:
+                                начиная
+                                с отличительных черт каждого растения, заканчивая погодными условиями местности, где Вы
+                                yаходитесь.
+                            </p>
+                            <p>Если речь идет об уже заболевшем растении, то здесь дела обстоят еще сложнее.
+                                Иногда лечение одного лишь
+                                дерева - трудный, многоступенчатый процесс, который стоит доверить специалистам для
+                                достижения
+                                наилучшего результата.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="article-container2" class="article-container border-text">
+                    <div class="article">
+                        <h3>Одними из наиболее распространенных
+                            и опасных вредителей считаютсяжуки-короеды.</h3>
+                        <p class="border-text">
+                            Несмотря на то, что размер этих насекомых совсем невелик, взрослая особь может нанести
+                            колоссальный
+                            вред
+                            растениям. Обычно они прогрызают дерево и создают внутри многочисленные ходы. Существует
+                            огромное
+                            количество разновидностей этого вредителя, некоторые из которых паразитируют на культурных
+                            растениях,
+                            плодовых культурах и даже деревянной мебели. Очень важно вовремя проводить профилактические
+                            мероприятия,
+                            чтобы избежать их появления
+                            и размножения.
+                        </p>
+                        <div class="beetle-control-info___photos border-text">
+                            <img src="/src/assets/images/serviceV1/pshik1.png" alt="девушка пшикает кусты" />
+                            <img src="/src/assets/images/serviceV1/pshik2.png" alt="опрыскивание куста" />
+                        </div>
+                        <div class="buttons-container">
+                            <div class="button-container">
+                                <span>оставить заявку</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                    viewBox="0 0 20 20">
+                                    <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                            <div class="button-container">
+                                <span>скачать прайслист</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                    viewBox="0 0 20 20">
+                                    <use href="/src/assets/icons/sprite.svg#download"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <h3>Еще одним из самых известных вредителей являются клещи.</h3>
+                        <p class="border-text">
+                            Как только на улице начинает пригревать солнце и земля освобождается от снега, появляются
+                            первые
+                            клещи. Они представляют большую опасность как для человека, так и для животных, потому что
+                            являются
+                            переносчиками опасных болезней, которые могут приводить к летальному исходу. На данный
+                            момент
+                            известно более 50 тысяч видов этого паразита, некоторые из которых относятся к
+                            растительноядным
+                            клещам. Они наносят огромный вред саду, так как питаются соком культурно-ягодных и огородных
+                            растений, вследствие чего, если вовремя не провести лечение, растения погибают.
+                        </p>
+                        <img id="arka" src="/src/assets/images/serviceV1/articlePhoto.png" alt="опрыскивание кустов" />
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Третий раздел -->
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Как проходит обработка участка от вредителей</h3>
+                        <p>
+                            Сначала мы проводим визуальный осмотр участка, выявляя проблемные зоныи признаки заражения.
+                            Это позволяет понять, какие вредители или заболеваниянанесли вред растениям. Мы определяем
+                            масштаб поражения и выбираем способвоздействия, учитывая тип растений и сезон.
+                        </p>
+                        <p>
+                            Далее подбираем подходящий метод обработки: опрыскивание, инъекции в ствол,точечная санация
+                            или капельная подача препаратов. Используем современныепрепараты — инсектициды, фунгициды,
+                            акарициды, а также биологические средства.Они эффективны и безопасны для людей, животных
+                            и окружающей среды.
+                        </p>
+                        <p>
+                            При необходимости обрабатываем участок повторно — для закрепления результатаи предотвращения
+                            повторного заражения. Вся работа проводится строго по нормами с применением
+                            профессионального
+                            оборудования. Мы обеспечиваем комплекснуюзащиту без ущерба для ландшафта.
+                        </p>
+                    </div>
+                    <img src="/src/assets/images/serviceV1/fittingwithjuk1.png" alt="сад-1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/serviceV1/fittingwithjuk2.png" alt="сад-2" />
+                    <div>
+                        <h4>Виды вредителей и преимуществ работы с нами</h4>
+                        <p>Виды вредителей и проблем, с которыми мы работаем</p>
+                        <ul>
+                            <li>Тля, клещи, трипсы</li>
+                            <li>Грибковые инфекции, плесень</li>
+                            <li>Корневая гниль, мучнистая роса</li>
+                            <li>Улитки, слизни, гусеницы</li>
+                            <li>Короеды, древоточащие жуки</li>
+                        </ul>
+                        <p>Преимущества работы с нами</p>
+                        <ul>
+                            <li>Применяем только сертифицированные препараты</li>
+                            <li>Индивидуальный подбор схемы защиты</li>
+                            <li>Быстрый выезд и чёткая диагностика</li>
+                            <li>Агроному всегда можно задать вопросы</li>
+                            <li>Гарантированный результат при комплексной обработке</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+           <footer class="footer">
+      <div class="footer-content">
+        <ul class="nav-footer">
+          <li><a href="">услуги</a></li>
+          <li><a href="">прайс-лист</a></li>
+          <li><a href="">проекты</a></li>
+          <li><a href="">партнерам</a></li>
+        </ul>
+        <a href="/" class="footer-logo">
+          <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+        </a>
+        <ul class="info-footer">
+          <li><a href="">о компании</a></li>
+          <li><a href="">контакты</a></li>
+          <li><a href="">каталог растений</a></li>
+        </ul>
+
+        <a href="" class="document-1">политика конфиденциальности</a>
+
+        <div class="footer-social">
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+              <use href="/src/assets/icons/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </div>
+        <a href="" class="document-2">пользовательское соглашение</a>
+      </div>
+    </footer>
+  </div>
+  <script src="/src/js/headerAdaptation.js"></script>
+  <script>
+    const headerHeight = document.querySelector(
+      ".main-header-content"
+    ).clientHeight;
+    document
+      .querySelector(".nav")
+      .setAttribute("style", `top: ${headerHeight}px`);
+
+    const plantsMenuModal = document.querySelector(".plants-menu");
+
+    document
+      .querySelector(".plants-catalog")
+      .addEventListener("click", () => {
+        if (plantsMenuModal.hasAttribute("style")) {
+          plantsMenuModal.removeAttribute("style");
+        } else {
+          plantsMenuModal.setAttribute("style", "display: none;");
+        }
+      });
+  </script>
+</body>
+
+</html>
