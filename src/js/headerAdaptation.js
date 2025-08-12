@@ -1,14 +1,8 @@
-const userMenu = document.querySelector(".user-menu");
 
-function toggleMenu() {
-  // Проверка: экран 768px и меньше
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    if (userMenu.classList.contains("hidden")) {
-      userMenu.classList.remove("hidden");
-    } else {
-      userMenu.classList.add("hidden");
-    }
-  }
-}
+const burger = document.getElementById('burger');
+const nav = document.querySelector('.mobbile-menu');
 
-console.log(userMenu);
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  nav.classList.toggle('active');
+});

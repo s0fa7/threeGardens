@@ -1,377 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карусель</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/assets/css/app.css" />
 </head>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .projects-about-us-carousel {
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-  }
-
-  .carousel-about-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 50%;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .arrows-container {
-    margin: 1rem;
-    position: relative;
-    top: 10%;
-    left: 1%;
-    display: flex;
-    gap: 27px;
-  }
-
-  .carousel {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-end;
-  }
-
-  .arrow {
-    cursor: pointer;
-
-    border: 1px solid #7C9085;
-    stroke: #303A30;
-    border-radius: 50%;
-    background-color: inherit;
-    width: 48px;
-    height: 48px;
-    padding: 8px;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 20px;
-    /* width: 800px; */
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 100%;
-    width: auto;
-  }
-
-  .carousel-item {
-    flex-shrink: 0;
-    transition: all 0.5s ease;
-    /* Плавное изменение размера и прозрачности */
-  }
-
-  .carousel-item.hidden {
-    width: 0;
-    opacity: 0;
-  }
-
-  .carousel-item.small {
-    /* width: auto;
-    height: auto; */
-    max-height: 50%;
-    max-width: 20%;
-    opacity: 1;
-  }
-
-  .carousel-item.big {
-    width: 49%;
-    height: auto;
-    max-height: 100%;
-    opacity: 1;
-  }
-
-  .carousel-item.big img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  .carousel-item.small img {
-    width: 90%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-
-  .button-container {
-    text-transform: uppercase;
-    font-size: .9375rem;
-
-    display: flex;
-    gap: .75rem;
-    align-items: center;
-  }
-
-  .button-container svg {
-    width: 36px;
-    height: 36px;
-    stroke: #007D21;
-    border: 1px solid #007D2133;
-    border-radius: 50%;
-    background: transparent;
-    display: inline-block;
-    padding: 0.5rem;
-    filter: blur(0);
-  }
-
-  .white-btn-bg svg {
-    background-color: #fff;
-    border-radius: 50%;
-    border: none;
-  }
-
-  .info-about-us {
-    padding: 1rem;
-    margin-top: 3%;
-    max-width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .info-about-us p {
-    font-size: 33px;
-    margin-bottom: 0.5rem;
-  }
-
-@media (min-width: 1440px) {
-
-  .projects-about-us-carousel {
-    gap: 24px;
-    max-height: 773px;
-  }
-
-  .carousel-about-us {
-    height: 100%;
-    width: auto;
-    padding: 0.5rem;
-  }
-
-  .info-about-us {
-    max-width: 28%;
-  }
-
-  .info-about-us p {
-    font-size: 26px;
-  }
-
-  .carousel-track {
-    gap: 12px;
-    height: 50%;
-  }
-
-  .carousel-item.small{
-    height: auto;
-    width: 20%;
-  }
-
-  .carousel-item.big{
-    height: 100%;
-    width: auto;
-  }
-
-  .arrow {
-    width: 40px;
-    height: 40px;
-    padding: 6px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .projects-about-us-carousel {
-    gap: 20px;
-    height: 50%;
-    align-items: flex-end;
-  }
-
-  .carousel-about-us {
-    height: 80%;
-    width: 40%;
-    padding: 0.5rem;
-    overflow: hidden;
-
-  }
-
-  .info-about-us {
-    max-width: 55%;
-  }
-
-  .info-about-us p {
-    font-size: 22px;
-  }
-
-  .carousel-track {
-    gap: 10px;
-  }
-
-  .carousel-item.small {
-    height: 40%;
-  }
-
-  .carousel-item.big {
-    height: 80%;
-  }
-
-  .arrow {
-    width: 36px;
-    height: 36px;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 425px){
-  .projects-about-us-carousel{
-    flex-direction: column;
-  }
-  .info-about-us{
-    max-width: 100%;
-  }
-  .carousel-about-us{
-    width: 100%;
-  }
-  .carousel-track{
-    overflow-x: auto;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-  .carousel-item.small,
-  .carousel-item.hidden,
-  .carousel-item.big{
-    width: 20%;
-    height: 20%;
-    opacity: 1;
-  }
-  /* .carousel-item.small{
-    width: 100%;
-  } */
-  .carousel-item.small img,
-  .carousel-item.hidden img,
-  .carousel-item.big img{
-    width: 300px;
-    height: 260px;
-  }
-}
-
-</style>
-
 <body>
-  <section class="projects-about-us-carousel">
-    <div class="carousel-about-us">
-      <div class="arrows-container">
-        <button class="arrow left">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
-            <use href="/src/assets/icons/sprite.svg#arrow-left"></use>
-          </svg>
-        </button>
-        <button class="arrow right">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
-            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work1.png" alt=""></div>
-          <div class="carousel-item hidden"><img src="/src/assets/images/aboutUs/work2.png" alt=""></div>
-          <div class="carousel-item small"><img src="/src/assets/images/aboutUs/work3.png" alt=""></div>
-          <div class="carousel-item small"><img src="/src/assets/images/projectsV2/private-project3.png" alt=""></div>
-          <div class="carousel-item big active"><img src="/src/assets/images/projectsV2/private-project4.png" alt="">
-          </div>
-        </div>
-      </div>
+    <div class="page-container">
+        <ol>
+            <li>
+                <a href="/pages/main.html">Главная</a>
+            </li>
+            <li>
+                <a href="/pages/services.html">Услуги</a>
+            </li>
+            <li>
+                <a href="/pages/serviceV1.html">Услуга</a>
+            </li>
+            <li>
+                <a href="/pages/subscription.html">Подписки</a>
+            </li>
+            <li>
+                <a href="/pages/aboutUs.html">О нас</a>
+            </li>
+            <li>
+                <a href="/pages/priceV2.html">Прайс</a>
+            </li>
+            <li>
+                <a href="/pages/projectsV2.html">Проекты</a>
+            </li>
+            <li>
+                <a href="/pages/greenfieldV2.html">Проект</a>
+            </li>
+            <li>
+                <a href="/pages/plantNursery.html">Питомник растений</a>
+            </li>
+            <li>
+                <a href="/pages/greenfieldV2.html">Лиственные растения</a>
+            </li>
+            <li>
+                <a href="/pages/forPartners.html">Для партнёров</a>
+            </li>
+            <li>
+                <a href="/pages/contacts.html">Контакты</a>
+            </li>
+            <li>
+                <a href="/pages/error1.html">404-1</a>
+            </li>
+            <li>
+                <a href="/pages/error2.html">404-2</a>
+            </li>
+            <li>
+                <a href="/pages/errror3.html">404-3</a>
+            </li>
+        </ol>
     </div>
-    <div class="info-about-us">
-      <div>
-        <p>Мы — команда профессионалов, объединённых любовью к природе
-          и качественному ландшафту.
-          Наша работа — это забота о садах, реализация ландшафтных решений, монтаж систем автополива и комплексный
-          технический уход
-          за участками.</p>
-        <p>
-          Мы работаем как с частными заказчиками, так и в партнёрстве
-          с ландшафтными дизайнерами, помогая воплощать их идеи в жизнь — точно, аккуратно и надёжно. В каждом проекте
-          мы
-          стремимся создать среду,
-          в которой хочется быть.
-        </p>
-      </div>
-      <div class="button-container white-btn-bg">
-        <span>оставить заявку</span>
-        <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true" viewBox="0 0 20 20">
-          <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const leftBtn = document.querySelector('.arrow.left');
-    const rightBtn = document.querySelector('.arrow.right');
-
-    let items = Array.from(track.children);
-    let isAnimating = false;
-
-    function updateClasses() {
-      items.forEach((item, index) => {
-        item.className = 'carousel-item';
-        if (index < 2) {
-          item.classList.add('hidden');
-        } else if (index === 2 || index === 3) {
-          item.classList.add('small');
-        } else if (index === 4) {
-          item.classList.add('big', 'active');
-        }
-      });
-    }
-
-    function move(direction) {
-      if (isAnimating) return;
-      isAnimating = true;
-
-      // Просто меняем порядок элементов в массиве
-      if (direction === 'left') {
-        items.unshift(items.pop());
-      } else {
-        items.push(items.shift());
-      }
-
-      // Обновляем DOM
-      updateDOM();
-
-      // Даем время на завершение transition
-      setTimeout(() => {
-        isAnimating = false;
-      }, 500);
-    }
-
-    function updateDOM() {
-      track.innerHTML = '';
-      items.forEach(item => track.appendChild(item));
-      updateClasses();
-    }
-
-    leftBtn.addEventListener('click', () => move('left'));
-    rightBtn.addEventListener('click', () => move('right'));
-
-    updateClasses();
-
-  </script>
 </body>
-
 </html>

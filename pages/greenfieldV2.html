@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Команда, которой доверяют - 3 сада</title>
+    <title>Наши проекты —
+        ваше вдохновение - 3 сада</title>
     <link rel="stylesheet" href="/src/assets/css/app.css" />
 
     <link rel="icon" href="/src/assets/icons/logoVector.svg" />
@@ -12,72 +13,125 @@
     <meta property="og:title" content="3 sads" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru" />
-    <meta property="og:description" content="our services" />
+    <meta property="og:description" content="project" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
 </head>
 
 <body>
-    <div class="header-container">
-        <header class="header" id="mainHeader">
-            <div class="header-content white-mode" id="headerContent">
-                <nav class="nav">
+    <div class="container white-mode">
+        <header class="main-header">
+            <div class="main-header-content white-mode">
+                <a href="tel:8800219333" class="phone-menu black-svg" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
                     <ul>
-                        <div class="headerOneHalf">
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">Прайс-лист</a></li>
-                            <li><a href="">Проекты</a></li>
-                            <li><a href="">О компании</a></li>
-                            <li><a href="">Партнерам</a></li>
-                            <li><a href="">Контакты</a></li>
-                        </div>
-                        <li><a href="/" class="logo">
-                                <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
-                            </a></li>
-                        <div class="headerTwoHalf">
-                            <li class="button-container gray-btn">
-                                <span>Каталог растений</span>
-                                <img src="/src/assets/icons/moreBlackGreen.svg" />
-                            </li>
-                            <li class="button-container gray-btn">
-                                <span>Оставить заявку</span>
-                                <img src="/src/assets/icons/arrowRightHeader.svg" />
-                            </li>
-                            <li>8 800 219 333</li>
-                        </div>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Прайс-лист</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Партнерам</a></li>
+                        <li><a href="">Контакты</a></li>
                     </ul>
                 </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog black-svg">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li><a href="">Лиственные деревья</a></li>
+                                <li><a href="">Хвойные растения</a></li>
+                                <li><a href="">Кустарники</a></li>
+                                <li><a href="">Многолетние растения</a></li>
+                                <li><a href="">Плодовые деревья и кустарники</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn black-svg">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="header-bar" id="headerBar">
-                <nav class="nav">
-                    <ul>
-                        <div class="headerOneHalf">
+
+            <div class="mobbile-menu">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn black-svg">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
                             <li><a href="">Услуги</a></li>
                             <li><a href="">Прайс-лист</a></li>
                             <li><a href="">Проекты</a></li>
                             <li><a href="">О компании</a></li>
                             <li><a href="">Партнерам</a></li>
                             <li><a href="">Контакты</a></li>
-                        </div>
-                        <li><a href="/" class="logo">
-                                <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
-                            </a></li>
-                        <div class="headerTwoHalf">
-                            <li class="button-container gray-btn">
-                                <span>Каталог растений</span>
-                                <img src="/src/assets/icons/menuHeader.svg" />
-                            </li>
-                            <li class="button-container gray-btn">
-                                <span>Оставить заявку</span>
-                                <img src="/src/assets/icons/arrowRightHeader.svg" />
-                            </li>
-                            <li>8 800 219 333</li>
-                        </div>
-                    </ul>
-                </nav>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
             </div>
         </header>
-    </div>
-
-    <main>
         <div class="white-mode">
             <aside class="nav-container white-mode">
                 <ul class="breadcrumbs">
@@ -86,7 +140,7 @@
                     <li class="current-pages white-mode"> КП “Гринфилд”</li>
                 </ul>
             </aside>
-            <section class="hero-section white-mode">
+            <div class="hero-section white-mode">
                 <div class="hero-content hero-section-plant">
                     <div class="hero-text hero-text-container hero-text-for-partners">
                         <div class="hero-text-top ">
@@ -102,158 +156,202 @@
                     <img class="hero-img-block white-mode" src="/src/assets/images/greenfieidV2/gardenBackground.png"
                         alt="сад фон">
                 </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/greenfieidV2/garden1.png" alt="сад" class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Проект благоустройства участка в КП «Гринфилд»</h3>
+                        <p>
+                            Перед нами стояла задача создать гармоничный, ухоженный и при этом функциональныйсадовый
+                            участок
+                            для частного дома в коттеджном посёлке «Гринфилд». Основное пожеланиезаказчиков — эстетика,
+                            простота ухода и эффект «дорогого газона».
+                        </p>
+                        <p>
+                            Работы велись на уже освоенной территории, где потребовалась полная
+                            перепланировкаозеленения,
+                            укладка новых дорожек и комплексный уход за существующими насаждениями.
+                    </div>
+                </div>
             </section>
-        </div>
 
-
-        <section class="services-main">
-            <div class="services-main-row">
-                <img src="/src/assets/images/greenfieidV2/garden1.png" alt="сад" class="img-placeholder">
-                <div class="services-main-row__text">
-                    <h3>Проект благоустройства участка в КП «Гринфилд»</h3>
-                    <p>
-                        Перед нами стояла задача создать гармоничный, ухоженный и при этом функциональныйсадовый участок
-                        для частного дома в коттеджном посёлке «Гринфилд». Основное пожеланиезаказчиков — эстетика,
-                        простота ухода и эффект «дорогого газона».
-                    </p>
-                    <p>
-                        Работы велись на уже освоенной территории, где потребовалась полная перепланировкаозеленения,
-                        укладка новых дорожек и комплексный уход за существующими насаждениями.
-                </div>
-            </div>
-        </section>
-
-        <section class="company-info green-project-info">
-            <div class="company-info-row">
-                <div class="company-info__text">
-                    <h3>Детали проекта</h3>
-                    <p>
-                        май- сентябрь 2018г.
-                    </p>
-                    <p>
-                        Площадь объекта: 0.3 га
-                    </p>
-                </div>
-                <img src="/src/assets/images/greenfieidV2/gardenBackground.png" alt="работа 1" />
-            </div>
-            <div class="company-info-row">
-                <img src="/src/assets/images/greenfieidV2/garden2.png" alt="работа 2" />
-                <div id="company-info-text2">
-                    <h3>Выполненные работы:</h3>
-                    <ul class="gray-text">
-                        <li>Устройство и облицовка дорожек и площадок</li>
-                        <li>Посадка деревьев, кустарников и многолетников</li>
-                        <li>Устройство рулонного газона</li>
-                        <li>Устройство системы автоматического полива</li>
-                        <li>Устройство системы освещения</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="green-carousel-section">
-                <div class="green-carousel-container">
-                    <div class="green-carousel-nav">
-                        <button class="green-carousel-arrow green-carousel-prev" aria-label="Предыдущее изображение">
-                            <img src="/src/assets/icons/arrow-left1variant.svg" alt="стрелка влево">
-                        </button>
-                        <button class="green-carousel-arrow green-carousel-next" aria-label="Следующее изображение">
-                            <img src="/src/assets/icons/arrow-right1variant.svg" alt="стрелка вправо">
-                        </button>
+            <section class="company-info green-project-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Детали проекта</h3>
+                        <p>
+                            май- сентябрь 2018г.
+                        </p>
+                        <p>
+                            Площадь объекта: 0.3 га
+                        </p>
                     </div>
-                    <div class="green-carousel-track">
-                        <img src="/src/assets/images/greenfieidV2/garden1.png" data-index="0" alt="Дом с садом"
-                            class="green-carousel-slide thumbnail green-carousel-image">
-                        <img src="/src/assets/images/greenfieidV2/garden2.png" data-index="1" alt="Ландшафтный дизайн"
-                            class="green-carousel-slide green-active thumbnail green-carousel-image">
-                        <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду"
-                            class="green-carousel-slide green-carousel-image thumbnail" data-index="2">
+                    <img src="/src/assets/images/greenfieidV2/gardenBackground.png" alt="работа 1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/greenfieidV2/garden2.png" alt="работа 2" />
+                    <div id="company-info-text2">
+                        <h3>Выполненные работы:</h3>
+                        <ul class="gray-text">
+                            <li>Устройство и облицовка дорожек и площадок</li>
+                            <li>Посадка деревьев, кустарников и многолетников</li>
+                            <li>Устройство рулонного газона</li>
+                            <li>Устройство системы автоматического полива</li>
+                            <li>Устройство системы освещения</li>
+                        </ul>
                     </div>
                 </div>
-                <div id="modal" class="modal">
-                    <img src="/src/assets/icons/cross.svg" class="close" alt="cross" />
-                    <img class="modal-content" id="modalImage">
+            </section>
+
+            <section>
+                <div class="green-carousel-section">
+                    <div class="green-carousel-container">
+                        <div class="green-carousel-nav">
+                            <button class="green-carousel-arrow green-carousel-prev"
+                                aria-label="Предыдущее изображение">
+                                <img src="/src/assets/icons/arrow-left1variant.svg" alt="стрелка влево">
+                            </button>
+                            <button class="green-carousel-arrow green-carousel-next" aria-label="Следующее изображение">
+                                <img src="/src/assets/icons/arrow-right1variant.svg" alt="стрелка вправо">
+                            </button>
+                        </div>
+                        <div class="green-carousel-track">
+                            <img src="/src/assets/images/greenfieidV2/garden1.png" data-index="0" alt="Дом с садом"
+                                class="green-carousel-slide thumbnail green-carousel-image">
+                            <img src="/src/assets/images/greenfieidV2/garden2.png" data-index="1"
+                                alt="Ландшафтный дизайн"
+                                class="green-carousel-slide green-active thumbnail green-carousel-image">
+                            <img src="/src/assets/images/greenfieidV2/garden3.png" alt="Беседка в саду"
+                                class="green-carousel-slide green-carousel-image thumbnail" data-index="2">
+                        </div>
+                    </div>
+                    <div id="modal" class="modal">
+                        <img src="/src/assets/icons/cross.svg" class="close" alt="cross" />
+                        <img class="modal-content" id="modalImage">
+                    </div>
                 </div>
-            </div>
 
-        </section>
+            </section>
 
 
-        <section class="company-info">
-            <div class="company-info-row">
-                <div class="company-info__text">
-                    <h3>Этапы реализации и особенности проекта</h3>
-                    <p>
-                        Благоустройство участка включало в себя целый комплекс задач. В первую очередь мыпровели
-                        диагностику почвы и составили план озеленения. Вывезли старый грунт, заменилиего на плодородный
-                        и уложили рулонный газон с плотным дёрном.
-                    </p>
-                    <p>
-                        Далее мы смонтировали изогнутые садовые дорожки из брусчатки, что позволило визуальнорасширить
-                        участок и добавить эстетики. Под дорожками проложен дренаж.
-                    </p>
-                    <p>Далее мы смонтировали изогнутые садовые дорожки из брусчатки, что позволило визуальнорасширить
-                        участок и добавить эстетики. Под дорожками проложен дренаж.</p>
-                    <p>Были сохранены и усилены декоративные акценты в виде клумб, дополнительно устроенаподсветка
-                        участка по периметру. Все элементы вписаны в архитектуру дома и соседнююзастройку.</p>
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Этапы реализации и особенности проекта</h3>
+                        <p>
+                            Благоустройство участка включало в себя целый комплекс задач. В первую очередь мыпровели
+                            диагностику почвы и составили план озеленения. Вывезли старый грунт,
+                            заменилиего на плодородный
+                            и уложили рулонный газон с плотным дёрном.
+                        </p>
+                        <p>
+                            Далее мы смонтировали изогнутые садовые дорожки из брусчатки, что позволило
+                            визуальнорасширить
+                            участок и добавить эстетики. Под дорожками проложен дренаж.
+                        </p>
+                        <p>Далее мы смонтировали изогнутые садовые дорожки из брусчатки, что позволило
+                            визуальнорасширить
+                            участок и добавить эстетики. Под дорожками проложен дренаж.</p>
+                        <p>Были сохранены и усилены декоративные акценты в виде клумб, дополнительно устроенаподсветка
+                            участка по периметру. Все элементы вписаны в архитектуру дома и соседнююзастройку.</p>
+                    </div>
+                    <img src="/src/assets/images/greenfieidV2/garden3.png" alt="работа 1" />
                 </div>
-                <img src="/src/assets/images/greenfieidV2/garden3.png" alt="работа 1" />
-            </div>
-            <div class="company-info-row">
-                <img src="/src/assets/images/greenfieidV2/garden4.png" alt="работа 2" />
-                <div>
-                    <h4>Что было сделано и каких целей добились</h4>
-                    <p>Основные работы на объекте</p>
-                    <ul class="gray-text">
-                        <li>Удаление и замена части старых посадок</li>
-                        <li>Укладка рулонного газона</li>
-                        <li>Монтаж изогнутых садовых дорожек</li>
-                        <li>Создание цветников и хвойных групп</li>
-                        <li>Установка освещения</li>
-                        <li>Сезонный уход и подкормка растений</li>
-                    </ul>
-                    <p>Результаты проекта</p>
-                    <ul class="gray-text">
-                        <li>Участок стал визуально больше и светлее</li>
-                        <li>Газон — плотный, зелёный и без проплешин</li>
-                        <li>Растения не требуют частого ухода</li>
-                        <li>Улучшен дренаж и микроклимат</li>
-                        <li>Простая логистика: удобно косить, поливать, обслуживать</li>
-                    </ul>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/greenfieidV2/garden4.png" alt="работа 2" />
+                    <div>
+                        <h4>Что было сделано и каких целей добились</h4>
+                        <p>Основные работы на объекте</p>
+                        <ul class="gray-text">
+                            <li>Удаление и замена части старых посадок</li>
+                            <li>Укладка рулонного газона</li>
+                            <li>Монтаж изогнутых садовых дорожек</li>
+                            <li>Создание цветников и хвойных групп</li>
+                            <li>Установка освещения</li>
+                            <li>Сезонный уход и подкормка растений</li>
+                        </ul>
+                        <p>Результаты проекта</p>
+                        <ul class="gray-text">
+                            <li>Участок стал визуально больше и светлее</li>
+                            <li>Газон — плотный, зелёный и без проплешин</li>
+                            <li>Растения не требуют частого ухода</li>
+                            <li>Улучшен дренаж и микроклимат</li>
+                            <li>Простая логистика: удобно косить, поливать, обслуживать</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
-    <footer class="footer">
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <ul>
-                    <li>услуги</li>
-                    <li>прайс-лист</li>
-                    <li>проекты</li>
-                    <li>партнерам</li>
-                    <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
-                    <li>о компании</li>
-                    <li>контакты</li>
-                    <li>каталог растений</li>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="nav-footer">
+                    <li><a href="">услуги</a></li>
+                    <li><a href="">прайс-лист</a></li>
+                    <li><a href="">проекты</a></li>
+                    <li><a href="">партнерам</a></li>
                 </ul>
-            </nav>
+                <a href="/" class="footer-logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+                </a>
+                <ul class="info-footer">
+                    <li><a href="">о компании</a></li>
+                    <li><a href="">контакты</a></li>
+                    <li><a href="">каталог растений</a></li>
+                </ul>
 
-            <div class="footer-bottom">
-                <span>политика конфиденциальности</span>
+                <a href="" class="document-1">политика конфиденциальности</a>
+
                 <div class="footer-social">
-                    <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
-                    <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
-                    <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
                 </div>
-                <span>пользовательское соглашение</span>
+                <a href="" class="document-2">пользовательское соглашение</a>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <script src="/src/js/headerAnimation.js"></script>
+    <script src="/src/js/headerAdaptation.js"></script>
+    <script>
+        const headerHeight = document.querySelector(
+            ".main-header-content"
+        ).clientHeight;
+        document
+            .querySelector(".nav")
+            .setAttribute("style", `top: ${headerHeight}px`);
+
+        const plantsMenuModal = document.querySelector(".plants-menu");
+
+        document
+            .querySelector(".plants-catalog")
+            .addEventListener("click", () => {
+                if (plantsMenuModal.hasAttribute("style")) {
+                    plantsMenuModal.removeAttribute("style");
+                } else {
+                    plantsMenuModal.setAttribute("style", "display: none;");
+                }
+            });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/src/js/greenCarousel.js"></script>
     <script src="/src/js/modal.js"></script>

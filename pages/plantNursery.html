@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Команда, которой доверяют - 3 сада</title>
+    <title>Свежие саженцы
+        напрямую из питомника - 3 сада</title>
     <link rel="stylesheet" href="/src/assets/css/app.css" />
-    <script src="/src/js/headerAnimation.js"></script>
     <script src="/src/js/showMore.js"></script>
 
     <link rel="icon" href="/src/assets/icons/logoVector.svg" />
@@ -14,72 +14,125 @@
     <meta property="og:title" content="3 sads" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru" />
-    <meta property="og:description" content="our services" />
+    <meta property="og:description" content="Plant Nursery" />
+    <script type="module">
+        import { showPopupHeader } from "../src/js/headerAnimation.js";
+
+        window.addEventListener("load", () => {
+            window.addEventListener("scroll", showPopupHeader);
+        });
+    </script>
 </head>
 
 <body>
-    <div class="header-container">
-        <header class="header" id="mainHeader">
-            <div class="header-content white-mode" id="headerContent">
-                <nav class="nav">
+    <div class="container white-mode">
+        <header class="main-header">
+            <div class="main-header-content white-mode">
+                <a href="tel:8800219333" class="phone-menu black-svg" aria-label="Позвоните нам">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 23 24">
+                        <use href="/src/assets/icons/sprite.svg#telephone"></use>
+                    </svg>
+                </a>
+                <nav class="nav animation">
                     <ul>
-                        <div class="headerOneHalf">
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">Прайс-лист</a></li>
-                            <li><a href="">Проекты</a></li>
-                            <li><a href="">О компании</a></li>
-                            <li><a href="">Партнерам</a></li>
-                            <li><a href="">Контакты</a></li>
-                        </div>
-                        <li><a href="/" class="logo">
-                                <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
-                            </a></li>
-                        <div class="headerTwoHalf">
-                            <li class="button-container gray-btn">
-                                <span>Каталог растений</span>
-                                <img src="/src/assets/icons/moreBlackGreen.svg" />
-                            </li>
-                            <li class="button-container gray-btn">
-                                <span>Оставить заявку</span>
-                                <img src="/src/assets/icons/arrowRightHeader.svg" />
-                            </li>
-                            <li>8 800 219 333</li>
-                        </div>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Прайс-лист</a></li>
+                        <li><a href="">Проекты</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Партнерам</a></li>
+                        <li><a href="">Контакты</a></li>
                     </ul>
                 </nav>
+                <a href="/" class="logo">
+                    <img src="/src/assets/icons/logoGrennBlackVector.svg" alt="Логотип сайта" />
+                </a>
+                <div class="info-nav animation">
+                    <div class="plants-catalog-wrapper">
+                        <button type="button" class="btn plants-catalog black-svg">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <div class="plants-menu" style="display: none">
+                            <ul>
+                                <li><a href="">Лиственные деревья</a></li>
+                                <li><a href="">Хвойные растения</a></li>
+                                <li><a href="">Кустарники</a></li>
+                                <li><a href="">Многолетние растения</a></li>
+                                <li><a href="">Плодовые деревья и кустарники</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn application-btn black-svg">
+                        <span>Оставить заявку</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                            <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a href="tel:8800219333">8 800 219 333</a>
+                </div>
+
+                <div class="burger phone-menu" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="header-bar" id="headerBar">
-                <nav class="nav">
-                    <ul>
-                        <div class="headerOneHalf">
+
+            <div class="mobbile-menu white-mode">
+                <ul>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Прайс-лист</a></li>
+                    <li><a href="">Проекты</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнерам</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li>
+                        <a href="/" class="btn application-btn black-svg">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup-header-wrapper">
+                <div class="popup-header">
+                    <nav class="nav animation">
+                        <ul>
                             <li><a href="">Услуги</a></li>
                             <li><a href="">Прайс-лист</a></li>
                             <li><a href="">Проекты</a></li>
                             <li><a href="">О компании</a></li>
                             <li><a href="">Партнерам</a></li>
                             <li><a href="">Контакты</a></li>
-                        </div>
-                        <li><a href="/" class="logo">
-                                <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
-                            </a></li>
-                        <div class="headerTwoHalf">
-                            <li class="button-container gray-btn">
-                                <span>Каталог растений</span>
-                                <img src="/src/assets/icons/menuHeader.svg" />
-                            </li>
-                            <li class="button-container gray-btn">
-                                <span>Оставить заявку</span>
-                                <img src="/src/assets/icons/arrowRightHeader.svg" />
-                            </li>
-                            <li>8 800 219 333</li>
-                        </div>
-                    </ul>
-                </nav>
+                        </ul>
+                    </nav>
+                    <a href="/" class="popup-header__logo">
+                        <img src="/src/assets/images/iconHeaderBar.svg" alt="Логотип сайта" />
+                    </a>
+                    <div class="info-nav animation">
+                        <button type="button" class="btn plants-catalog">
+                            <span>Каталог растений</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#dots"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn application-btn">
+                            <span>Оставить заявку</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 32 32">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                        <a href="tel:8800219333">8 800 219 333</a>
+                    </div>
+                </div>
             </div>
         </header>
-    </div>
-
-    <main>
         <div class="white-mode">
             <aside class="nav-container white-mode">
                 <ul class="breadcrumbs">
@@ -87,7 +140,7 @@
                     <li class="current-pages white-mode">Каталог растений</li>
                 </ul>
             </aside>
-            <section class="hero-section white-mode">
+            <div class="hero-section white-mode">
                 <div class="hero-content hero-section-plant">
                     <div class="hero-text hero-text-container">
                         <div class="hero-text-top ">
@@ -99,216 +152,273 @@
                         </div>
                         <div class="button-container white-btn-bg white-mode">
                             <span>скачать прайслист</span>
-                            <img src="/src/assets/icons/download.svg" />
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#download"></use>
+                            </svg>
                         </div>
                     </div>
                     <img class="hero-img-block white-mode" src="/src/assets/images/plantNursery/gardenBackgrond.png"
                         alt="сад фон">
                 </div>
+            </div>
+        </div>
+        <main>
+            <section class="services-main">
+                <div class="services-main-row">
+                    <img src="/src/assets/images/plantNursery/garden1.png" alt="сад" class="img-placeholder">
+                    <div class="services-main-row__text">
+                        <h3>Питомник растений компании «3 сада»</h3>
+                        <p>
+                            Мы выращиваем саженцы деревьев, кустарников и многолетников в собственном питомнике.
+                            Это позволяет нам контролировать качество посадочного материала и оперативно подбирать
+                            растения
+                            под каждый проект без задержек и переплат.
+                        </p>
+                        <p>
+                            Наши растения адаптированы к местному климату и отлично приживаются на участках
+                            в Подмосковье
+                            и соседних регионах.
+                    </div>
+                </div>
             </section>
-        </div>
-        <section class="services-main">
-            <div class="services-main-row">
-                <img src="/src/assets/images/plantNursery/garden1.png" alt="сад" class="img-placeholder">
-                <div class="services-main-row__text">
-                    <h3>Питомник растений компании «3 сада»</h3>
-                    <p>
-                        Мы выращиваем саженцы деревьев, кустарников и многолетников в собственном питомнике.
-                        Это позволяет нам контролировать качество посадочного материала и оперативно подбирать растения
-                        под каждый проект без задержек и переплат.
-                    </p>
-                    <p>
-                        Наши растения адаптированы к местному климату и отлично приживаются на участках в Подмосковье
-                        и соседних регионах.
+            <section class="section-n-plants">
+                <div class="section-n-plant">
+                    <div class="plant-n-text-container">
+                        <h3>Лиственные деревья</h3>
+                        <p>Декоративные и теневыносливые деревья
+                            для городских и частных участков</p>
+                        <div class="plant-n-tags">
+                            <span>клён</span>
+                            <span>рябина</span>
+                            <span>липа</span>
+                            <span>береза</span>
+                        </div>
+                        <p>Подходят для аллей, озеленения улиц, парковых зон</p>
+                        <div class="button-container white-btn-bg white-mode">
+                            <span>подробнее</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden1.png">
+
                 </div>
-            </div>
-        </section>
 
-
-
-        <section class="section-n-plants">
-            <div class="section-n-plant">
-                <div class="plant-n-text-container">
-                    <h3>Лиственные деревья</h3>
-                    <p>Декоративные и теневыносливые деревья
-                        для городских и частных участков</p>
-                    <div class="plant-n-tags">
-                        <span>клён</span>
-                        <span>рябина</span>
-                        <span>липа</span>
-                        <span>береза</span>
+                <div class="section-n-plant">
+                    <div class="plant-n-text-container">
+                        <h3>Хвойные растения</h3>
+                        <p>Декоративные и теневыносливые деревья
+                            для городских и частных участков</p>
+                        <div class="plant-n-tags">
+                            <span>клён</span>
+                            <span>рябина</span>
+                            <span>липа</span>
+                            <span>береза</span>
+                        </div>
+                        <p>Подходят для аллей, озеленения улиц, парковых зон</p>
+                        <div class="button-container white-btn-bg white-mode">
+                            <span>подробнее</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <p>Подходят для аллей, озеленения улиц, парковых зон</p>
-                    <div class="button-container white-btn-bg white-mode">
-                        <span>подробнее</span>
-                        <img src="/src/assets/icons/arrow-right.svg" />
+                    <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden2.png">
+
+                </div>
+
+                <div class="section-n-plant">
+                    <div class="plant-n-text-container">
+                        <h3>Кустарники</h3>
+                        <p>Декоративные и теневыносливые деревья
+                            для городских и частных участков</p>
+                        <div class="plant-n-tags">
+                            <span>клён</span>
+                            <span>рябина</span>
+                            <span>липа</span>
+                            <span>береза</span>
+                        </div>
+                        <p>Подходят для аллей, озеленения улиц, парковых зон</p>
+                        <div class="button-container white-btn-bg white-mode">
+                            <span>подробнее</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden3.png">
+
+                </div>
+
+                <div class="section-n-plant">
+                    <div class="plant-n-text-container">
+                        <h3>Многолетние растения</h3>
+                        <p>Декоративные и теневыносливые деревья
+                            для городских и частных участков</p>
+                        <div class="plant-n-tags">
+                            <span>клён</span>
+                            <span>рябина</span>
+                            <span>липа</span>
+                            <span>береза</span>
+                        </div>
+                        <p>Подходят для аллей, озеленения улиц, парковых зон</p>
+                        <div class="button-container white-btn-bg white-mode">
+                            <span>подробнее</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden4.png">
+
+                </div>
+
+                <div class="section-n-plant">
+                    <div class="plant-n-text-container">
+                        <h3>Плодовые деревья и кустарники</h3>
+                        <p>Декоративные и теневыносливые деревья
+                            для городских и частных участков</p>
+                        <div class="plant-n-tags">
+                            <span>клён</span>
+                            <span>рябина</span>
+                            <span>липа</span>
+                            <span>береза</span>
+                        </div>
+                        <p>Подходят для аллей, озеленения улиц, парковых зон</p>
+                        <div class="button-container white-btn-bg white-mode">
+                            <span>подробнее</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" stroke="007D21" aria-hidden="true"
+                                viewBox="0 0 20 20">
+                                <use href="/src/assets/icons/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden5.png">
+
+                </div>
+            </section>
+
+
+
+            <section class="company-info">
+                <div class="company-info-row">
+                    <div class="company-info__text">
+                        <h3>Что мы выращиваем и как работает питомник</h3>
+                        <p>
+                            Наш питомник — это более 2 гектаров земли, где под контролемагрономов растут лиственные,
+                            хвойные, декоративные и плодовыедеревья, а также многолетние кустарники и злаки.
+                        </p>
+                        <p>
+                            Мы используем проверенные сорта, выбираем устойчивые
+                            к болезням и перепадам температуры растения, ухаживаем заними с момента посадки до отгрузки.
+                        </p>
+                        <p>
+                            Большую часть ассортимента мы применяем в собственныхпроектах благоустройства. Это позволяет
+                            предлагать клиентамлучшие экземпляры без переплаты посредникам.
+                        </p>
+                        <p>
+                            Также возможен самостоятельный заказ из питомника —
+                            с доставкой и услугой посадки нашими специалистами.
+                        </p>
+                    </div>
+                    <img src="/src/assets/images/plantNursery/plants1.png" alt="сад-1" />
+                </div>
+                <div class="company-info-row">
+                    <img src="/src/assets/images/plantNursery/plants2.png" alt="сад-2" />
+                    <div>
+                        <h4>Ассортимент и условия заказа</h4>
+                        <p>Что вы найдёте в нашем питомнике</p>
+                        <ul>
+                            <li>Лиственные деревья: клёны, липы, рябины</li>
+                            <li>Кустарники: спирея, дерен, барбарис</li>
+                            <li>Хвойные: туи, ели, сосны</li>
+                            <li>Декоративные многолетники и злаки</li>
+                            <li>Сопутствующие товары: мульча, удобрения</li>
+                        </ul>
+                        <p>Ассортимент и условия заказа</p>
+                        <ul>
+                            <li>Минимальный заказ — от 3 растений</li>
+                            <li>Доставка по Москве и области</li>
+                            <li>Возможна посадка под ключ</li>
+                            <li>Сезонное бронирование и резерв</li>
+                            <li>Выезд агронома для подбора</li>
+                        </ul>
                     </div>
                 </div>
-                <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden1.png">
+            </section>
+        </main>
 
-            </div>
-
-            <div class="section-n-plant">
-                <div class="plant-n-text-container">
-                    <h3>Хвойные растения</h3>
-                    <p>Декоративные и теневыносливые деревья
-                        для городских и частных участков</p>
-                    <div class="plant-n-tags">
-                        <span>клён</span>
-                        <span>рябина</span>
-                        <span>липа</span>
-                        <span>береза</span>
-                    </div>
-                    <p>Подходят для аллей, озеленения улиц, парковых зон</p>
-                    <div class="button-container white-btn-bg white-mode">
-                        <span>подробнее</span>
-                        <img src="/src/assets/icons/arrow-right.svg" />
-                    </div>
-                </div>
-                <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden2.png">
-
-            </div>
-
-            <div class="section-n-plant">
-                <div class="plant-n-text-container">
-                    <h3>Кустарники</h3>
-                    <p>Декоративные и теневыносливые деревья
-                        для городских и частных участков</p>
-                    <div class="plant-n-tags">
-                        <span>клён</span>
-                        <span>рябина</span>
-                        <span>липа</span>
-                        <span>береза</span>
-                    </div>
-                    <p>Подходят для аллей, озеленения улиц, парковых зон</p>
-                    <div class="button-container white-btn-bg white-mode">
-                        <span>подробнее</span>
-                        <img src="/src/assets/icons/arrow-right.svg" />
-                    </div>
-                </div>
-                <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden3.png">
-
-            </div>
-
-            <div class="section-n-plant">
-                <div class="plant-n-text-container">
-                    <h3>Многолетние растения</h3>
-                    <p>Декоративные и теневыносливые деревья
-                        для городских и частных участков</p>
-                    <div class="plant-n-tags">
-                        <span>клён</span>
-                        <span>рябина</span>
-                        <span>липа</span>
-                        <span>береза</span>
-                    </div>
-                    <p>Подходят для аллей, озеленения улиц, парковых зон</p>
-                    <div class="button-container white-btn-bg white-mode">
-                        <span>подробнее</span>
-                        <img src="/src/assets/icons/arrow-right.svg" />
-                    </div>
-                </div>
-                <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden4.png">
-
-            </div>
-
-            <div class="section-n-plant">
-                <div class="plant-n-text-container">
-                    <h3>Плодовые деревья и кустарники</h3>
-                    <p>Декоративные и теневыносливые деревья
-                        для городских и частных участков</p>
-                    <div class="plant-n-tags">
-                        <span>клён</span>
-                        <span>рябина</span>
-                        <span>липа</span>
-                        <span>береза</span>
-                    </div>
-                    <p>Подходят для аллей, озеленения улиц, парковых зон</p>
-                    <div class="button-container white-btn-bg white-mode">
-                        <span>подробнее</span>
-                        <img src="/src/assets/icons/arrow-right.svg" />
-                    </div>
-                </div>
-                <img class="plant-n-img" src="/src/assets/images/plantNursery/cardGarden5.png">
-
-            </div>
-        </section>
-
-
-
-        <section class="company-info">
-            <div class="company-info-row">
-                <div class="company-info__text">
-                    <h3>Что мы выращиваем и как работает питомник</h3>
-                    <p>
-                        Наш питомник — это более 2 гектаров земли, где под контролемагрономов растут лиственные,
-                        хвойные, декоративные и плодовыедеревья, а также многолетние кустарники и злаки.
-                    </p>
-                    <p>
-                        Мы используем проверенные сорта, выбираем устойчивые
-                        к болезням и перепадам температуры растения, ухаживаем заними с момента посадки до отгрузки.
-                    </p>
-                    <p>
-                        Большую часть ассортимента мы применяем в собственныхпроектах благоустройства. Это позволяет
-                        предлагать клиентамлучшие экземпляры без переплаты посредникам.
-                    </p>
-                    <p>
-                        Также возможен самостоятельный заказ из питомника —
-                        с доставкой и услугой посадки нашими специалистами.
-                    </p>
-                </div>
-                <img src="/src/assets/images/plantNursery/plants1.png" alt="сад-1" />
-            </div>
-            <div class="company-info-row">
-                <img src="/src/assets/images/plantNursery/plants2.png" alt="сад-2" />
-                <div>
-                    <h4>Ассортимент и условия заказа</h4>
-                    <p>Что вы найдёте в нашем питомнике</p>
-                    <ul>
-                        <li>Лиственные деревья: клёны, липы, рябины</li>
-                        <li>Кустарники: спирея, дерен, барбарис</li>
-                        <li>Хвойные: туи, ели, сосны</li>
-                        <li>Декоративные многолетники и злаки</li>
-                        <li>Сопутствующие товары: мульча, удобрения</li>
-                    </ul>
-                    <p>Ассортимент и условия заказа</p>
-                    <ul>
-                        <li>Минимальный заказ — от 3 растений</li>
-                        <li>Доставка по Москве и области</li>
-                        <li>Возможна посадка под ключ</li>
-                        <li>Сезонное бронирование и резерв</li>
-                        <li>Выезд агронома для подбора</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <ul>
-                    <li>услуги</li>
-                    <li>прайс-лист</li>
-                    <li>проекты</li>
-                    <li>партнерам</li>
-                    <li><img class="footer-logo" src="/src/assets/icons/logoVector.svg" /></li>
-                    <li>о компании</li>
-                    <li>контакты</li>
-                    <li>каталог растений</li>
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="nav-footer">
+                    <li><a href="">услуги</a></li>
+                    <li><a href="">прайс-лист</a></li>
+                    <li><a href="">проекты</a></li>
+                    <li><a href="">партнерам</a></li>
                 </ul>
-            </nav>
+                <a href="/" class="footer-logo">
+                    <img src="/src/assets/icons/logoVector.svg" alt="logo" />
+                </a>
+                <ul class="info-footer">
+                    <li><a href="">о компании</a></li>
+                    <li><a href="">контакты</a></li>
+                    <li><a href="">каталог растений</a></li>
+                </ul>
 
-            <div class="footer-bottom">
-                <span>политика конфиденциальности</span>
+                <a href="" class="document-1">политика конфиденциальности</a>
+
                 <div class="footer-social">
-                    <img class="footer-icon" src="/src/assets/icons/whatsap.svg" alt="whatsapp">
-                    <img class="footer-icon" src="/src/assets/icons/telegram.svg" alt="telegram">
-                    <img class="footer-icon" src="/src/assets/icons/vk.svg" alt="vk">
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#whatsap"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            viewBox="0 0 20 20">
+                            <use href="/src/assets/icons/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
                 </div>
-                <span>пользовательское соглашение</span>
+                <a href="" class="document-2">пользовательское соглашение</a>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
+    <script src="/src/js/headerAdaptation.js"></script>
+    <script>
+        const headerHeight = document.querySelector(
+            ".main-header-content"
+        ).clientHeight;
+        document
+            .querySelector(".nav")
+            .setAttribute("style", `top: ${headerHeight}px`);
+
+        const plantsMenuModal = document.querySelector(".plants-menu");
+
+        document
+            .querySelector(".plants-catalog")
+            .addEventListener("click", () => {
+                if (plantsMenuModal.hasAttribute("style")) {
+                    plantsMenuModal.removeAttribute("style");
+                } else {
+                    plantsMenuModal.setAttribute("style", "display: none;");
+                }
+            });
+    </script>
 </body>
 
 </html>
